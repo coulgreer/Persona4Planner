@@ -11,28 +11,28 @@ import javax.swing.JPanel;
 
 public class Persona4Planner {
 	JPanel cards;
-	JButton statusButton, calendarButton;
 
 	public void addComponentToPane(Container pane) {
 		JPanel navigationPanel = new JPanel();
+		JButton statusButton, calendarButton;
 		statusButton = new JButton("Status Screen");
-		statusButton.addActionListener( new ActionListener() {
+		statusButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cardLayout = (CardLayout) cards.getLayout();
 				cardLayout.show(cards, e.getActionCommand());
 			}
 		});
-		
+
 		calendarButton = new JButton("Calendar Screen");
-		calendarButton.addActionListener( new ActionListener() {
+		calendarButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cardLayout = (CardLayout) cards.getLayout();
 				cardLayout.show(cards, e.getActionCommand());
 			}
 		});
-		
+
 		navigationPanel.setBackground(new Color(255, 174, 32));
 		navigationPanel.add(statusButton);
 		navigationPanel.add(calendarButton);
@@ -50,11 +50,6 @@ public class Persona4Planner {
 		pane.add(navigationPanel, BorderLayout.PAGE_START);
 		pane.add(cards, BorderLayout.CENTER);
 
-	}
-
-	public void actionPerformed(ActionEvent e) {
-		CardLayout cardLayout = (CardLayout) cards.getLayout();
-		cardLayout.show(cards, e.getActionCommand());
 	}
 
 	public static void main(String[] args) {
