@@ -28,6 +28,13 @@ public class Persona4Planner {
 
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
+		RadarChart statChart = new RadarChart.RadarChartBuilder() //
+				.withCourageLevelOf(1) //
+				.withDiligenceLevelOf(1) //
+				.withUnderstandingLevelOf(1) //
+				.withExpressionLevelOf(1) //
+				.withKnowledgeLevelOf(1) //
+				.createRadarChart();
 
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
 		navigationPanel.setPreferredSize(new Dimension(DEFAULT_NAVBAR_WIDTH, DEFAULT_SCREEN_HEIGHT));
@@ -38,6 +45,7 @@ public class Persona4Planner {
 
 		JPanel statusCard = new JPanel();
 		statusCard.setBackground(new Color(254, 234, 44));
+		statusCard.add(statChart.initComponents());
 
 		JPanel calendarCard = new JPanel();
 		calendarCard.setBackground(Color.PINK);
