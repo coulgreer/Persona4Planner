@@ -22,22 +22,21 @@ public class RadarChart extends JPanel {
 	}
 
 	public JPanel initComponents() {
-		
-		
+
 		JPanel panel = new JPanel() {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
-                g.setColor(Color.BLACK);
-                drawRadarChartFrame(g);
+				g.setColor(Color.BLACK);
+				drawRadarChartFrame(g);
 			}
-			
+
 			@Override
-            public Dimension getPreferredSize() {
-                return new Dimension(200, 150);
-            }
+			public Dimension getPreferredSize() {
+				return new Dimension(200, 150);
+			}
 		};
-		
+
 		return panel;
 	}
 
@@ -46,12 +45,13 @@ public class RadarChart extends JPanel {
 		int numberOfSides = 5;
 		double radius = 50;
 		double theta = 2 * Math.PI / numberOfSides;
+		double rotation = Math.toRadians(198);
 		for (int i = 0; i < numberOfSides; i++) {
-			int x = (int) (100 + radius * Math.cos(i * theta));
-			int y = (int) (100 + radius * Math.sin(i * theta));
+			int x = (int) (100 + radius * Math.cos((i * theta) + rotation));
+			int y = (int) (100 + radius * Math.sin((i * theta) + rotation));
 			p.addPoint(x, y);
 		}
-		
+
 		g.drawPolygon(p);
 	}
 
