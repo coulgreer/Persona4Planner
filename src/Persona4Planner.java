@@ -6,6 +6,8 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -23,17 +25,19 @@ public class Persona4Planner {
 	private final static int NAVBAR_BUTTON_BUFFER = 5;
 	private final static int DEFAULT_NAVBAR_BUTTON_WIDTH = DEFAULT_NAVBAR_WIDTH - (NAVBAR_BUTTON_BUFFER * 2);
 	private final static int DEFAULT_NAVBAR_BUTTON_HEIGHT = 50;
+	private final static int DEFAUL_LEVEL = 1;
 
 	private JPanel cards;
-
+	private RadarChart statChart;
+	
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
-		RadarChart statChart = new RadarChart.RadarChartBuilder() //
-				.withCourageLevelOf(1) //
-				.withDiligenceLevelOf(1) //
-				.withUnderstandingLevelOf(1) //
-				.withExpressionLevelOf(1) //
-				.withKnowledgeLevelOf(1) //
+		statChart = new RadarChart.RadarChartBuilder() //
+				.withCourageLevelOf(DEFAUL_LEVEL) //
+				.withDiligenceLevelOf(DEFAUL_LEVEL) //
+				.withUnderstandingLevelOf(DEFAUL_LEVEL) //
+				.withExpressionLevelOf(DEFAUL_LEVEL) //
+				.withKnowledgeLevelOf(DEFAUL_LEVEL) //
 				.createRadarChart();
 
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
@@ -46,9 +50,16 @@ public class Persona4Planner {
 		JPanel statusCard = new JPanel();
 		statusCard.setBackground(new Color(254, 234, 44));
 		statusCard.add(statChart.initComponents());
+		statusCard.addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentHidden(ComponentEvent evt) {
+				statChart.updateParameters(); // Will be removed and updating will happen elsewhere when calendar is created
+				statChart.repaint();
+			}
+		});
 
 		JPanel calendarCard = new JPanel();
-		calendarCard.setBackground(Color.PINK);
+		calendarCard.setBackground(new Color(254, 234, 44));
 
 		cards = new JPanel(new CardLayout());
 		cards.setPreferredSize(new Dimension(DEFAULT_CARD_WIDTH, DEFAULT_SCREEN_HEIGHT));
@@ -69,6 +80,7 @@ public class Persona4Planner {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cardLayout = (CardLayout) cards.getLayout();
 				cardLayout.show(cards, e.getActionCommand());
+				
 			}
 		});
 
