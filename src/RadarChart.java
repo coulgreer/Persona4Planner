@@ -5,12 +5,16 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Polygon;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JPanel;
 
 public class RadarChart extends JPanel {
-	private static final int PANEL_WIDTH = 200;
-	private static final int PANEL_HEIGHT = 200;
+	private static final int PANEL_WIDTH = 300;
+	private static final int PANEL_HEIGHT = 300;
 	private static final int MAX_LEVEL = 5;
 
 	private int courageLvl, diligenceLvl, understandingLvl, expressionLvl, knowledgeLvl;
@@ -87,96 +91,120 @@ public class RadarChart extends JPanel {
 	 *            - the graphics object to help draw the frame.
 	 */
 	private void drawRadarChart(Graphics g) {
-		Polygon chartFrame = new Polygon();
-		Ellipse2D circumscribedCircle;
-		int numberOfSides = 5;
+		Graphics2D g2 = (Graphics2D) g;
 		double diameter = 175;
 		double radius = diameter / 2;
-		int pipDiameter = 6;
-		int pipRadius = (int) Math.round(pipDiameter / 2);
+
+		int numberOfSides = 5;
 		double theta = 2 * Math.PI / numberOfSides;
 		double rotation = Math.toRadians(198);
-
-		g.setColor(Color.BLACK);
-
-		circumscribedCircle = new Ellipse2D.Double((PANEL_WIDTH / 2) - radius, (PANEL_HEIGHT / 2) - radius, diameter,
-				diameter);
+		Polygon chartFrame = new Polygon();
+		List<Point> polygonVertices = new ArrayList<Point>();
 		for (int i = 0; i < numberOfSides; i++) {
-			Graphics2D g2 = (Graphics2D) g;
 			int x = (int) Math.round(((PANEL_WIDTH / 2) + radius * Math.cos((i * theta) + rotation)));
 			int y = (int) Math.round(((PANEL_HEIGHT / 2) + radius * Math.sin((i * theta) + rotation)));
 
-			g2.drawLine(x, y, (int) circumscribedCircle.getCenterX(), (int) circumscribedCircle.getCenterY());
-
-			// Draws the pips on the spokes in the pentagon
-			switch (i) {
-			case 0:
-				for (int j = 1; j <= MAX_LEVEL; j++) {
-					int pointX = (int) (circumscribedCircle.getCenterX()
-							- j * Math.abs(x - circumscribedCircle.getCenterX()) / MAX_LEVEL);
-					int pointY = (int) (circumscribedCircle.getCenterY()
-							- j * Math.abs(y - circumscribedCircle.getCenterY()) / MAX_LEVEL);
-					knowledgeCoord[j - 1] = new Point(pointX, pointY);
-					g2.fillOval(pointX - pipRadius, pointY - pipRadius, pipDiameter, pipDiameter);
-				}
-				break;
-			case 1:
-				for (int j = 1; j <= MAX_LEVEL; j++) {
-					int pointX = (int) (circumscribedCircle.getCenterX()
-							- j * Math.abs(x - circumscribedCircle.getCenterX()) / MAX_LEVEL);
-					int pointY = (int) (circumscribedCircle.getCenterY()
-							- j * Math.abs(y - circumscribedCircle.getCenterY()) / MAX_LEVEL);
-					courageCoord[j - 1] = new Point(pointX, pointY);
-					g2.fillOval(pointX - pipRadius, pointY - pipRadius, pipDiameter, pipDiameter);
-				}
-				break;
-			case 2:
-				for (int j = 1; j <= MAX_LEVEL; j++) {
-					int pointX = (int) (circumscribedCircle.getCenterX()
-							+ j * Math.abs(x - circumscribedCircle.getCenterX()) / MAX_LEVEL);
-					int pointY = (int) (circumscribedCircle.getCenterY()
-							- j * Math.abs(y - circumscribedCircle.getCenterY()) / MAX_LEVEL);
-					diligenceCoord[j - 1] = new Point(pointX, pointY);
-					g2.fillOval(pointX - pipRadius, pointY - pipRadius, pipDiameter, pipDiameter);
-				}
-				break;
-			case 3:
-				for (int j = 1; j <= MAX_LEVEL; j++) {
-					int pointX = (int) (circumscribedCircle.getCenterX()
-							+ j * Math.abs(x - circumscribedCircle.getCenterX()) / MAX_LEVEL);
-					int pointY = (int) (circumscribedCircle.getCenterY()
-							+ j * Math.abs(y - circumscribedCircle.getCenterY()) / MAX_LEVEL);
-					understandingCoord[j - 1] = new Point(pointX, pointY);
-					g2.fillOval(pointX - pipRadius, pointY - pipRadius, pipDiameter, pipDiameter);
-				}
-				break;
-			case 4:
-				for (int j = 1; j <= MAX_LEVEL; j++) {
-					int pointX = (int) (circumscribedCircle.getCenterX()
-							- j * Math.abs(x - circumscribedCircle.getCenterX()) / MAX_LEVEL);
-					int pointY = (int) (circumscribedCircle.getCenterY()
-							+ j * Math.abs(y - circumscribedCircle.getCenterY()) / MAX_LEVEL);
-					expressionCoord[j - 1] = new Point(pointX, pointY);
-					g2.fillOval(pointX - pipRadius, pointY - pipRadius, pipDiameter, pipDiameter);
-				}
-				break;
-			default:
-				break;
-			}
-
+			polygonVertices.add(new Point(x, y));
 			chartFrame.addPoint(x, y);
 		}
+		g2.setColor(new Color(255, 255, 255, 100));
+		g2.fillPolygon(chartFrame);
+		g2.setColor(Color.BLACK);
+		g2.drawPolygon(chartFrame);
 
-		drawStatParameters(g);
-
-		g.setColor(Color.BLACK);
-		g.drawPolygon(chartFrame);
-
+		drawSpokes(g2, diameter, polygonVertices);
 	}
 
 	/**
-	 * Draws a semi-transparent polygon that visually represents characters social quality levels
-	 * @param g - the graphics object to help draw the frame.
+	 * Draws the lines from the center of the circumscribed circle to the
+	 * vertices of the inscribed polygon
+	 * 
+	 * @param g2
+	 *            - the graphics object to help draw the object.
+	 * @param diameter
+	 *            - the width of the circumscribed circle.
+	 * @param polygonVertices
+	 *            - a list of all the vertex points used to form the polygon.
+	 */
+	private void drawSpokes(Graphics2D g2, double diameter, List<Point> polygonVertices) {
+		double radius = diameter / 2;
+		Ellipse2D circumscribedCircle = new Ellipse2D.Double((PANEL_WIDTH / 2) - radius, (PANEL_HEIGHT / 2) - radius,
+				diameter, diameter);
+		Point2D circumcenter = new Point2D.Double(circumscribedCircle.getCenterX(), circumscribedCircle.getCenterY());
+		List<Line2D> spokes = new ArrayList<Line2D>();
+
+		g2.setColor(Color.BLACK);
+		for (Point p : polygonVertices) {
+			spokes.add(new Line2D.Double(p, circumcenter));
+			g2.draw(new Line2D.Double(p, circumcenter));
+		}
+
+		drawPips(g2, circumcenter, spokes);
+	}
+
+	/**
+	 * Draws dots/pips onto the spokes within the polygon.
+	 * 
+	 * @param g2
+	 *            - the graphics object to help draw the object.
+	 * @param circumcenter
+	 *            - the center of the circumscribed circle.
+	 * @param spokes
+	 *            - a list of lines from the center of the polygon to the
+	 *            vertices.
+	 */
+	private void drawPips(Graphics2D g2, Point2D circumcenter, List<Line2D> spokes) {
+		int pipDiameter = 6;
+		int pipRadius = (int) Math.round(pipDiameter / 2);
+		for (int i = 0; i < spokes.size(); i++) {
+			Point2D outerPoint = new Point2D.Double();
+			if (!spokes.get(i).getP1().equals(circumcenter)) {
+				outerPoint = spokes.get(i).getP1();
+			} else if (!spokes.get(i).getP2().equals(circumcenter)) {
+				outerPoint = spokes.get(i).getP2();
+			}
+			int x1 = (int) outerPoint.getX();
+			int y1 = (int) outerPoint.getY();
+			for (int j = 1; j <= MAX_LEVEL; j++) {
+				int x2 = x1 <= circumcenter.getX()
+						? (int) (circumcenter.getX() - j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL)
+						: (int) (circumcenter.getX() + j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL);
+
+				int y2 = y1 <= circumcenter.getY()
+						? y2 = (int) (circumcenter.getY() - j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL)
+						: (int) (circumcenter.getY() + j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL);
+				switch (i) {
+				case 0:
+					knowledgeCoord[j - 1] = new Point(x2, y2);
+					break;
+				case 1:
+					courageCoord[j - 1] = new Point(x2, y2);
+					break;
+				case 2:
+					diligenceCoord[j - 1] = new Point(x2, y2);
+					break;
+				case 3:
+					understandingCoord[j - 1] = new Point(x2, y2);
+					break;
+				case 4:
+					expressionCoord[j - 1] = new Point(x2, y2);
+					break;
+				default:
+					break;
+				}
+				g2.fillOval(x2 - pipRadius, y2 - pipRadius, pipDiameter, pipDiameter);
+			}
+		}
+
+		drawStatParameters(g2);
+	}
+
+	/**
+	 * Draws a semi-transparent polygon that visually represents characters
+	 * social quality levels.
+	 * 
+	 * @param g
+	 *            - the graphics object to help draw the object.
 	 */
 	private void drawStatParameters(Graphics g) {
 		Polygon parameterPolygon = new Polygon();
