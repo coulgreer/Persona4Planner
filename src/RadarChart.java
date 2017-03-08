@@ -18,11 +18,6 @@ public class RadarChart extends JPanel {
 	private static final int MAX_LEVEL = 5;
 
 	private int courageLvl, diligenceLvl, understandingLvl, expressionLvl, knowledgeLvl;
-	private Point[] courageCoord = new Point[MAX_LEVEL];
-	private Point[] diligenceCoord = new Point[MAX_LEVEL];
-	private Point[] understandingCoord = new Point[MAX_LEVEL];
-	private Point[] expressionCoord = new Point[MAX_LEVEL];
-	private Point[] knowledgeCoord = new Point[MAX_LEVEL];
 
 	public RadarChart(int courageLvl, int diligenceLvl, int understandingLvl, int expressionLvl, int knowledgeLvl) {
 		this.courageLvl = courageLvl;
@@ -84,8 +79,9 @@ public class RadarChart extends JPanel {
 	}
 
 	/**
-	 * Draws the radar chart. This includes the frame, spokes from the center to
-	 * a vertex, and pips on the spokes
+	 * Draws the radar chart. This includes the frame, the visual representation
+	 * of current levels, spokes from the center to a vertex, and pips on the
+	 * spokes
 	 * 
 	 * @param g
 	 *            - the graphics object to help draw the frame.
@@ -95,130 +91,136 @@ public class RadarChart extends JPanel {
 		double diameter = 175;
 		double radius = diameter / 2;
 
+		List<Point> polygonVertices = createPolygonVertices(radius);
+		List<Line2D> spokes = createSpokes(diameter, radius, polygonVertices);
+
+		List<List<Point>> pips = new ArrayList<List<Point>>();
+		List<Point> knowledgePips = createPips(diameter, radius, spokes.get(0));
+		pips.add(knowledgePips);
+		List<Point> couragePips = createPips(diameter, radius, spokes.get(1));
+		pips.add(couragePips);
+		List<Point> diligencePips = createPips(diameter, radius, spokes.get(2));
+		pips.add(diligencePips);
+		List<Point> understandingPips = createPips(diameter, radius, spokes.get(3));
+		pips.add(understandingPips);
+		List<Point> expressionPips = createPips(diameter, radius, spokes.get(4));
+		pips.add(expressionPips);
+
+		Polygon chartFrame = new Polygon();
+		for (Point p : polygonVertices) {
+			chartFrame.addPoint((int) p.getX(), (int) p.getY());
+		}
+		g2.setColor(new Color(255, 255, 255, 90));
+		g2.fillPolygon(chartFrame);
+		g2.setColor(Color.BLACK);
+		g2.drawPolygon(chartFrame);
+
+		Polygon parameterPolygon = new Polygon();
+		g.setColor(new Color(255, 174, 32));
+		parameterPolygon.addPoint(knowledgePips.get(knowledgeLvl - 1).x, knowledgePips.get(knowledgeLvl - 1).y);
+		parameterPolygon.addPoint(couragePips.get(courageLvl - 1).x, couragePips.get(courageLvl - 1).y);
+		parameterPolygon.addPoint(diligencePips.get(diligenceLvl - 1).x, diligencePips.get(diligenceLvl - 1).y);
+		parameterPolygon.addPoint(understandingPips.get(understandingLvl - 1).x,
+				understandingPips.get(understandingLvl - 1).y);
+		parameterPolygon.addPoint(expressionPips.get(expressionLvl - 1).x, expressionPips.get(expressionLvl - 1).y);
+		g.fillPolygon(parameterPolygon);
+
+		g2.setColor(Color.BLACK);
+		for (Line2D l2d : spokes) {
+			g2.draw(l2d);
+		}
+
+		for (List<Point> pts : pips) {
+			int pipDiameter = 6;
+			int pipRadius = (int) Math.round(pipDiameter / 2);
+			for (Point p : pts) {
+				g2.fillOval((int) p.getX() - pipRadius, (int) p.getY() - pipRadius, pipDiameter, pipDiameter);
+			}
+		}
+
+	}
+
+	/**
+	 * Calculates the vertices to make a regular polygon.
+	 * 
+	 * @param radius
+	 *            - the radius used for the circumscribed circle to determine
+	 *            the width of the polygon
+	 * @return returns a list of the vertices points
+	 */
+	private List<Point> createPolygonVertices(double radius) {
 		int numberOfSides = 5;
 		double theta = 2 * Math.PI / numberOfSides;
 		double rotation = Math.toRadians(198);
-		Polygon chartFrame = new Polygon();
 		List<Point> polygonVertices = new ArrayList<Point>();
 		for (int i = 0; i < numberOfSides; i++) {
 			int x = (int) Math.round(((PANEL_WIDTH / 2) + radius * Math.cos((i * theta) + rotation)));
 			int y = (int) Math.round(((PANEL_HEIGHT / 2) + radius * Math.sin((i * theta) + rotation)));
 
 			polygonVertices.add(new Point(x, y));
-			chartFrame.addPoint(x, y);
 		}
-		g2.setColor(new Color(255, 255, 255, 100));
-		g2.fillPolygon(chartFrame);
-		g2.setColor(Color.BLACK);
-		g2.drawPolygon(chartFrame);
-
-		drawSpokes(g2, diameter, polygonVertices);
+		return polygonVertices;
 	}
 
 	/**
-	 * Draws the lines from the center of the circumscribed circle to the
-	 * vertices of the inscribed polygon
+	 * Calculates the end points of the lines within a polygon
 	 * 
-	 * @param g2
-	 *            - the graphics object to help draw the object.
 	 * @param diameter
-	 *            - the width of the circumscribed circle.
+	 *            - the width of the circumscribed circle
+	 * @param radius
+	 *            - half the width of the circumscribed circle
 	 * @param polygonVertices
-	 *            - a list of all the vertex points used to form the polygon.
+	 *            - list of point objects derived from the polygon's vertices
+	 * @return returns a list of lines that stem from the center of the polygon
+	 *         to a vertex
 	 */
-	private void drawSpokes(Graphics2D g2, double diameter, List<Point> polygonVertices) {
-		double radius = diameter / 2;
+	private List<Line2D> createSpokes(double diameter, double radius, List<Point> polygonVertices) {
 		Ellipse2D circumscribedCircle = new Ellipse2D.Double((PANEL_WIDTH / 2) - radius, (PANEL_HEIGHT / 2) - radius,
 				diameter, diameter);
 		Point2D circumcenter = new Point2D.Double(circumscribedCircle.getCenterX(), circumscribedCircle.getCenterY());
 		List<Line2D> spokes = new ArrayList<Line2D>();
-
-		g2.setColor(Color.BLACK);
 		for (Point p : polygonVertices) {
 			spokes.add(new Line2D.Double(p, circumcenter));
-			g2.draw(new Line2D.Double(p, circumcenter));
 		}
-
-		drawPips(g2, circumcenter, spokes);
+		return spokes;
 	}
 
 	/**
-	 * Draws dots/pips onto the spokes within the polygon.
+	 * Calculates a value to find its place on a radar graph
 	 * 
-	 * @param g2
-	 *            - the graphics object to help draw the object.
-	 * @param circumcenter
-	 *            - the center of the circumscribed circle.
-	 * @param spokes
-	 *            - a list of lines from the center of the polygon to the
-	 *            vertices.
+	 * @param diameter
+	 *            - the width of the circumscribed circle
+	 * @param radius
+	 *            - half the width of the circumscribed circle
+	 * @param spoke
+	 *            - line object from the center to a vertex of a polygon object
+	 * @return returns a point object to visually represent data on a radar
+	 *         graph
 	 */
-	private void drawPips(Graphics2D g2, Point2D circumcenter, List<Line2D> spokes) {
-		int pipDiameter = 6;
-		int pipRadius = (int) Math.round(pipDiameter / 2);
-		for (int i = 0; i < spokes.size(); i++) {
-			Point2D outerPoint = new Point2D.Double();
-			if (!spokes.get(i).getP1().equals(circumcenter)) {
-				outerPoint = spokes.get(i).getP1();
-			} else if (!spokes.get(i).getP2().equals(circumcenter)) {
-				outerPoint = spokes.get(i).getP2();
-			}
-			int x1 = (int) outerPoint.getX();
-			int y1 = (int) outerPoint.getY();
-			for (int j = 1; j <= MAX_LEVEL; j++) {
-				int x2 = x1 <= circumcenter.getX()
-						? (int) (circumcenter.getX() - j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL)
-						: (int) (circumcenter.getX() + j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL);
-
-				int y2 = y1 <= circumcenter.getY()
-						? y2 = (int) (circumcenter.getY() - j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL)
-						: (int) (circumcenter.getY() + j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL);
-				switch (i) {
-				case 0:
-					knowledgeCoord[j - 1] = new Point(x2, y2);
-					break;
-				case 1:
-					courageCoord[j - 1] = new Point(x2, y2);
-					break;
-				case 2:
-					diligenceCoord[j - 1] = new Point(x2, y2);
-					break;
-				case 3:
-					understandingCoord[j - 1] = new Point(x2, y2);
-					break;
-				case 4:
-					expressionCoord[j - 1] = new Point(x2, y2);
-					break;
-				default:
-					break;
-				}
-				g2.fillOval(x2 - pipRadius, y2 - pipRadius, pipDiameter, pipDiameter);
-			}
+	private List<Point> createPips(double diameter, double radius, Line2D spoke) {
+		Ellipse2D circumscribedCircle = new Ellipse2D.Double((PANEL_WIDTH / 2) - radius, (PANEL_HEIGHT / 2) - radius,
+				diameter, diameter);
+		Point2D circumcenter = new Point2D.Double(circumscribedCircle.getCenterX(), circumscribedCircle.getCenterY());
+		List<Point> points = new ArrayList<Point>();
+		Point2D outerPoint = new Point2D.Double();
+		if (!spoke.getP1().equals(circumcenter)) {
+			outerPoint = spoke.getP1();
+		} else if (!spoke.getP2().equals(circumcenter)) {
+			outerPoint = spoke.getP2();
 		}
+		int x1 = (int) outerPoint.getX();
+		int y1 = (int) outerPoint.getY();
+		for (int j = 1; j <= MAX_LEVEL; j++) {
+			int x2 = x1 <= circumcenter.getX()
+					? (int) (circumcenter.getX() - j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL)
+					: (int) (circumcenter.getX() + j * Math.abs(x1 - circumcenter.getX()) / MAX_LEVEL);
 
-		drawStatParameters(g2);
-	}
-
-	/**
-	 * Draws a semi-transparent polygon that visually represents characters
-	 * social quality levels.
-	 * 
-	 * @param g
-	 *            - the graphics object to help draw the object.
-	 */
-	private void drawStatParameters(Graphics g) {
-		Polygon parameterPolygon = new Polygon();
-
-		g.setColor(new Color(255, 174, 32, 200));
-
-		parameterPolygon.addPoint(knowledgeCoord[knowledgeLvl - 1].x, knowledgeCoord[knowledgeLvl - 1].y);
-		parameterPolygon.addPoint(courageCoord[courageLvl - 1].x, courageCoord[courageLvl - 1].y);
-		parameterPolygon.addPoint(diligenceCoord[diligenceLvl - 1].x, diligenceCoord[diligenceLvl - 1].y);
-		parameterPolygon.addPoint(understandingCoord[understandingLvl - 1].x,
-				understandingCoord[understandingLvl - 1].y);
-		parameterPolygon.addPoint(expressionCoord[expressionLvl - 1].x, expressionCoord[expressionLvl - 1].y);
-
-		g.fillPolygon(parameterPolygon);
+			int y2 = y1 <= circumcenter.getY()
+					? y2 = (int) (circumcenter.getY() - j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL)
+					: (int) (circumcenter.getY() + j * Math.abs(y1 - circumcenter.getY()) / MAX_LEVEL);
+			points.add(new Point(x2, y2));
+		}
+		return points;
 	}
 
 	public static class RadarChartBuilder {
