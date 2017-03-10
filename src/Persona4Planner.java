@@ -29,7 +29,7 @@ public class Persona4Planner {
 
 	private JPanel cards;
 	private RadarChart statChart;
-	
+
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
 		statChart = new RadarChart.RadarChartBuilder() //
@@ -53,7 +53,9 @@ public class Persona4Planner {
 		statusCard.addComponentListener(new ComponentAdapter() {
 			@Override
 			public void componentHidden(ComponentEvent evt) {
-				statChart.updateParameters(); // Will be removed and updating will happen elsewhere when calendar is created
+				statChart.updateParameters(); // Will be removed and updating
+												// will happen elsewhere when
+												// calendar is created
 				statChart.repaint();
 			}
 		});
@@ -80,7 +82,7 @@ public class Persona4Planner {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cardLayout = (CardLayout) cards.getLayout();
 				cardLayout.show(cards, e.getActionCommand());
-				
+
 			}
 		});
 
