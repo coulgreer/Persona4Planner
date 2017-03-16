@@ -19,14 +19,14 @@ public class RadarChart extends JPanel {
 	private static final int PANEL_HEIGHT = 300;
 	private static final int MAX_LEVEL = 5;
 
-	private int courageLvl, diligenceLvl, understandingLvl, expressionLvl, knowledgeLvl;
+	private int field2Level, field3Level, field4Level, field5Level, field1Level;
 
-	public RadarChart(int courageLvl, int diligenceLvl, int understandingLvl, int expressionLvl, int knowledgeLvl) {
-		this.courageLvl = courageLvl;
-		this.diligenceLvl = diligenceLvl;
-		this.understandingLvl = understandingLvl;
-		this.expressionLvl = expressionLvl;
-		this.knowledgeLvl = knowledgeLvl;
+	public RadarChart(int field2Level, int field3Level, int field4Level, int field5Level, int field1Level) {
+		this.field2Level = field2Level;
+		this.field3Level = field3Level;
+		this.field4Level = field4Level;
+		this.field5Level = field5Level;
+		this.field1Level = field1Level;
 	}
 
 	public JPanel initComponents() {
@@ -52,11 +52,11 @@ public class RadarChart extends JPanel {
 	 * so that the values are updated dynamically using getters and setters
 	 */
 	public void updateParameters() {
-		this.courageLvl = 4;
-		this.diligenceLvl = 2;
-		this.understandingLvl = 3;
-		this.expressionLvl = 5;
-		this.knowledgeLvl = 3;
+		this.field2Level = 4;
+		this.field3Level = 2;
+		this.field4Level = 3;
+		this.field5Level = 5;
+		this.field1Level = 3;
 	}
 
 	private void drawRadarChart(Graphics g) {
@@ -71,16 +71,16 @@ public class RadarChart extends JPanel {
 		List<Line2D> spokes = createSpokes(circumcenter, polygonVertices);
 
 		List<List<Point2D>> pips = new ArrayList<List<Point2D>>();
-		List<Point2D> knowledgePips = createPips(circumcenter, spokes.get(0));
-		pips.add(knowledgePips);
-		List<Point2D> couragePips = createPips(circumcenter, spokes.get(1));
-		pips.add(couragePips);
-		List<Point2D> diligencePips = createPips(circumcenter, spokes.get(2));
-		pips.add(diligencePips);
-		List<Point2D> understandingPips = createPips(circumcenter, spokes.get(3));
-		pips.add(understandingPips);
-		List<Point2D> expressionPips = createPips(circumcenter, spokes.get(4));
-		pips.add(expressionPips);
+		List<Point2D> field1Pips = createPips(circumcenter, spokes.get(0));
+		pips.add(field1Pips);
+		List<Point2D> field2Pips = createPips(circumcenter, spokes.get(1));
+		pips.add(field2Pips);
+		List<Point2D> field3Pips = createPips(circumcenter, spokes.get(2));
+		pips.add(field3Pips);
+		List<Point2D> field4Pips = createPips(circumcenter, spokes.get(3));
+		pips.add(field4Pips);
+		List<Point2D> field5Pips = createPips(circumcenter, spokes.get(4));
+		pips.add(field5Pips);
 
 		drawCircularLabels(g2, labels);
 		drawPolygonFrameWithBackground(g2, polygonVertices);
@@ -93,23 +93,23 @@ public class RadarChart extends JPanel {
 	private void drawStatisticPolygon(Graphics2D g2, List<List<Point2D>> pips) {
 		g2.setColor(new Color(255, 174, 32));
 		Polygon statisticsPolygon = new Polygon();
-		List<Point2D> knowledgePips = pips.get(0);
-		List<Point2D> couragePips = pips.get(1);
-		List<Point2D> diligencePips = pips.get(2);
-		List<Point2D> understandingPips = pips.get(3);
-		List<Point2D> expressionPips = pips.get(4);
+		List<Point2D> field1Pips = pips.get(0);
+		List<Point2D> field2Pips = pips.get(1);
+		List<Point2D> field3Pips = pips.get(2);
+		List<Point2D> field4Pips = pips.get(3);
+		List<Point2D> field5Pips = pips.get(4);
 
-		Point2D knowledgeCoordinates = knowledgePips.get(knowledgeLvl - 1);
-		Point2D courageCoordinates = couragePips.get(courageLvl - 1);
-		Point2D diligenceCoordinates = diligencePips.get(diligenceLvl - 1);
-		Point2D understandingCoordinates = understandingPips.get(understandingLvl - 1);
-		Point2D expressionCoordinates = expressionPips.get(expressionLvl - 1);
+		Point2D field1Coordinates = field1Pips.get(field1Level - 1);
+		Point2D field2Coordinates = field2Pips.get(field2Level - 1);
+		Point2D field3Coordinates = field3Pips.get(field3Level - 1);
+		Point2D field4Coordinates = field4Pips.get(field4Level - 1);
+		Point2D field5Coordinates = field5Pips.get(field5Level - 1);
 
-		statisticsPolygon.addPoint((int) knowledgeCoordinates.getX(), (int) knowledgeCoordinates.getY());
-		statisticsPolygon.addPoint((int) courageCoordinates.getX(), (int) courageCoordinates.getY());
-		statisticsPolygon.addPoint((int) diligenceCoordinates.getX(), (int) diligenceCoordinates.getY());
-		statisticsPolygon.addPoint((int) understandingCoordinates.getX(), (int) understandingCoordinates.getY());
-		statisticsPolygon.addPoint((int) expressionCoordinates.getX(), (int) expressionCoordinates.getY());
+		statisticsPolygon.addPoint((int) field1Coordinates.getX(), (int) field1Coordinates.getY());
+		statisticsPolygon.addPoint((int) field2Coordinates.getX(), (int) field2Coordinates.getY());
+		statisticsPolygon.addPoint((int) field3Coordinates.getX(), (int) field3Coordinates.getY());
+		statisticsPolygon.addPoint((int) field4Coordinates.getX(), (int) field4Coordinates.getY());
+		statisticsPolygon.addPoint((int) field5Coordinates.getX(), (int) field5Coordinates.getY());
 		g2.fillPolygon(statisticsPolygon);
 	}
 
@@ -201,6 +201,18 @@ public class RadarChart extends JPanel {
 	}
 
 	private void drawCircularLabels(Graphics2D g2, List<Ellipse2D> labels) {
+		String fieldTitle1 = "Knowledge";
+		String fieldTitle2 = "Courage";
+		String fieldTitle3 = "Diligence";
+		String fieldTitle4 = "Understanding";
+		String fieldTitle5 = "Expression";
+
+		String[] titleSubtitles1 = { "Aware", "Informed", "Expert", "Professor", "Sage" };
+		String[] titleSubtitles2 = { "Average", "Reliable", "Brave", "Daring", "Heroic" };
+		String[] titleSubtitles3 = { "Callow", "Persistant", "Strong", "Persuasive", "Rock Solid" };
+		String[] titleSubtitles4 = { "Basic", "Kindly", "Generous", "Motherly", "Saintly" };
+		String[] titleSubtitles5 = { "Rough", "Eloquent", "Persuasive", "Touching", "Enthralling" };
+
 		for (int i = 0; i < labels.size(); i++) {
 			String title = "";
 			String subtitle = "";
@@ -209,112 +221,112 @@ public class RadarChart extends JPanel {
 			g2.setColor(new Color(255, 174, 32));
 			g2.fill(labels.get(i));
 
-			switch (i) {
-			case 0:
-				title = "Knowledge";
-				switch (knowledgeLvl) {
-				case 1:
-					subtitle = "Aware";
-					break;
-				case 2:
-					subtitle = "Informed";
-					break;
-				case 3:
-					subtitle = "Expert";
-					break;
-				case 4:
-					subtitle = "Professor";
-					break;
-				case 5:
-					subtitle = "Sage";
-					break;
-				default:
-					break;
-				}
-				break;
+			switch (i + 1) {
 			case 1:
-				title = "Courage";
-				switch (courageLvl) {
+				title = fieldTitle1;
+				switch (field1Level) {
 				case 1:
-					subtitle = "Average";
+					subtitle = titleSubtitles1[0];
 					break;
 				case 2:
-					subtitle = "Reliable";
+					subtitle = titleSubtitles1[1];
 					break;
 				case 3:
-					subtitle = "Brave";
+					subtitle = titleSubtitles1[2];
 					break;
 				case 4:
-					subtitle = "Daring";
+					subtitle = titleSubtitles1[3];
 					break;
 				case 5:
-					subtitle = "Heroic";
+					subtitle = titleSubtitles1[4];
 					break;
 				default:
 					break;
 				}
 				break;
 			case 2:
-				title = "Diligence";
-				switch (diligenceLvl) {
+				title = fieldTitle2;
+				switch (field2Level) {
 				case 1:
-					subtitle = "Callow";
+					subtitle = titleSubtitles2[0];
 					break;
 				case 2:
-					subtitle = "Persistent";
+					subtitle = titleSubtitles2[1];
 					break;
 				case 3:
-					subtitle = "Strong";
+					subtitle = titleSubtitles2[2];
 					break;
 				case 4:
-					subtitle = "Persuasive";
+					subtitle = titleSubtitles2[3];
 					break;
 				case 5:
-					subtitle = "Rock Solid";
+					subtitle = titleSubtitles2[4];
 					break;
 				default:
 					break;
 				}
 				break;
 			case 3:
-				title = "Understanding";
-				switch (understandingLvl) {
+				title = fieldTitle3;
+				switch (field3Level) {
 				case 1:
-					subtitle = "Basic";
+					subtitle = titleSubtitles3[0];
 					break;
 				case 2:
-					subtitle = "Kind";
+					subtitle = titleSubtitles3[1];
 					break;
 				case 3:
-					subtitle = "Generous";
+					subtitle = titleSubtitles3[2];
 					break;
 				case 4:
-					subtitle = "Motherly";
+					subtitle = titleSubtitles3[3];
 					break;
 				case 5:
-					subtitle = "Saintly";
+					subtitle = titleSubtitles3[4];
 					break;
 				default:
 					break;
 				}
 				break;
 			case 4:
-				title = "Expression";
-				switch (expressionLvl) {
+				title = fieldTitle4;
+				switch (field4Level) {
 				case 1:
-					subtitle = "Rough";
+					subtitle = titleSubtitles4[0];
 					break;
 				case 2:
-					subtitle = "Eloquent";
+					subtitle = titleSubtitles4[1];
 					break;
 				case 3:
-					subtitle = "Persuasice";
+					subtitle = titleSubtitles4[2];
 					break;
 				case 4:
-					subtitle = "Touching";
+					subtitle = titleSubtitles4[3];
 					break;
 				case 5:
-					subtitle = "Entrhralling";
+					subtitle = titleSubtitles4[4];
+					break;
+				default:
+					break;
+				}
+				break;
+			case 5:
+				title = fieldTitle5;
+				switch (field5Level) {
+				case 1:
+					subtitle = titleSubtitles5[0];
+					break;
+				case 2:
+					subtitle = titleSubtitles5[1];
+					break;
+				case 3:
+					subtitle = titleSubtitles5[2];
+					break;
+				case 4:
+					subtitle = titleSubtitles5[3];
+					break;
+				case 5:
+					subtitle = titleSubtitles5[4];
 					break;
 				default:
 					break;
@@ -382,35 +394,35 @@ public class RadarChart extends JPanel {
 	}
 
 	public static class RadarChartBuilder {
-		private int courageLvl, diligenceLvl, understandingLvl, expressionLvl, knowledgeLvl;
+		private int field2Level, field3Level, field4Level, field5Level, field1Level;
 
-		public RadarChartBuilder withCourageLevelOf(int courageLvl) {
-			this.courageLvl = courageLvl;
+		public RadarChartBuilder withField2LevelOf(int field2Level) {
+			this.field2Level = field2Level;
 			return this;
 		}
 
-		public RadarChartBuilder withDiligenceLevelOf(int diligenceLvl) {
-			this.diligenceLvl = diligenceLvl;
+		public RadarChartBuilder withField3LevelOf(int field3Level) {
+			this.field3Level = field3Level;
 			return this;
 		}
 
-		public RadarChartBuilder withUnderstandingLevelOf(int understandingLvl) {
-			this.understandingLvl = understandingLvl;
+		public RadarChartBuilder withField4LevelOf(int field4Level) {
+			this.field4Level = field4Level;
 			return this;
 		}
 
-		public RadarChartBuilder withExpressionLevelOf(int expressionLvl) {
-			this.expressionLvl = expressionLvl;
+		public RadarChartBuilder withField5LevelOf(int field5Level) {
+			this.field5Level = field5Level;
 			return this;
 		}
 
-		public RadarChartBuilder withKnowledgeLevelOf(int knowledgeLvl) {
-			this.knowledgeLvl = knowledgeLvl;
+		public RadarChartBuilder withField1LevelOf(int field1Level) {
+			this.field1Level = field1Level;
 			return this;
 		}
 
 		public RadarChart createRadarChart() {
-			return new RadarChart(courageLvl, diligenceLvl, understandingLvl, expressionLvl, knowledgeLvl);
+			return new RadarChart(field2Level, field3Level, field4Level, field5Level, field1Level);
 		}
 
 	}

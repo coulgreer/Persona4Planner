@@ -33,11 +33,11 @@ public class Persona4Planner {
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
 		statChart = new RadarChart.RadarChartBuilder() //
-				.withCourageLevelOf(DEFAUL_LEVEL) //
-				.withDiligenceLevelOf(DEFAUL_LEVEL) //
-				.withUnderstandingLevelOf(DEFAUL_LEVEL) //
-				.withExpressionLevelOf(DEFAUL_LEVEL) //
-				.withKnowledgeLevelOf(DEFAUL_LEVEL) //
+				.withField2LevelOf(DEFAUL_LEVEL) //
+				.withField3LevelOf(DEFAUL_LEVEL) //
+				.withField4LevelOf(DEFAUL_LEVEL) //
+				.withField5LevelOf(DEFAUL_LEVEL) //
+				.withField1LevelOf(DEFAUL_LEVEL) //
 				.createRadarChart();
 
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
