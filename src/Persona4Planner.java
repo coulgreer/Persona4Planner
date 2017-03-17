@@ -28,17 +28,19 @@ public class Persona4Planner {
 	private final static int DEFAUL_LEVEL = 1;
 
 	private JPanel cards;
-	private RadarChart statChart;
+	private RadarChart radarChart;
+	private BarChart barChart;
 
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
-		statChart = new RadarChart.RadarChartBuilder() //
+		radarChart = new RadarChart.RadarChartBuilder() //
 				.withField2LevelOf(DEFAUL_LEVEL) //
 				.withField3LevelOf(DEFAUL_LEVEL) //
 				.withField4LevelOf(DEFAUL_LEVEL) //
 				.withField5LevelOf(DEFAUL_LEVEL) //
 				.withField1LevelOf(DEFAUL_LEVEL) //
 				.createRadarChart();
+		barChart = new BarChart();
 
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
 		navigationPanel.setPreferredSize(new Dimension(DEFAULT_NAVBAR_WIDTH, DEFAULT_SCREEN_HEIGHT));
@@ -49,14 +51,15 @@ public class Persona4Planner {
 
 		JPanel statusCard = new JPanel();
 		statusCard.setBackground(new Color(254, 234, 44));
-		statusCard.add(statChart.initComponents());
+		statusCard.add(radarChart.initComponents(), BorderLayout.NORTH);
+		statusCard.add(barChart.initComponents(), BorderLayout.SOUTH);
 		statusCard.addComponentListener(new ComponentAdapter() {
 			@Override
 			public void componentHidden(ComponentEvent evt) {
-				statChart.updateParameters(); // Will be removed and updating
+				radarChart.updateParameters(); // Will be removed and updating
 												// will happen elsewhere when
 												// calendar is created
-				statChart.repaint();
+				radarChart.repaint();
 			}
 		});
 
