@@ -60,6 +60,11 @@ public class Persona4Planner {
 												// will happen elsewhere when
 												// calendar is created
 				radarChart.repaint();
+
+				barChart.updateParameters();// Will be removed and updating
+											// will happen elsewhere when
+											// calendar is created
+				barChart.repaint();
 			}
 		});
 

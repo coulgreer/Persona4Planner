@@ -13,8 +13,9 @@ import javax.swing.JScrollPane;
 
 public class BarChart extends JPanel {
 	public static final int DEFAULT_RANK = 0;
+	public static final int MAX_RANK = 10;
 
-	private List<SocialLink> socialLinks = new ArrayList<SocialLink>() {
+	private List<SocialLink> socialLinkList = new ArrayList<SocialLink>() {
 		{
 			add(new SocialLink("Fool", "Investigation Team", DEFAULT_RANK));
 			add(new SocialLink("Magician", "Yosuke Hanamura", DEFAULT_RANK));
@@ -57,8 +58,8 @@ public class BarChart extends JPanel {
 				int rank;
 				String arcana;
 				String name;
-				for (int i = 0; i < 10; i++) {
-					SocialLink socialLink = socialLinks.get(i);
+				for (int i = 0; i < socialLinkList.size(); i++) {
+					SocialLink socialLink = socialLinkList.get(i);
 					rank = socialLink.getSocialRank();
 					arcana = socialLink.getArcana();
 					name = socialLink.getName();
@@ -68,23 +69,38 @@ public class BarChart extends JPanel {
 					g2.drawString("Rank " + rank, bufferX, metrics.getHeight() + sectionHeight * i);
 					g2.drawString(arcana, bufferX, (metrics.getHeight() * 2) + sectionHeight * i);
 
-					double x = metrics.stringWidth(findLongestString()) + (bufferX * 2);
-					double y = bufferY + sectionHeight * i;
-					double w = getParent().getWidth() - x - bufferX;
-					double h = metrics.getAscent() + metrics.getLeading();
-					Rectangle2D outline = new Rectangle2D.Double(x, y, w, h);
+					double outlineX = metrics.stringWidth(findLongestString()) + (bufferX * 2);
+					double outlineY = bufferY + sectionHeight * i;
+					double outlineWidth = getParent().getWidth() - outlineX - bufferX;
+					double outlineHeight = metrics.getAscent() + metrics.getLeading();
+					Rectangle2D outline = new Rectangle2D.Double(outlineX, outlineY, outlineWidth, outlineHeight);
+					g2.setColor(Color.BLACK);
 					g2.draw(outline);
 
+					for (int j = 0; j < rank; j++) {
+						double pipWidth = outlineWidth / MAX_RANK;
+						double pipHeight = outlineHeight;
+						double pipX = outlineX + (pipWidth * j);
+						double pipY = outlineY;
+						Rectangle2D pip = new Rectangle2D.Double(pipX, pipY, pipWidth, pipHeight);
+						g2.setColor(Color.ORANGE);
+						g2.fill(pip);
+						g2.setColor(Color.BLACK);
+						g2.draw(pip);
+					}
+
+					g2.setColor(Color.BLACK);
 					g2.drawString(name, metrics.stringWidth(findLongestString()) + (bufferX * 2),
 							(metrics.getHeight() * 2) + sectionHeight * i);
 				}
 
 			}
 
+			// Make height programmatically
 			@Override
 			public Dimension getPreferredSize() {
 				int width = getParent().getWidth();
-				int height = 800;
+				int height = 1600;
 				return new Dimension(width, height);
 			}
 		};
@@ -96,17 +112,23 @@ public class BarChart extends JPanel {
 		return scrollPane;
 	}
 
+	public void updateParameters() {
+		for (int i = 0; i < 4; i++) {
+			socialLinkList.get(1).increaseSocialRank();
+		}
+	}
+
 	// Investigate for flexibility
 	private String findLongestString() {
 		String longestString = "Rank 99";
 		int longestStringLength = 0;
-		for(SocialLink sl : socialLinks){
-			if(sl.getArcana().length() > longestStringLength) {
+		for (SocialLink sl : socialLinkList) {
+			if (sl.getArcana().length() > longestStringLength) {
 				longestStringLength = sl.getArcana().length();
 				longestString = sl.getArcana();
 			}
 		}
-		return longestString;
+		return longestString + "/t";
 	}
 
 	public class SocialLink {
