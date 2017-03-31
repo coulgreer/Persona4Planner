@@ -50,7 +50,7 @@ public class Persona4Planner {
 		buildNavigationButton(CALENDAR_SCREEN, navigationPanel);
 
 		JPanel statusCard = new JPanel();
-		statusCard.setBackground(new Color(254, 234, 44));
+		statusCard.setBackground(new Color(255, 232, 44));
 		statusCard.add(radarChart.initComponents(), BorderLayout.NORTH);
 		statusCard.add(barChart.initComponents(), BorderLayout.SOUTH);
 		statusCard.addComponentListener(new ComponentAdapter() {

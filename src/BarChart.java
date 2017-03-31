@@ -5,6 +5,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
+import java.awt.geom.RoundRectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +13,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 public class BarChart extends JPanel {
-	public static final int DEFAULT_RANK = 0;
-	public static final int MAX_RANK = 10;
+	private static final int DEFAULT_RANK = 0;
+	private static final int MAX_RANK = 10;
+	private static final Color DARK_ORANGE = new Color(236, 116, 3);
+	private static final Color LIGHT_YELLOW = new Color(255, 255, 129);
 
 	private List<SocialLink> socialLinkList = new ArrayList<SocialLink>() {
 		{
@@ -46,61 +49,77 @@ public class BarChart extends JPanel {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				super.setBackground(new Color(254, 234, 44));
+				super.setBackground(LIGHT_YELLOW);
 
-				JPanel stat = new JPanel();
 				Graphics2D g2 = (Graphics2D) g;
-				Font font = new Font("Arial", Font.BOLD, 21);
-				FontMetrics metrics = g2.getFontMetrics(font);
-				int bufferX = 10;
-				int bufferY = 10;
+				int horizontalBuffer = 10;
+				int verticalBuffer = 10;
+				Font rankFont = new Font("Comic Sans MS", Font.BOLD, 21);
+				Font arcanaFont = new Font("Monospaced", Font.BOLD, 19);
+				Font nameFont = new Font("Arial", Font.BOLD, 21);
+				FontMetrics rankMetrics = g2.getFontMetrics(rankFont);
+				FontMetrics arcanaMetrics = g2.getFontMetrics(arcanaFont);
+				FontMetrics nameMetrics = g2.getFontMetrics(nameFont);
+				List<String> arcanaList = new ArrayList<String>() {
+					{
+						for (SocialLink sl : socialLinkList) {
+							add(sl.getArcana());
+						}
+					}
+				};
 
 				int rank;
 				String arcana;
 				String name;
 				for (int i = 0; i < socialLinkList.size(); i++) {
+					int column1Width = rankMetrics.stringWidth("Rank " + MAX_RANK) > arcanaMetrics
+							.stringWidth(findLongestString(arcanaList)) ? rankMetrics.stringWidth("Rank " + MAX_RANK)
+									: arcanaMetrics.stringWidth(findLongestString(arcanaList));
+					int column2Width = getParent().getWidth() - column1Width - (horizontalBuffer * 2);
+					int row1Height = rankMetrics.getAscent() + verticalBuffer * 2;
+					int row2Height = arcanaMetrics.getHeight() > nameMetrics.getHeight()
+							? arcanaMetrics.getAscent() + arcanaMetrics.getLeading()
+							: nameMetrics.getAscent() + nameMetrics.getLeading();
+					int sectionHeight = row1Height + row2Height + (verticalBuffer * 3);
+					int x1 = horizontalBuffer;
+					int y1 = verticalBuffer + (sectionHeight * i);
+					int x2 = column1Width + horizontalBuffer;
+					int y2 = row1Height + (sectionHeight * i);
+					double backgroundX = x1;
+					double backgroundY = y2;
+					double backgroundWidth = column1Width - horizontalBuffer;
+					double backgroundHeight = row2Height + verticalBuffer - 3;
+					double backgroundArcWidth = 10;
+					double backgroundArcHeight = 10;
+					double outlineX = x2;
+					double outlineY = y1;
+					double outlineWidth = column2Width - horizontalBuffer;
+					double outlineHeight = row1Height - verticalBuffer * 2;
 					SocialLink socialLink = socialLinkList.get(i);
 					rank = socialLink.getSocialRank();
 					arcana = socialLink.getArcana();
 					name = socialLink.getName();
-					int sectionHeight = metrics.getHeight() * 3;
 
-					g2.setFont(font);
-					g2.drawString("Rank " + rank, bufferX, metrics.getHeight() + sectionHeight * i);
-					g2.drawString(arcana, bufferX, (metrics.getHeight() * 2) + sectionHeight * i);
+					drawRank(g2, rankMetrics, x1, y1, rank);
+					drawArcana(g2, arcanaMetrics, backgroundX, backgroundY, backgroundWidth, backgroundHeight,
+							backgroundArcWidth, backgroundArcHeight, arcana);
+					drawBars(g2, outlineX, outlineY, outlineWidth, outlineHeight, rank);
 
-					double outlineX = metrics.stringWidth(findLongestString()) + (bufferX * 2);
-					double outlineY = bufferY + sectionHeight * i;
-					double outlineWidth = getParent().getWidth() - outlineX - bufferX;
-					double outlineHeight = metrics.getAscent() + metrics.getLeading();
-					Rectangle2D outline = new Rectangle2D.Double(outlineX, outlineY, outlineWidth, outlineHeight);
-					g2.setColor(Color.BLACK);
-					g2.draw(outline);
+					drawName(g2, nameMetrics, x2, y2, name);
 
-					for (int j = 0; j < rank; j++) {
-						double pipWidth = outlineWidth / MAX_RANK;
-						double pipHeight = outlineHeight;
-						double pipX = outlineX + (pipWidth * j);
-						double pipY = outlineY;
-						Rectangle2D pip = new Rectangle2D.Double(pipX, pipY, pipWidth, pipHeight);
-						g2.setColor(Color.ORANGE);
-						g2.fill(pip);
-						g2.setColor(Color.BLACK);
-						g2.draw(pip);
-					}
-
-					g2.setColor(Color.BLACK);
-					g2.drawString(name, metrics.stringWidth(findLongestString()) + (bufferX * 2),
-							(metrics.getHeight() * 2) + sectionHeight * i);
+					// Drawing divider
+					g2.setColor(DARK_ORANGE);
+					g2.drawLine(x1, sectionHeight + (sectionHeight * i), getParent().getWidth() - horizontalBuffer * 2,
+							sectionHeight + (sectionHeight * i));
 				}
 
 			}
 
-			// Make height programmatically
+			// Adjust height programmatically if possible
 			@Override
 			public Dimension getPreferredSize() {
 				int width = getParent().getWidth();
-				int height = 1600;
+				int height = 1970;
 				return new Dimension(width, height);
 			}
 		};
@@ -118,14 +137,60 @@ public class BarChart extends JPanel {
 		}
 	}
 
+	private void drawRank(Graphics2D g2, FontMetrics fontMetrics, int x, int y, int rank) {
+		g2.setColor(DARK_ORANGE);
+		g2.setFont(fontMetrics.getFont());
+		g2.drawString("Rank " + rank, x, fontMetrics.getAscent() + y);
+	}
+
+	private void drawArcana(Graphics2D g2, FontMetrics fontMetrics, double x, double y, double width, double height,
+			double arcWidth, double arcHeight, String arcana) {
+		RoundRectangle2D cellBackground = new RoundRectangle2D.Double(x, y, width, height, arcWidth, arcHeight);
+		g2.setColor(DARK_ORANGE);
+		g2.fill(cellBackground);
+
+		g2.setColor(LIGHT_YELLOW);
+		g2.setFont(fontMetrics.getFont());
+		g2.drawString(arcana, (int) Math.round((x + width / 2 - fontMetrics.stringWidth(arcana) / 2)),
+				(int) Math.round((y + height) - (height - fontMetrics.getDescent()) / 2));
+	}
+
+	private void drawBars(Graphics2D g2, double outlineX, double outlineY, double outlineWidth, double outlineHeight,
+			int rank) {
+		Rectangle2D outline = new Rectangle2D.Double(outlineX, outlineY, outlineWidth, outlineHeight);
+		g2.setColor(DARK_ORANGE);
+		g2.fill(outline);
+		g2.setColor(Color.BLACK);
+		g2.draw(outline);
+
+		// Drawing pips (2,1)
+		for (int j = 0; j < rank; j++) {
+			double pipWidth = outline.getWidth() / MAX_RANK - 1;
+			double pipHeight = outline.getHeight() - 10;
+			double pipX = outline.getX() + 6 + (pipWidth * j);
+			double pipY = outline.getY() + 5;
+			Rectangle2D pip = new Rectangle2D.Double(pipX, pipY, pipWidth, pipHeight);
+			g2.setColor(LIGHT_YELLOW);
+			g2.fill(pip);
+			g2.setColor(DARK_ORANGE);
+			g2.draw(pip);
+		}
+	}
+
+	private void drawName(Graphics2D g2, FontMetrics fontMetrics, int x, int y, String name) {
+		g2.setFont(fontMetrics.getFont());
+		g2.setColor(DARK_ORANGE);
+		g2.drawString(name, x, fontMetrics.getAscent() + y);
+	}
+
 	// Investigate for flexibility
-	private String findLongestString() {
-		String longestString = "Rank 99";
+	private String findLongestString(List<String> list) {
+		String longestString = "";
 		int longestStringLength = 0;
-		for (SocialLink sl : socialLinkList) {
-			if (sl.getArcana().length() > longestStringLength) {
-				longestStringLength = sl.getArcana().length();
-				longestString = sl.getArcana();
+		for (String str : list) {
+			if (str.length() > longestStringLength) {
+				longestStringLength = str.length();
+				longestString = str;
 			}
 		}
 		return longestString + "/t";
@@ -155,11 +220,15 @@ public class BarChart extends JPanel {
 		}
 
 		public void increaseSocialRank() {
-			socialRank++;
+			if (socialRank < 10) {
+				socialRank++;
+			}
 		}
 
 		public void decreaseSocialRank() {
-			socialRank--;
+			if (socialRank > 0) {
+				socialRank--;
+			}
 		}
 	}
 }

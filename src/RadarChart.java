@@ -18,6 +18,7 @@ public class RadarChart extends JPanel {
 	private static final int PANEL_WIDTH = 300;
 	private static final int PANEL_HEIGHT = 300;
 	private static final int MAX_LEVEL = 5;
+	private static final Color ORANGE = new Color(255, 158, 7);
 
 	private int field2Level, field3Level, field4Level, field5Level, field1Level;
 
@@ -91,7 +92,7 @@ public class RadarChart extends JPanel {
 	}
 
 	private void drawStatisticPolygon(Graphics2D g2, List<List<Point2D>> pips) {
-		g2.setColor(new Color(255, 174, 32));
+		g2.setColor(ORANGE);
 		Polygon statisticsPolygon = new Polygon();
 		List<Point2D> field1Pips = pips.get(0);
 		List<Point2D> field2Pips = pips.get(1);
@@ -218,7 +219,7 @@ public class RadarChart extends JPanel {
 			String subtitle = "";
 			Ellipse2D e = labels.get(i);
 
-			g2.setColor(new Color(255, 174, 32));
+			g2.setColor(ORANGE);
 			g2.fill(labels.get(i));
 
 			switch (i + 1) {
