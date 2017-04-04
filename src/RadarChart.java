@@ -15,14 +15,15 @@ import java.util.List;
 import javax.swing.JPanel;
 
 public class RadarChart extends JPanel {
-	private static final int PANEL_WIDTH = 300;
-	private static final int PANEL_HEIGHT = 300;
 	private static final int MAX_LEVEL = 5;
 	private static final Color ORANGE = new Color(255, 158, 7);
 
 	private int field2Level, field3Level, field4Level, field5Level, field1Level;
+	private int width, height;
 
-	public RadarChart(int field2Level, int field3Level, int field4Level, int field5Level, int field1Level) {
+	public RadarChart(int width, int height, int field2Level, int field3Level, int field4Level, int field5Level, int field1Level) {
+		this.width = width;
+		this.height = height;
 		this.field2Level = field2Level;
 		this.field3Level = field3Level;
 		this.field4Level = field4Level;
@@ -41,7 +42,7 @@ public class RadarChart extends JPanel {
 
 			@Override
 			public Dimension getPreferredSize() {
-				return new Dimension(PANEL_WIDTH, PANEL_HEIGHT);
+				return new Dimension(width, height);
 			}
 		};
 
@@ -63,8 +64,8 @@ public class RadarChart extends JPanel {
 	private void drawRadarChart(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
 		double diameter = 175;
-		double x = (PANEL_WIDTH / 2);
-		double y = (PANEL_HEIGHT / 2);
+		double x = (width / 2);
+		double y = (height / 2);
 
 		Point2D circumcenter = findCenter(x, y, diameter);
 		List<Point> polygonVertices = createPolygonVertices(x, y, diameter);
@@ -116,7 +117,7 @@ public class RadarChart extends JPanel {
 
 	private Point2D findCenter(double x, double y, double diameter) {
 		double radius = diameter / 2;
-		Ellipse2D circumscribedCircle = new Ellipse2D.Double((PANEL_WIDTH / 2) - radius, (PANEL_HEIGHT / 2) - radius,
+		Ellipse2D circumscribedCircle = new Ellipse2D.Double((width / 2) - radius, (height / 2) - radius,
 				diameter, diameter);
 		Point2D circumcenter = new Point2D.Double(circumscribedCircle.getCenterX(), circumscribedCircle.getCenterY());
 		return circumcenter;
@@ -396,9 +397,20 @@ public class RadarChart extends JPanel {
 
 	public static class RadarChartBuilder {
 		private int field2Level, field3Level, field4Level, field5Level, field1Level;
+		private int width, height;
 
 		public RadarChartBuilder withField2LevelOf(int field2Level) {
 			this.field2Level = field2Level;
+			return this;
+		}
+		
+		public RadarChartBuilder withWidth(int width) {
+			this.width = width;
+			return this;
+		}
+
+		public RadarChartBuilder withHeight(int height) {
+			this.height = height;
 			return this;
 		}
 
@@ -423,7 +435,7 @@ public class RadarChart extends JPanel {
 		}
 
 		public RadarChart createRadarChart() {
-			return new RadarChart(field2Level, field3Level, field4Level, field5Level, field1Level);
+			return new RadarChart(width, height, field2Level, field3Level, field4Level, field5Level, field1Level);
 		}
 
 	}

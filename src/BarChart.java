@@ -4,20 +4,31 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 
 public class BarChart extends JPanel {
 	private static final int DEFAULT_RANK = 0;
 	private static final int MAX_RANK = 10;
 	private static final Color DARK_ORANGE = new Color(236, 116, 3);
+	private static final Color DARK_YELLOW = new Color(230, 230, 116);
 	private static final Color LIGHT_YELLOW = new Color(255, 255, 129);
 
+	private int width;
+	private int height;
 	private List<SocialLink> socialLinkList = new ArrayList<SocialLink>() {
 		{
 			add(new SocialLink("Fool", "Investigation Team", DEFAULT_RANK));
@@ -44,16 +55,23 @@ public class BarChart extends JPanel {
 		}
 	};
 
+	public BarChart(Dimension d) {
+		this.width = d.width;
+		this.height = d.height;
+	}
+
 	public JScrollPane initComponents() {
-		JPanel pane = new JPanel() {
+		JPanel socialLinkPanel = new JPanel() {
+			int sectionHeight;
+			int horizontalBuffer = 10;
+			int verticalBuffer = 10;
+
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
 				super.setBackground(LIGHT_YELLOW);
 
 				Graphics2D g2 = (Graphics2D) g;
-				int horizontalBuffer = 10;
-				int verticalBuffer = 10;
 				Font rankFont = new Font("Comic Sans MS", Font.BOLD, 21);
 				Font arcanaFont = new Font("Monospaced", Font.BOLD, 19);
 				Font nameFont = new Font("Arial", Font.BOLD, 21);
@@ -80,7 +98,6 @@ public class BarChart extends JPanel {
 					int row2Height = arcanaMetrics.getHeight() > nameMetrics.getHeight()
 							? arcanaMetrics.getAscent() + arcanaMetrics.getLeading()
 							: nameMetrics.getAscent() + nameMetrics.getLeading();
-					int sectionHeight = row1Height + row2Height + (verticalBuffer * 3);
 					int x1 = horizontalBuffer;
 					int y1 = verticalBuffer + (sectionHeight * i);
 					int x2 = column1Width + horizontalBuffer;
@@ -99,12 +116,12 @@ public class BarChart extends JPanel {
 					rank = socialLink.getSocialRank();
 					arcana = socialLink.getArcana();
 					name = socialLink.getName();
+					sectionHeight = row1Height + row2Height + (verticalBuffer * 3);
 
 					drawRank(g2, rankMetrics, x1, y1, rank);
 					drawArcana(g2, arcanaMetrics, backgroundX, backgroundY, backgroundWidth, backgroundHeight,
 							backgroundArcWidth, backgroundArcHeight, arcana);
 					drawBars(g2, outlineX, outlineY, outlineWidth, outlineHeight, rank);
-
 					drawName(g2, nameMetrics, x2, y2, name);
 
 					// Drawing divider
@@ -115,20 +132,23 @@ public class BarChart extends JPanel {
 
 			}
 
-			// Adjust height programmatically if possible
 			@Override
 			public Dimension getPreferredSize() {
 				int width = getParent().getWidth();
-				int height = 1970;
+				int height = sectionHeight * socialLinkList.size();
 				return new Dimension(width, height);
 			}
 		};
 
-		JScrollPane scrollPane = new JScrollPane(pane);
-		scrollPane.setPreferredSize(new Dimension(800, 400));
-		scrollPane.getViewport().setOpaque(false);
+		JScrollPane statScrollPane = new JScrollPane(socialLinkPanel);
+		statScrollPane.setPreferredSize(new Dimension(width - 100, height - 75));
+		statScrollPane.getViewport().setOpaque(false);
 
-		return scrollPane;
+		JScrollBar statScrollBar = statScrollPane.getVerticalScrollBar();
+		statScrollBar.setPreferredSize(new Dimension(18, Integer.MAX_VALUE));
+		statScrollBar.setUI(new MyScrollBarUI());
+
+		return statScrollPane;
 	}
 
 	public void updateParameters() {
@@ -163,7 +183,6 @@ public class BarChart extends JPanel {
 		g2.setColor(Color.BLACK);
 		g2.draw(outline);
 
-		// Drawing pips (2,1)
 		for (int j = 0; j < rank; j++) {
 			double pipWidth = outline.getWidth() / MAX_RANK - 1;
 			double pipHeight = outline.getHeight() - 10;
@@ -228,6 +247,94 @@ public class BarChart extends JPanel {
 		public void decreaseSocialRank() {
 			if (socialRank > 0) {
 				socialRank--;
+			}
+		}
+	}
+
+	class MyScrollBarUI extends BasicScrollBarUI {
+		private final Dimension d = new Dimension();
+		private ImageIcon downArrow, upArrow, leftArrow, rightArrow;
+
+		public MyScrollBarUI() {
+			upArrow = new ImageIcon("images/arrow-up-icon.png");
+			downArrow = new ImageIcon("images/arrow-down-icon.png");
+			rightArrow = new ImageIcon("images/arrow-right-icon.png");
+			leftArrow = new ImageIcon("images/arrow-left-icon.png");
+		}
+
+		@Override
+		protected JButton createDecreaseButton(int orientation) {
+			JButton decreaseButton = new JButton(getAppropriateIcon(orientation)) {
+				@Override
+				public Dimension getPreferredSize() {
+					return new Dimension(22, 22);
+				}
+			};
+			decreaseButton.setBackground(Color.BLACK);
+			decreaseButton.setBorderPainted(false);
+			decreaseButton.setFocusPainted(false);
+			return decreaseButton;
+		}
+
+		@Override
+		protected JButton createIncreaseButton(int orientation) {
+			JButton increaseButton = new JButton(getAppropriateIcon(orientation)) {
+				@Override
+				public Dimension getPreferredSize() {
+					return new Dimension(22, 22);
+				}
+			};
+			increaseButton.setBackground(Color.BLACK);
+			increaseButton.setBorderPainted(false);
+			increaseButton.setFocusPainted(false);
+			return increaseButton;
+		}
+
+		@Override
+		protected void paintTrack(Graphics g, JComponent c, Rectangle r) {
+			Graphics2D g2 = (Graphics2D) g.create();
+			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			g2.setPaint(Color.BLACK);
+			g2.fillRect(r.x, r.y, r.width, r.height);
+		}
+
+		@Override
+		protected void paintThumb(Graphics g, JComponent c, Rectangle r) {
+			Graphics2D g2 = (Graphics2D) g.create();
+			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			Color color = null;
+			JScrollBar sb = (JScrollBar) c;
+			if (!sb.isEnabled() || r.width > r.height) {
+				return;
+			} else if (isDragging) {
+				color = DARK_YELLOW;
+			} else if (isThumbRollover()) {
+				color = LIGHT_YELLOW;
+			} else {
+				color = LIGHT_YELLOW;
+			}
+			g2.setPaint(color);
+			g2.fillRoundRect(r.x - ((int) Math.round((r.width - 8) / 2.0)) + (int) Math.round(r.width / 2.0), r.y,
+					r.width - 8, r.height, 10, 10);
+			g2.dispose();
+		}
+
+		@Override
+		protected void setThumbBounds(int x, int y, int width, int height) {
+			super.setThumbBounds(x, y, width, height);
+			scrollbar.repaint();
+		}
+
+		private ImageIcon getAppropriateIcon(int orientation) {
+			switch (orientation) {
+			case SwingConstants.SOUTH:
+				return downArrow;
+			case SwingConstants.NORTH:
+				return upArrow;
+			case SwingConstants.EAST:
+				return rightArrow;
+			default:
+				return leftArrow;
 			}
 		}
 	}

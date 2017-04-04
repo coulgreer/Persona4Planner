@@ -14,6 +14,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 public class Persona4Planner {
 	private final static String STATUS_SCREEN = "Status Screen";
@@ -33,21 +34,28 @@ public class Persona4Planner {
 
 	public void addComponentToPane(Container panel) {
 		JPanel navigationPanel = new JPanel();
-		radarChart = new RadarChart.RadarChartBuilder() //
-				.withField2LevelOf(DEFAUL_LEVEL) //
-				.withField3LevelOf(DEFAUL_LEVEL) //
-				.withField4LevelOf(DEFAUL_LEVEL) //
-				.withField5LevelOf(DEFAUL_LEVEL) //
-				.withField1LevelOf(DEFAUL_LEVEL) //
-				.createRadarChart();
-		barChart = new BarChart();
-
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
 		navigationPanel.setPreferredSize(new Dimension(DEFAULT_NAVBAR_WIDTH, DEFAULT_SCREEN_HEIGHT));
 		navigationPanel.setBackground(new Color(255, 174, 32));
 		navigationPanel.add(Box.createRigidArea(new Dimension(0, 5)));
 		buildNavigationButton(STATUS_SCREEN, navigationPanel);
 		buildNavigationButton(CALENDAR_SCREEN, navigationPanel);
+
+		int radarChartWidth = DEFAULT_CARD_WIDTH;
+		int radarChartHeight = (int) Math.round(DEFAULT_SCREEN_HEIGHT * .375);
+		radarChart = new RadarChart.RadarChartBuilder() //
+				.withWidth(radarChartWidth) //
+				.withHeight(radarChartHeight) //
+				.withField2LevelOf(DEFAUL_LEVEL) //
+				.withField3LevelOf(DEFAUL_LEVEL) //
+				.withField4LevelOf(DEFAUL_LEVEL) //
+				.withField5LevelOf(DEFAUL_LEVEL) //
+				.withField1LevelOf(DEFAUL_LEVEL) //
+				.createRadarChart();
+
+		int barChartWidth = DEFAULT_CARD_WIDTH;
+		int barChartHeight = (int) Math.round(DEFAULT_SCREEN_HEIGHT * .625);
+		barChart = new BarChart(new Dimension(barChartWidth, barChartHeight));
 
 		JPanel statusCard = new JPanel();
 		statusCard.setBackground(new Color(255, 232, 44));
@@ -100,14 +108,19 @@ public class Persona4Planner {
 	}
 
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Persona 4 Planner");
-		frame.setSize(DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				JFrame frame = new JFrame("Persona 4 Planner");
+				frame.setSize(DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		Persona4Planner p4p = new Persona4Planner();
-		p4p.addComponentToPane(frame.getContentPane());
+				Persona4Planner p4p = new Persona4Planner();
+				p4p.addComponentToPane(frame.getContentPane());
 
-		frame.setVisible(true);
+				frame.setVisible(true);
+			}
+		});
+
 	}
 
 }
