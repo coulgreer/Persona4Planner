@@ -142,7 +142,7 @@ public class BarChart extends JPanel {
 
 		JScrollPane statScrollPane = new JScrollPane(socialLinkPanel);
 		statScrollPane.setPreferredSize(new Dimension(width - 100, height - 75));
-		statScrollPane.getViewport().setOpaque(false);
+		statScrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
 		JScrollBar statScrollBar = statScrollPane.getVerticalScrollBar();
 		statScrollBar.setPreferredSize(new Dimension(18, Integer.MAX_VALUE));
