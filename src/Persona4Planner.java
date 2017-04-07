@@ -19,6 +19,8 @@ import javax.swing.SwingUtilities;
 public class Persona4Planner {
 	private final static String STATUS_SCREEN = "Status Screen";
 	private final static String CALENDAR_SCREEN = "Calendar Screen";
+	private static final Color ORANGE = new Color(255, 158, 7);
+	private final static Color YELLOW = new Color(255, 232, 44);
 	private final static int DEFAULT_SCREEN_WIDTH = 1200;
 	private final static int DEFAULT_SCREEN_HEIGHT = 800;
 	private final static int DEFAULT_NAVBAR_WIDTH = (int) Math.round((DEFAULT_SCREEN_WIDTH * .25));
@@ -36,7 +38,7 @@ public class Persona4Planner {
 		JPanel navigationPanel = new JPanel();
 		navigationPanel.setLayout(new BoxLayout(navigationPanel, BoxLayout.Y_AXIS));
 		navigationPanel.setPreferredSize(new Dimension(DEFAULT_NAVBAR_WIDTH, DEFAULT_SCREEN_HEIGHT));
-		navigationPanel.setBackground(new Color(255, 174, 32));
+		navigationPanel.setBackground(ORANGE);
 		navigationPanel.add(Box.createRigidArea(new Dimension(0, 5)));
 		buildNavigationButton(STATUS_SCREEN, navigationPanel);
 		buildNavigationButton(CALENDAR_SCREEN, navigationPanel);
@@ -58,7 +60,7 @@ public class Persona4Planner {
 		barChart = new BarChart(new Dimension(barChartWidth, barChartHeight));
 
 		JPanel statusCard = new JPanel();
-		statusCard.setBackground(new Color(255, 232, 44));
+		statusCard.setBackground(YELLOW);
 		statusCard.add(radarChart.initComponents(), BorderLayout.NORTH);
 		statusCard.add(barChart.initComponents(), BorderLayout.SOUTH);
 		statusCard.addComponentListener(new ComponentAdapter() {
@@ -77,7 +79,7 @@ public class Persona4Planner {
 		});
 
 		JPanel calendarCard = new JPanel();
-		calendarCard.setBackground(new Color(254, 234, 44));
+		calendarCard.setBackground(YELLOW);
 
 		cards = new JPanel(new CardLayout());
 		cards.setPreferredSize(new Dimension(DEFAULT_CARD_WIDTH, DEFAULT_SCREEN_HEIGHT));
@@ -113,6 +115,7 @@ public class Persona4Planner {
 				JFrame frame = new JFrame("Persona 4 Planner");
 				frame.setSize(DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setResizable(false);
 
 				Persona4Planner p4p = new Persona4Planner();
 				p4p.addComponentToPane(frame.getContentPane());

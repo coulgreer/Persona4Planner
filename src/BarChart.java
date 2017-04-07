@@ -21,6 +21,10 @@ import javax.swing.SwingConstants;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
 public class BarChart extends JPanel {
+	private static final int HORIZONTAL_BUFFER = 10;
+	private static final int VERTICAL_BUFFER = 10;
+	private static final int PIP_HORIZONTAL_BUFFER = 6;
+	private static final int PIP_VERTICAL_BUFFER = 6;
 	private static final int DEFAULT_RANK = 0;
 	private static final int MAX_RANK = 10;
 	private static final Color DARK_ORANGE = new Color(236, 116, 3);
@@ -29,29 +33,48 @@ public class BarChart extends JPanel {
 
 	private int width;
 	private int height;
+	private int sectionHeight;
 	private List<SocialLink> socialLinkList = new ArrayList<SocialLink>() {
 		{
-			add(new SocialLink("Fool", "Investigation Team", DEFAULT_RANK));
-			add(new SocialLink("Magician", "Yosuke Hanamura", DEFAULT_RANK));
-			add(new SocialLink("Priestess", "Yukiko Hanamura", DEFAULT_RANK));
-			add(new SocialLink("Empress", "Margaret", DEFAULT_RANK));
-			add(new SocialLink("Emperor", "Kanji Tatsumi", DEFAULT_RANK));
-			add(new SocialLink("Hierophant", "Ryotaro Dojima", DEFAULT_RANK));
-			add(new SocialLink("Lovers", "Rise Kujikawa", DEFAULT_RANK));
-			add(new SocialLink("Chariot", "Chie Satonaka", DEFAULT_RANK));
-			add(new SocialLink("Justice", "Nanako Dojima", DEFAULT_RANK));
-			add(new SocialLink("Hermit", "Fox", DEFAULT_RANK));
-			add(new SocialLink("Fortune", "Naoto Shirogane", DEFAULT_RANK));
-			add(new SocialLink("Strength", "Fellow Atheletes", DEFAULT_RANK));
-			add(new SocialLink("Hanged Man", "Naoki Konishi", DEFAULT_RANK));
-			add(new SocialLink("Death", "Hisano Kuroda", DEFAULT_RANK));
-			add(new SocialLink("Temperance", "Eri Minami", DEFAULT_RANK));
-			add(new SocialLink("Devil", "Sayoko Uehara", DEFAULT_RANK));
-			add(new SocialLink("Tower", "Shu Nakajima", DEFAULT_RANK));
-			add(new SocialLink("Star", "Teddie", DEFAULT_RANK));
-			add(new SocialLink("Moon", "Ai Ebihara", DEFAULT_RANK));
-			add(new SocialLink("Sun", "Culture Club", DEFAULT_RANK));
-			add(new SocialLink("Judgement", "Seekers of Truth", DEFAULT_RANK));
+			add(new SocialLink("Fool", "Investigation Team", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
+			add(new SocialLink("Magician", "Yosuke Hanamura", DEFAULT_RANK,
+					new Integer[] { 0, 0, 2, 3, 4, 4, 6, 6, 4, 8 }));
+			add(new SocialLink("Priestess", "Yukiko Amagi", DEFAULT_RANK,
+					new Integer[] { 0, 0, 2, 2, 4, 5, 6, 7, 8, 8 }));
+			add(new SocialLink("Empress", "Margaret", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
+			add(new SocialLink("Emperor", "Kanji Tatsumi", DEFAULT_RANK,
+					new Integer[] { 0, 0, 2, 2, 4, 6, 4, 5, 6, 6 }));
+			add(new SocialLink("Hierophant", "Ryotaro Dojima", DEFAULT_RANK,
+					new Integer[] { 0, 0, 4, 4, 6, 6, 5, 5, 6, 8 }));
+			add(new SocialLink("Lovers", "Rise Kujikawa", DEFAULT_RANK,
+					new Integer[] { 0, 0, 2, 4, 6, 6, 6, 8, 6, 9 }));
+			add(new SocialLink("Chariot", "Chie Satonaka", DEFAULT_RANK,
+					new Integer[] { 0, 0, 3, 3, 4, 4, 6, 5, 6, 10 }));
+			add(new SocialLink("Justice", "Nanako Dojima", DEFAULT_RANK,
+					new Integer[] { 0, 3, 6, 9, 10, 12, 9, 6, 10, 12 }));
+			add(new SocialLink("Hermit", "Fox", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
+			add(new SocialLink("Fortune", "Naoto Shirogane", DEFAULT_RANK,
+					new Integer[] { 0, 0, 0, 3, 5, 6, 8, 8, 4, 8 }));
+			add(new SocialLink("Strength", "Fellow Atheletes", DEFAULT_RANK,
+					new Integer[] { 0, 0, 6, 6, 6, 4, 0, 5, 7, 6 }, new Integer[] { 0, 0, 4, 2, 3, 2, 4, 0, 6, 6 }));
+			add(new SocialLink("Hanged Man", "Naoki Konishi", DEFAULT_RANK,
+					new Integer[] { 0, 0, 0, 4, 4, 4, 4, 4, 6, 6 }));
+			add(new SocialLink("Death", "Hisano Kuroda", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
+			add(new SocialLink("Temperance", "Eri Minami", DEFAULT_RANK,
+					new Integer[] { 0, 0, 2, 2, 4, 3, 4, 6, 4, 13 }));
+			add(new SocialLink("Devil", "Sayoko Uehara", DEFAULT_RANK, new Integer[] { 0, 0, 0, 3, 3, 4, 2, 6, 6, 3 }));
+			add(new SocialLink("Tower", "Shu Nakajima", DEFAULT_RANK, new Integer[] { 0, 0, 2, 6, 3, 5, 5, 4, 4, 0 }));
+			add(new SocialLink("Star", "Teddie", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
+			add(new SocialLink("Moon", "Ai Ebihara", DEFAULT_RANK, new Integer[] { 0, 0, 4, 4, 4, 0, 4, 8, 8, 6 }));
+			add(new SocialLink("Sun", "Culture Club", DEFAULT_RANK, new Integer[] { 0, 0, 2, 2, 6, 8, 6, 7, 0, 5 },
+					new Integer[] { 0, 0, 2, 2, 4, 6, 6, 6, 4, 6 }));
+			add(new SocialLink("Judgement", "Seekers of Truth", DEFAULT_RANK,
+					new Integer[] { null, null, null, null, null, null, null, null, null, null }));
 		}
 	};
 
@@ -62,9 +85,6 @@ public class BarChart extends JPanel {
 
 	public JScrollPane initComponents() {
 		JPanel socialLinkPanel = new JPanel() {
-			int sectionHeight;
-			int horizontalBuffer = 10;
-			int verticalBuffer = 10;
 
 			@Override
 			protected void paintComponent(Graphics g) {
@@ -75,9 +95,11 @@ public class BarChart extends JPanel {
 				Font rankFont = new Font("Comic Sans MS", Font.BOLD, 21);
 				Font arcanaFont = new Font("Monospaced", Font.BOLD, 19);
 				Font nameFont = new Font("Arial", Font.BOLD, 21);
+				Font pointFont = new Font("Arial", Font.PLAIN, 18);
 				FontMetrics rankMetrics = g2.getFontMetrics(rankFont);
 				FontMetrics arcanaMetrics = g2.getFontMetrics(arcanaFont);
 				FontMetrics nameMetrics = g2.getFontMetrics(nameFont);
+				FontMetrics pointMetrics = g2.getFontMetrics(pointFont);
 				List<String> arcanaList = new ArrayList<String>() {
 					{
 						for (SocialLink sl : socialLinkList) {
@@ -89,44 +111,40 @@ public class BarChart extends JPanel {
 				int rank;
 				String arcana;
 				String name;
+				String points;
 				for (int i = 0; i < socialLinkList.size(); i++) {
 					int column1Width = rankMetrics.stringWidth("Rank " + MAX_RANK) > arcanaMetrics
 							.stringWidth(findLongestString(arcanaList)) ? rankMetrics.stringWidth("Rank " + MAX_RANK)
 									: arcanaMetrics.stringWidth(findLongestString(arcanaList));
-					int column2Width = getParent().getWidth() - column1Width - (horizontalBuffer * 2);
-					int row1Height = rankMetrics.getAscent() + verticalBuffer * 2;
+					int column2Width = (getParent().getWidth() / 3 * 2) - (HORIZONTAL_BUFFER * 2);
+					int column3Width = getParent().getWidth() - column1Width - column2Width - (HORIZONTAL_BUFFER * 2);
+					int row1Height = rankMetrics.getAscent() + VERTICAL_BUFFER * 2;
 					int row2Height = arcanaMetrics.getHeight() > nameMetrics.getHeight()
 							? arcanaMetrics.getAscent() + arcanaMetrics.getLeading()
 							: nameMetrics.getAscent() + nameMetrics.getLeading();
-					int x1 = horizontalBuffer;
-					int y1 = verticalBuffer + (sectionHeight * i);
-					int x2 = column1Width + horizontalBuffer;
+					int x1 = HORIZONTAL_BUFFER;
+					int y1 = VERTICAL_BUFFER + (sectionHeight * i);
+					int x2 = column1Width + HORIZONTAL_BUFFER;
 					int y2 = row1Height + (sectionHeight * i);
-					double backgroundX = x1;
-					double backgroundY = y2;
-					double backgroundWidth = column1Width - horizontalBuffer;
-					double backgroundHeight = row2Height + verticalBuffer - 3;
-					double backgroundArcWidth = 10;
-					double backgroundArcHeight = 10;
-					double outlineX = x2;
-					double outlineY = y1;
-					double outlineWidth = column2Width - horizontalBuffer;
-					double outlineHeight = row1Height - verticalBuffer * 2;
+					int x3 = column1Width + column2Width + HORIZONTAL_BUFFER;
 					SocialLink socialLink = socialLinkList.get(i);
 					rank = socialLink.getSocialRank();
 					arcana = socialLink.getArcana();
 					name = socialLink.getName();
-					sectionHeight = row1Height + row2Height + (verticalBuffer * 3);
+					points = socialLink.getPointsForRankUp(rank);
+					sectionHeight = row1Height + row2Height + (VERTICAL_BUFFER * 3);
 
 					drawRank(g2, rankMetrics, x1, y1, rank);
-					drawArcana(g2, arcanaMetrics, backgroundX, backgroundY, backgroundWidth, backgroundHeight,
-							backgroundArcWidth, backgroundArcHeight, arcana);
-					drawBars(g2, outlineX, outlineY, outlineWidth, outlineHeight, rank);
+					drawArcana(g2, arcanaMetrics, x1, y2, column1Width, row2Height, arcana);
+					drawBars(g2, x2, y1, column2Width, row1Height, rank);
 					drawName(g2, nameMetrics, x2, y2, name);
+					drawPoints(g2, pointMetrics, x3, y1, column3Width, row1Height, points);
+
+					// Add update of points needed til next rank up
 
 					// Drawing divider
 					g2.setColor(DARK_ORANGE);
-					g2.drawLine(x1, sectionHeight + (sectionHeight * i), getParent().getWidth() - horizontalBuffer * 2,
+					g2.drawLine(x1, sectionHeight + (sectionHeight * i), getParent().getWidth() - HORIZONTAL_BUFFER * 2,
 							sectionHeight + (sectionHeight * i));
 				}
 
@@ -142,17 +160,17 @@ public class BarChart extends JPanel {
 
 		JScrollPane statScrollPane = new JScrollPane(socialLinkPanel);
 		statScrollPane.setPreferredSize(new Dimension(width - 100, height - 75));
-		statScrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
 		JScrollBar statScrollBar = statScrollPane.getVerticalScrollBar();
 		statScrollBar.setPreferredSize(new Dimension(18, Integer.MAX_VALUE));
 		statScrollBar.setUI(new MyScrollBarUI());
+		statScrollBar.setUnitIncrement(16);
 
 		return statScrollPane;
 	}
 
 	public void updateParameters() {
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 3; i++) {
 			socialLinkList.get(1).increaseSocialRank();
 		}
 	}
@@ -163,31 +181,37 @@ public class BarChart extends JPanel {
 		g2.drawString("Rank " + rank, x, fontMetrics.getAscent() + y);
 	}
 
-	private void drawArcana(Graphics2D g2, FontMetrics fontMetrics, double x, double y, double width, double height,
-			double arcWidth, double arcHeight, String arcana) {
-		RoundRectangle2D cellBackground = new RoundRectangle2D.Double(x, y, width, height, arcWidth, arcHeight);
+	private void drawArcana(Graphics2D g2, FontMetrics fontMetrics, double x, double y, double columnWidth,
+			double rowHeight, String arcana) {
+		double backgroundWidth = columnWidth - HORIZONTAL_BUFFER;
+		double backgroundHeight = rowHeight + VERTICAL_BUFFER - 3;
+		double arcWidth = 10;
+		double arcHeight = 10;
+		RoundRectangle2D cellBackground = new RoundRectangle2D.Double(x, y, backgroundWidth, backgroundHeight, arcWidth,
+				arcHeight);
 		g2.setColor(DARK_ORANGE);
 		g2.fill(cellBackground);
 
 		g2.setColor(LIGHT_YELLOW);
 		g2.setFont(fontMetrics.getFont());
-		g2.drawString(arcana, (int) Math.round((x + width / 2 - fontMetrics.stringWidth(arcana) / 2)),
-				(int) Math.round((y + height) - (height - fontMetrics.getDescent()) / 2));
+		g2.drawString(arcana, (int) Math.round((x + backgroundWidth / 2 - fontMetrics.stringWidth(arcana) / 2)),
+				(int) Math.round((y + backgroundHeight) - (backgroundHeight - fontMetrics.getDescent()) / 2));
 	}
 
-	private void drawBars(Graphics2D g2, double outlineX, double outlineY, double outlineWidth, double outlineHeight,
-			int rank) {
-		Rectangle2D outline = new Rectangle2D.Double(outlineX, outlineY, outlineWidth, outlineHeight);
+	private void drawBars(Graphics2D g2, double x, double y, double columnWidth, double rowHeight, int rank) {
+		double outlineWidth = columnWidth - HORIZONTAL_BUFFER;
+		double outlineHeight = rowHeight - VERTICAL_BUFFER * 2;
+		Rectangle2D outline = new Rectangle2D.Double(x, y, outlineWidth, outlineHeight);
 		g2.setColor(DARK_ORANGE);
 		g2.fill(outline);
 		g2.setColor(Color.BLACK);
 		g2.draw(outline);
 
 		for (int j = 0; j < rank; j++) {
-			double pipWidth = outline.getWidth() / MAX_RANK - 1;
-			double pipHeight = outline.getHeight() - 10;
-			double pipX = outline.getX() + 6 + (pipWidth * j);
-			double pipY = outline.getY() + 5;
+			double pipWidth = (outline.getWidth() - PIP_HORIZONTAL_BUFFER * 2) / MAX_RANK;
+			double pipHeight = outline.getHeight() - PIP_VERTICAL_BUFFER * 2;
+			double pipX = outline.getX() + PIP_HORIZONTAL_BUFFER + (pipWidth * j);
+			double pipY = outline.getY() + PIP_VERTICAL_BUFFER;
 			Rectangle2D pip = new Rectangle2D.Double(pipX, pipY, pipWidth, pipHeight);
 			g2.setColor(LIGHT_YELLOW);
 			g2.fill(pip);
@@ -200,6 +224,15 @@ public class BarChart extends JPanel {
 		g2.setFont(fontMetrics.getFont());
 		g2.setColor(DARK_ORANGE);
 		g2.drawString(name, x, fontMetrics.getAscent() + y);
+	}
+
+	private void drawPoints(Graphics2D g2, FontMetrics fontMetrics, int x, int y, int columnWidth, int rowHeight,
+			String points) {
+		int centerX = x - (fontMetrics.stringWidth(points) / 2) + (columnWidth / 2);
+		int centerY = y - (fontMetrics.getHeight() / 2) + (rowHeight / 2) + VERTICAL_BUFFER;
+		g2.setFont(fontMetrics.getFont());
+		g2.setColor(Color.BLACK);
+		g2.drawString(points, centerX, centerY);
 	}
 
 	// Investigate for flexibility
@@ -219,11 +252,21 @@ public class BarChart extends JPanel {
 		String arcana;
 		String name;
 		int socialRank;
+		Integer[] pointsForRankUpArray;
 
-		public SocialLink(String arcana, String name, int socialRank) {
+		public SocialLink(String arcana, String name, int socialRank, Integer[] pointsForRankUpArray) {
 			this.arcana = arcana;
 			this.name = name;
 			this.socialRank = socialRank;
+			this.pointsForRankUpArray = pointsForRankUpArray;
+		}
+
+		public SocialLink(String arcana, String name, int socialRank, Integer[] pointsForRankUpArray1,
+				Integer[] pointsForRankUpArray2) {
+			this.arcana = arcana;
+			this.name = name;
+			this.socialRank = socialRank;
+			this.pointsForRankUpArray = pointsForRankUpArray1;
 		}
 
 		public String getArcana() {
@@ -236,6 +279,15 @@ public class BarChart extends JPanel {
 
 		public int getSocialRank() {
 			return socialRank;
+		}
+
+		public String getPointsForRankUp(int currentRank) {
+			if (currentRank + 1 <= 10) {
+				return pointsForRankUpArray[currentRank] == null ? "-"
+						: String.valueOf(pointsForRankUpArray[currentRank]);
+			} else {
+				return "MAX";
+			}
 		}
 
 		public void increaseSocialRank() {
