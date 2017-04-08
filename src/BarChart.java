@@ -140,8 +140,6 @@ public class BarChart extends JPanel {
 					drawName(g2, nameMetrics, x2, y2, name);
 					drawPoints(g2, pointMetrics, x3, y1, column3Width, row1Height, points);
 
-					// Add update of points needed til next rank up
-
 					// Drawing divider
 					g2.setColor(DARK_ORANGE);
 					g2.drawLine(x1, sectionHeight + (sectionHeight * i), getParent().getWidth() - HORIZONTAL_BUFFER * 2,

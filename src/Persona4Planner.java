@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
@@ -15,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import javax.swing.border.LineBorder;
 
 public class Persona4Planner {
 	private final static String STATUS_SCREEN = "Status Screen";
@@ -95,6 +97,10 @@ public class Persona4Planner {
 		JButton button = new JButton(buttonName);
 		button.setMaximumSize(new Dimension(DEFAULT_NAVBAR_BUTTON_WIDTH, DEFAULT_NAVBAR_BUTTON_HEIGHT));
 		button.setAlignmentX(Component.CENTER_ALIGNMENT);
+		button.setBorder(new LineBorder(Color.BLACK, 3));
+		button.setBackground(YELLOW);
+		button.setForeground(ORANGE);
+		button.setFont(new Font("Arial", Font.BOLD, 21));
 		button.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

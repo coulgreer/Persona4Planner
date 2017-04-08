@@ -21,7 +21,8 @@ public class RadarChart extends JPanel {
 	private int field2Level, field3Level, field4Level, field5Level, field1Level;
 	private int width, height;
 
-	public RadarChart(int width, int height, int field2Level, int field3Level, int field4Level, int field5Level, int field1Level) {
+	public RadarChart(int width, int height, int field2Level, int field3Level, int field4Level, int field5Level,
+			int field1Level) {
 		this.width = width;
 		this.height = height;
 		this.field2Level = field2Level;
@@ -117,8 +118,8 @@ public class RadarChart extends JPanel {
 
 	private Point2D findCenter(double x, double y, double diameter) {
 		double radius = diameter / 2;
-		Ellipse2D circumscribedCircle = new Ellipse2D.Double((width / 2) - radius, (height / 2) - radius,
-				diameter, diameter);
+		Ellipse2D circumscribedCircle = new Ellipse2D.Double((width / 2) - radius, (height / 2) - radius, diameter,
+				diameter);
 		Point2D circumcenter = new Point2D.Double(circumscribedCircle.getCenterX(), circumscribedCircle.getCenterY());
 		return circumcenter;
 	}
@@ -403,7 +404,7 @@ public class RadarChart extends JPanel {
 			this.field2Level = field2Level;
 			return this;
 		}
-		
+
 		public RadarChartBuilder withWidth(int width) {
 			this.width = width;
 			return this;
