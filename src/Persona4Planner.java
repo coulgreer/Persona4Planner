@@ -9,6 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -118,18 +122,37 @@ public class Persona4Planner {
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				JFrame frame = new JFrame("Persona 4 Planner");
-				frame.setSize(DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
-				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				frame.setResizable(false);
-
-				Persona4Planner p4p = new Persona4Planner();
-				p4p.addComponentToPane(frame.getContentPane());
-
-				frame.setVisible(true);
+				createGUI();
+				createDatabase("schedule.db");
 			}
 		});
 
+	}
+
+	private static void createGUI() {
+		JFrame frame = new JFrame("Persona 4 Planner");
+		frame.setSize(DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+
+		Persona4Planner p4p = new Persona4Planner();
+		p4p.addComponentToPane(frame.getContentPane());
+
+		frame.setVisible(true);
+	}
+
+	private static void createDatabase(String fileName) {
+		String url = "jdbc:sqlite:./database/" + fileName;
+		try (Connection conn = DriverManager.getConnection(url)) {
+			if (conn != null) {
+				DatabaseMetaData meta = conn.getMetaData();
+				System.out.println("The driver name is " + meta.getDriverName());
+				System.out.println("A new database has been created.");
+			}
+
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
