@@ -396,41 +396,41 @@ public class RadarChart extends JPanel {
 		g2.drawString(subtitle, x, y);
 	}
 
-	public static class RadarChartBuilder {
+	public static class Builder {
 		private int field2Level, field3Level, field4Level, field5Level, field1Level;
 		private int width, height;
 
-		public RadarChartBuilder withField2LevelOf(int field2Level) {
+		public Builder withField2LevelOf(int field2Level) {
 			this.field2Level = field2Level;
 			return this;
 		}
 
-		public RadarChartBuilder withWidth(int width) {
+		public Builder withWidth(int width) {
 			this.width = width;
 			return this;
 		}
 
-		public RadarChartBuilder withHeight(int height) {
+		public Builder withHeight(int height) {
 			this.height = height;
 			return this;
 		}
 
-		public RadarChartBuilder withField3LevelOf(int field3Level) {
+		public Builder withField3LevelOf(int field3Level) {
 			this.field3Level = field3Level;
 			return this;
 		}
 
-		public RadarChartBuilder withField4LevelOf(int field4Level) {
+		public Builder withField4LevelOf(int field4Level) {
 			this.field4Level = field4Level;
 			return this;
 		}
 
-		public RadarChartBuilder withField5LevelOf(int field5Level) {
+		public Builder withField5LevelOf(int field5Level) {
 			this.field5Level = field5Level;
 			return this;
 		}
 
-		public RadarChartBuilder withField1LevelOf(int field1Level) {
+		public Builder withField1LevelOf(int field1Level) {
 			this.field1Level = field1Level;
 			return this;
 		}

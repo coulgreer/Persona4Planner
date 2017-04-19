@@ -1,0 +1,35 @@
+Key for database table:
+      Afternoon/Night
+         N = Unavailable
+         Y = Available
+         R = Restricted
+         F = earliest date of social link's Flag events
+         I = earliest date of social link's Initiation
+         P = Phone event from the social link
+         T = Test
+         E = Event
+         X = end
+      Weather
+         S = sunny
+         C = cloudy
+         R = rainy
+      Column Abbreviations
+         Mag = Magician
+         Cha = Chariot
+         Pri = Priestess
+         Epr = Emperor
+         Lov = Lover
+         For = Fortune
+         Str = Strength
+         Sun = Sun
+         Mon = Moon
+         Hng = Hanged Man
+         Dea = Death
+         Tem = Temperance
+         Her = Hermit
+         Eps = Empress
+         Hie = Hierophant
+         Jus = Justice
+         Dev = Devil
+         Tow = Tower
+         
