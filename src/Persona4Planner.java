@@ -249,29 +249,29 @@ public class Persona4Planner {
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, table.date);
-			pstmt.setString(2, table.day);
-			pstmt.setString(3, table.weather);
-			pstmt.setString(4, table.afternoon);
-			pstmt.setString(5, table.night);
-			pstmt.setString(6, table.magician);
-			pstmt.setString(7, table.chariot);
-			pstmt.setString(8, table.priestess);
-			pstmt.setString(9, table.emperor);
-			pstmt.setString(10, table.lovers);
-			pstmt.setString(11, table.fortune);
-			pstmt.setString(12, table.strength);
-			pstmt.setString(13, table.sun);
-			pstmt.setString(14, table.moon);
-			pstmt.setString(15, table.hangedMan);
-			pstmt.setString(16, table.death);
-			pstmt.setString(17, table.temperance);
-			pstmt.setString(18, table.hermit);
-			pstmt.setString(19, table.empress);
-			pstmt.setString(20, table.hierophant);
-			pstmt.setString(21, table.justice);
-			pstmt.setString(22, table.devil);
-			pstmt.setString(23, table.tower);
+			pstmt.setString(1, table.date());
+			pstmt.setString(2, table.day());
+			pstmt.setString(3, table.weather());
+			pstmt.setString(4, table.afternoon());
+			pstmt.setString(5, table.night());
+			pstmt.setString(6, table.magician());
+			pstmt.setString(7, table.chariot());
+			pstmt.setString(8, table.priestess());
+			pstmt.setString(9, table.emperor());
+			pstmt.setString(10, table.lovers());
+			pstmt.setString(11, table.fortune());
+			pstmt.setString(12, table.strength());
+			pstmt.setString(13, table.sun());
+			pstmt.setString(14, table.moon());
+			pstmt.setString(15, table.hangedMan());
+			pstmt.setString(16, table.death());
+			pstmt.setString(17, table.temperance());
+			pstmt.setString(18, table.hermit());
+			pstmt.setString(19, table.empress());
+			pstmt.setString(20, table.hierophant());
+			pstmt.setString(21, table.justice());
+			pstmt.setString(22, table.devil());
+			pstmt.setString(23, table.tower());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -410,6 +410,97 @@ public class Persona4Planner {
 			return this;
 		}
 
+		public String date() {
+			return date;
+		}
+
+		public String day() {
+			return day;
+		}
+
+		public String weather() {
+			return weather;
+		}
+
+		public String afternoon() {
+			return afternoon;
+		}
+
+		public String night() {
+			return night;
+		}
+
+		public String magician() {
+			return magician;
+		}
+
+		public String chariot() {
+			return chariot;
+		}
+
+		public String priestess() {
+			return priestess;
+		}
+
+		public String emperor() {
+			return emperor;
+		}
+
+		public String lovers() {
+			return lovers;
+		}
+
+		public String fortune() {
+			return fortune;
+		}
+
+		public String strength() {
+			return strength;
+		}
+
+		public String sun() {
+			return sun;
+		}
+
+		public String moon() {
+			return moon;
+		}
+
+		public String hangedMan() {
+			return hangedMan;
+		}
+
+		public String death() {
+			return death;
+		}
+
+		public String temperance() {
+			return temperance;
+		}
+
+		public String hermit() {
+			return hermit;
+		}
+
+		public String empress() {
+			return empress;
+		}
+
+		public String hierophant() {
+			return hierophant;
+		}
+
+		public String justice() {
+			return justice;
+		}
+
+		public String devil() {
+			return devil;
+		}
+
+		public String tower() {
+			return tower;
+		}
 	}
 
 }
