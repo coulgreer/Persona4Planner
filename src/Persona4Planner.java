@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -36,6 +39,7 @@ public class Persona4Planner {
 	private final static int DEFAULT_NAVBAR_BUTTON_WIDTH = DEFAULT_NAVBAR_WIDTH - (NAVBAR_BUTTON_BUFFER * 2);
 	private final static int DEFAULT_NAVBAR_BUTTON_HEIGHT = 50;
 	private final static int DEFAUL_LEVEL = 1;
+	private final static String DATABASE_NAME = "Persona4_Schedule.db";
 	private final static String ARCANA_TABLE_NAME = "ArcanaAvailability";
 
 	private JPanel cards;
@@ -122,70 +126,72 @@ public class Persona4Planner {
 	}
 
 	public static void main(String[] args) {
+
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				Persona4Planner p4p = new Persona4Planner();
 				createGUI();
+				Persona4Planner p4p = new Persona4Planner();
 				p4p.createDatabaseTables();
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("11-Apr") //
-						.withDayOf("Mon") //
-						.withWeatherOf("C/R") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.hasEvent(true));
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("12-Apr") //
-						.withDayOf("Tue") //
-						.withWeatherOf("R/C") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.hasEvent(true));
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("13-Apr") //
-						.withDayOf("Wed") //
-						.withWeatherOf("C") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.hasEvent(true));
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("14-Apr") //
-						.withDayOf("Thu") //
-						.withWeatherOf("R") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.hasEvent(true));
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("15-Apr") //
-						.withDayOf("Fri") //
-						.withWeatherOf("R") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.hasEvent(true));
-				p4p.insertToAvailability(new ArcanaTable() //
-						.withDateOf("16-Apr") //
-						.withDayOf("Sat") //
-						.withWeatherOf("R") //
-						.withAfternoon("N") //
-						.withNight("R") //
-						.withMag("I") //
-						.withCha("N") //
-						.withPri("N") //
-						.withEpr("N") //
-						.withLov("N") //
-						.withFort("N") //
-						.withStr("N") //
-						.withSun("N") //
-						.withMon("N") //
-						.withHng("N") //
-						.withDea("N") //
-						.withTem("N") //
-						.withHer("N") //
-						.withEps("N") //
-						.withHie("N") //
-						.withJus("N") //
-						.withDev("N") //
-						.withTow("N"));
+				String line = null;
+				try {
+					BufferedReader br = new BufferedReader(new FileReader("documents/Arcana-Yearly-Schedule"));
+					line = br.readLine();
+					while ((line = br.readLine()) != null) {
+						String[] dailyData = line.split("\t");
+						String date = dailyData[0];
+						String day = dailyData[1];
+						String weather = dailyData[2];
+						String afternoon = dailyData[3];
+						String night = dailyData[4];
+						String magician = dailyData[5];
+						String chariot = dailyData[6];
+						String priestess = dailyData[7];
+						String emperor = dailyData[8];
+						String lovers = dailyData[9];
+						String fortune = dailyData[10];
+						String strength = dailyData[11];
+						String sun = dailyData[12];
+						String moon = dailyData[13];
+						String hangedMan = dailyData[14];
+						String death = dailyData[15];
+						String temperance = dailyData[16];
+						String hermit = dailyData[17];
+						String empress = dailyData[18];
+						String hierophant = dailyData[19];
+						String justice = dailyData[20];
+						String devil = dailyData[21];
+						String tower = dailyData[22];
+
+						p4p.insertToAvailability(new ArcanaTable()//
+								.withDateOf(date) //
+								.withDayOf(day) //
+								.withWeatherOf(weather) //
+								.withAfternoon(afternoon) //
+								.withNight(night) //
+								.withMagicianAvailability(magician) //
+								.withChariotAvailability(chariot) //
+								.withPriestessAvailability(priestess) //
+								.withEmperorAvailability(emperor) //
+								.withLoversAvailability(lovers) //
+								.withFortuneAvailability(fortune) //
+								.withStrengthAvailability(strength) //
+								.withSunAvailability(sun) //
+								.withMoonAvailability(moon) //
+								.withHangedManAvailability(hangedMan) //
+								.withDeathAvailability(death) //
+								.withTemperanceAvailability(temperance) //
+								.withHermitAvailability(hermit) //
+								.withEmpressAvailability(empress) //
+								.withHierophantAvailability(hierophant) //
+								.withJusticeAvailability(justice) //
+								.withDevilAvailability(devil) //
+								.withTowerAvailability(tower));
+					}
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
 			}
 		});
 
@@ -210,27 +216,26 @@ public class Persona4Planner {
 				+ "	Weather varchar(3) NOT NULL," //
 				+ "	Afternoon nchar(1) NOT NULL," //
 				+ "	Night nchar(1) NOT NULL," //
-				+ "	Mag nchar(1)," //
-				+ "	Cha nchar(1)," //
-				+ "	Pri nchar(1)," //
-				+ "	Epr nchar(1)," //
-				+ "	Lov nchar(1)," //
-				+ "	For nchar(1)," //
-				+ "	Str nchar(1)," //
-				+ "	Sun nchar(1)," //
-				+ "	Mon nchar(1)," //
-				+ "	Hng nchar(1)," //
-				+ "	Dea nchar(1)," //
-				+ "	Tem nchar(1)," //
-				+ "	Her nchar(1)," //
-				+ "	Eps nchar(1)," //
-				+ "	Hie nchar(1)," //
-				+ "	Jus nchar(1)," //
-				+ "	Dev nchar(1)," //
-				+ "	Tow nchar(1)" //
-				+ ");"; //
+				+ "	Mag nchar(3)," //
+				+ "	Cha nchar(3)," //
+				+ "	Pri nchar(3)," //
+				+ "	Epr nchar(3)," //
+				+ "	Lov nchar(3)," //
+				+ "	For nchar(3)," //
+				+ "	Str nchar(3)," //
+				+ "	Sun nchar(3)," //
+				+ "	Mon nchar(3)," //
+				+ "	Hng nchar(3)," //
+				+ "	Dea nchar(3)," //
+				+ "	Tem nchar(3)," //
+				+ "	Her nchar(3)," //
+				+ "	Eps nchar(3)," //
+				+ "	Hie nchar(3)," //
+				+ "	Jus nchar(3)," //
+				+ "	Dev nchar(3)," //
+				+ "	Tow nchar(3));"; //
 
-		try (Connection conn = this.connect("arcanaSchedule.db"); Statement stmt = conn.createStatement()) {
+		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
 			stmt.execute(sql);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -243,37 +248,30 @@ public class Persona4Planner {
 				+ "(Date, Day, Weather, Afternoon, Night, Mag, Cha, Pri, Epr, Lov, For, Str, Sun, Mon, Hng, Dea, Tem, Her, Eps, Hie, Jus, Dev, Tow)" //
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-		try (Connection conn = this.connect("arcanaSchedule.db");
-				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			pstmt.setString(1, table.date);
 			pstmt.setString(2, table.day);
 			pstmt.setString(3, table.weather);
 			pstmt.setString(4, table.afternoon);
 			pstmt.setString(5, table.night);
-			if (table.event) {
-				for (int x = 6; x <= 23; x++) {
-					pstmt.setString(x, "E");
-				}
-			} else {
-				pstmt.setString(6, table.magician);
-				pstmt.setString(7, table.chariot);
-				pstmt.setString(8, table.priestess);
-				pstmt.setString(9, table.emperor);
-				pstmt.setString(10, table.love);
-				pstmt.setString(11, table.fortune);
-				pstmt.setString(12, table.strength);
-				pstmt.setString(13, table.sun);
-				pstmt.setString(14, table.moon);
-				pstmt.setString(15, table.hangedMan);
-				pstmt.setString(16, table.death);
-				pstmt.setString(17, table.temperance);
-				pstmt.setString(18, table.hermit);
-				pstmt.setString(19, table.empress);
-				pstmt.setString(20, table.hierophant);
-				pstmt.setString(21, table.justice);
-				pstmt.setString(22, table.devil);
-				pstmt.setString(23, table.tower);
-			}
+			pstmt.setString(6, table.magician);
+			pstmt.setString(7, table.chariot);
+			pstmt.setString(8, table.priestess);
+			pstmt.setString(9, table.emperor);
+			pstmt.setString(10, table.lovers);
+			pstmt.setString(11, table.fortune);
+			pstmt.setString(12, table.strength);
+			pstmt.setString(13, table.sun);
+			pstmt.setString(14, table.moon);
+			pstmt.setString(15, table.hangedMan);
+			pstmt.setString(16, table.death);
+			pstmt.setString(17, table.temperance);
+			pstmt.setString(18, table.hermit);
+			pstmt.setString(19, table.empress);
+			pstmt.setString(20, table.hierophant);
+			pstmt.setString(21, table.justice);
+			pstmt.setString(22, table.devil);
+			pstmt.setString(23, table.tower);
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -293,9 +291,8 @@ public class Persona4Planner {
 	}
 
 	public static class ArcanaTable {
-		private boolean event = false;
 		private String date, day, weather, afternoon, night;
-		private String magician, chariot, priestess, emperor, love, fortune, strength, sun, moon, hangedMan, death,
+		private String magician, chariot, priestess, emperor, lovers, fortune, strength, sun, moon, hangedMan, death,
 				temperance, hermit, empress, hierophant, justice, devil, tower;
 
 		public ArcanaTable withDateOf(String date) {
@@ -323,98 +320,93 @@ public class Persona4Planner {
 			return this;
 		}
 
-		public ArcanaTable withMag(String magician) {
+		public ArcanaTable withMagicianAvailability(String magician) {
 			this.magician = magician;
 			return this;
 		}
 
-		public ArcanaTable withCha(String chariot) {
+		public ArcanaTable withChariotAvailability(String chariot) {
 			this.chariot = chariot;
 			return this;
 		}
 
-		public ArcanaTable withPri(String priestess) {
+		public ArcanaTable withPriestessAvailability(String priestess) {
 			this.priestess = priestess;
 			return this;
 		}
 
-		public ArcanaTable withEpr(String emperor) {
+		public ArcanaTable withEmperorAvailability(String emperor) {
 			this.emperor = emperor;
 			return this;
 		}
 
-		public ArcanaTable withLov(String love) {
-			this.love = love;
+		public ArcanaTable withLoversAvailability(String lovers) {
+			this.lovers = lovers;
 			return this;
 		}
 
-		public ArcanaTable withFort(String fortune) {
+		public ArcanaTable withFortuneAvailability(String fortune) {
 			this.fortune = fortune;
 			return this;
 		}
 
-		public ArcanaTable withStr(String strength) {
+		public ArcanaTable withStrengthAvailability(String strength) {
 			this.strength = strength;
 			return this;
 		}
 
-		public ArcanaTable withSun(String sun) {
+		public ArcanaTable withSunAvailability(String sun) {
 			this.sun = sun;
 			return this;
 		}
 
-		public ArcanaTable withMon(String moon) {
+		public ArcanaTable withMoonAvailability(String moon) {
 			this.moon = moon;
 			return this;
 		}
 
-		public ArcanaTable withHng(String hangedMan) {
+		public ArcanaTable withHangedManAvailability(String hangedMan) {
 			this.hangedMan = hangedMan;
 			return this;
 		}
 
-		public ArcanaTable withDea(String death) {
+		public ArcanaTable withDeathAvailability(String death) {
 			this.death = death;
 			return this;
 		}
 
-		public ArcanaTable withTem(String temperance) {
+		public ArcanaTable withTemperanceAvailability(String temperance) {
 			this.temperance = temperance;
 			return this;
 		}
 
-		public ArcanaTable withHer(String hermit) {
+		public ArcanaTable withHermitAvailability(String hermit) {
 			this.hermit = hermit;
 			return this;
 		}
 
-		public ArcanaTable withEps(String empress) {
+		public ArcanaTable withEmpressAvailability(String empress) {
 			this.empress = empress;
 			return this;
 		}
 
-		public ArcanaTable withHie(String hierophant) {
+		public ArcanaTable withHierophantAvailability(String hierophant) {
 			this.hierophant = hierophant;
 			return this;
 		}
 
-		public ArcanaTable withJus(String justice) {
+		public ArcanaTable withJusticeAvailability(String justice) {
 			this.justice = justice;
 			return this;
 		}
 
-		public ArcanaTable withDev(String devil) {
+		public ArcanaTable withDevilAvailability(String devil) {
 			this.devil = devil;
 			return this;
 		}
 
-		public ArcanaTable withTow(String tower) {
+		public ArcanaTable withTowerAvailability(String tower) {
 			this.tower = tower;
-			return this;
-		}
-
-		public ArcanaTable hasEvent(boolean event) {
-			this.event = event;
 			return this;
 		}
 

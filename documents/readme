@@ -3,12 +3,11 @@ Key for database table:
          N = Unavailable
          Y = Available
          R = Restricted
+         - = arcana unavailable
          F = earliest date of social link's Flag events
          I = earliest date of social link's Initiation
-         P = Phone event from the social link
-         T = Test
-         E = Event
-         X = end
+         T = Phone event from the social link
+         E = end
       Weather
          S = sunny
          C = cloudy
