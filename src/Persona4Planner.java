@@ -1,3 +1,4 @@
+import java.awt.AlphaComposite;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -5,6 +6,8 @@ import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.SplashScreen;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
@@ -17,6 +20,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -126,12 +133,14 @@ public class Persona4Planner {
 	}
 
 	public static void main(String[] args) {
+		ExecutorService executor = Executors.newFixedThreadPool(2);
 
-		SwingUtilities.invokeLater(new Runnable() {
+		Future<?> future = executor.submit(new Runnable() {
+			@Override
 			public void run() {
-				createGUI();
 				Persona4Planner p4p = new Persona4Planner();
 				p4p.createDatabaseTables();
+
 				String line = null;
 				try {
 					BufferedReader br = new BufferedReader(new FileReader("documents/Arcana-Yearly-Schedule"));
@@ -162,7 +171,7 @@ public class Persona4Planner {
 						String devil = dailyData[21];
 						String tower = dailyData[22];
 
-						p4p.insertToAvailability(new ArcanaTable()//
+						p4p.insertToAvailability(new ArcanaTable() //
 								.withDateOf(date) //
 								.withDayOf(day) //
 								.withWeatherOf(weather) //
@@ -191,10 +200,58 @@ public class Persona4Planner {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+			}
+		});
+
+		executor.submit(new Runnable() {
+			@Override
+			public void run() {
+				final SplashScreen splash = SplashScreen.getSplashScreen();
+				if (splash == null) {
+					System.out.println("SplashScreen.getSplashScreen() returned null");
+					return;
+				}
+				Graphics2D g = splash.createGraphics();
+				if (g == null) {
+					System.out.println("g is null");
+					return;
+				}
+				for (int i = 0; !future.isDone(); i++) {
+					renderSplashFrame(g, i);
+					splash.update();
+					try {
+						Thread.sleep(250);
+					} catch (InterruptedException e) {
+					}
+				}
+				splash.close();
+			}
+		});
+		executor.shutdown();
+
+		try {
+			executor.awaitTermination(1, TimeUnit.DAYS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				createGUI();
 
 			}
 		});
 
+	}
+
+	private static void renderSplashFrame(Graphics2D g, int frame) {
+		final String[] comps = { "Creating Database", "This may take a minute" };
+		g.setComposite(AlphaComposite.Clear);
+		g.fillRect(70, 130, 200, 40);
+		g.setPaintMode();
+		g.setColor(Color.BLACK);
+		g.drawString("Loading " + comps[(frame / 5) % comps.length] + "...", 70, 140);
 	}
 
 	private static void createGUI() {
@@ -207,9 +264,10 @@ public class Persona4Planner {
 		p4p.addComponentToPane(frame.getContentPane());
 
 		frame.setVisible(true);
+		forceToFront(frame);
 	}
 
-	public void createDatabaseTables() {
+	private void createDatabaseTables() {
 		String sql = "CREATE TABLE IF NOT EXISTS " + ARCANA_TABLE_NAME + " (" //
 				+ "	Date nchar(6) PRIMARY KEY," //
 				+ "	Day nchar(3) NOT NULL," //
@@ -243,7 +301,6 @@ public class Persona4Planner {
 	}
 
 	private void insertToAvailability(ArcanaTable table) {
-
 		String sql = "INSERT INTO " + ARCANA_TABLE_NAME //
 				+ "(Date, Day, Weather, Afternoon, Night, Mag, Cha, Pri, Epr, Lov, For, Str, Sun, Mon, Hng, Dea, Tem, Her, Eps, Hie, Jus, Dev, Tow)" //
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -288,6 +345,11 @@ public class Persona4Planner {
 			System.out.println(e.getMessage());
 		}
 		return conn;
+	}
+	
+	private static void forceToFront(JFrame frame) {
+		frame.setAlwaysOnTop(true);
+		frame.setAlwaysOnTop(false);
 	}
 
 	public static class ArcanaTable {
