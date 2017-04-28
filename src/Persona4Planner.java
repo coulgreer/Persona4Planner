@@ -48,6 +48,7 @@ public class Persona4Planner {
 	private final static int DEFAUL_LEVEL = 1;
 	private final static String DATABASE_NAME = "Persona4_Schedule.db";
 	private final static String ARCANA_TABLE_NAME = "ArcanaAvailability";
+	private final static String QUEST_TABLE_NAME = "Quest";
 
 	private JPanel cards;
 	private RadarChart radarChart;
@@ -141,8 +142,8 @@ public class Persona4Planner {
 				Persona4Planner p4p = new Persona4Planner();
 				p4p.createDatabaseTables();
 
-				String line = null;
 				try {
+					String line = null;
 					BufferedReader br = new BufferedReader(new FileReader("documents/Arcana-Yearly-Schedule"));
 					line = br.readLine();
 					while ((line = br.readLine()) != null) {
@@ -195,6 +196,32 @@ public class Persona4Planner {
 								.withJusticeAvailability(justice) //
 								.withDevilAvailability(devil) //
 								.withTowerAvailability(tower));
+					}
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				try {
+					String line = null;
+					BufferedReader br = new BufferedReader(new FileReader("documents/Quests"));
+					line = br.readLine();
+					while ((line = br.readLine()) != null) {
+						String[] questData = line.split("\t");
+						String questName = questData[0];
+						String questNumber = questData[1];
+						String questGiver = questData[2];
+						String questTimeFrame = questData[3];
+						String questReward = questData[4];
+						String remarks = questData[5];
+
+						p4p.insertToQuests(new QuestTable() //
+								.withQuestName(questName) //
+								.withQuestNumber(questNumber) //
+								.withQuestGiver(questGiver) //
+								.withAvailabilityDate(questTimeFrame) //
+								.withRewardOf(questReward) //
+								.withRemarks(remarks));
 					}
 					br.close();
 				} catch (IOException e) {
@@ -268,42 +295,14 @@ public class Persona4Planner {
 	}
 
 	private void createDatabaseTables() {
-		String sql = "CREATE TABLE IF NOT EXISTS " + ARCANA_TABLE_NAME + " (" //
-				+ "	Date nchar(6) PRIMARY KEY," //
-				+ "	Day nchar(3) NOT NULL," //
-				+ "	Weather varchar(3) NOT NULL," //
-				+ "	Afternoon nchar(1) NOT NULL," //
-				+ "	Night nchar(1) NOT NULL," //
-				+ "	Mag nchar(3)," //
-				+ "	Cha nchar(3)," //
-				+ "	Pri nchar(3)," //
-				+ "	Epr nchar(3)," //
-				+ "	Lov nchar(3)," //
-				+ "	For nchar(3)," //
-				+ "	Str nchar(3)," //
-				+ "	Sun nchar(3)," //
-				+ "	Mon nchar(3)," //
-				+ "	Hng nchar(3)," //
-				+ "	Dea nchar(3)," //
-				+ "	Tem nchar(3)," //
-				+ "	Her nchar(3)," //
-				+ "	Eps nchar(3)," //
-				+ "	Hie nchar(3)," //
-				+ "	Jus nchar(3)," //
-				+ "	Dev nchar(3)," //
-				+ "	Tow nchar(3));"; //
-
-		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
-			stmt.execute(sql);
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
+		createQuestTable();
+		createArcanaTable();
 	}
 
 	private void insertToAvailability(ArcanaTable table) {
 		String sql = "INSERT INTO " + ARCANA_TABLE_NAME //
 				+ "(Date, Day, Weather, Afternoon, Night, Mag, Cha, Pri, Epr, Lov, For, Str, Sun, Mon, Hng, Dea, Tem, Her, Eps, Hie, Jus, Dev, Tow)" //
-				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			pstmt.setString(1, table.date());
@@ -335,6 +334,73 @@ public class Persona4Planner {
 		}
 	}
 
+	private void insertToQuests(QuestTable table) {
+		String sql = "INSERT INTO " + QUEST_TABLE_NAME //
+				+ "(QuestName, QuestNumber, QuestGiver, TimeFrame, Reward, Remarks)" //
+				+ "VALUES (?, ?, ?, ?, ?, ?);";
+
+		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, table.questName());
+			pstmt.setString(2, table.questNumber());
+			pstmt.setString(3, table.questGiver());
+			pstmt.setString(4, table.questTimeFrame());
+			pstmt.setString(5, table.reward());
+			pstmt.setString(6, table.remarks());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	private void createArcanaTable() {
+		String sql = "CREATE TABLE IF NOT EXISTS " + ARCANA_TABLE_NAME + " (" //
+				+ "	Date nchar(6) PRIMARY KEY," //
+				+ "	Day nchar(3) NOT NULL," //
+				+ "	Weather varchar(3) NOT NULL," //
+				+ "	Afternoon nchar(1) NOT NULL," //
+				+ "	Night nchar(1) NOT NULL," //
+				+ "	Mag nchar(3)," //
+				+ "	Cha nchar(3)," //
+				+ "	Pri nchar(3)," //
+				+ "	Epr nchar(3)," //
+				+ "	Lov nchar(3)," //
+				+ "	For nchar(3)," //
+				+ "	Str nchar(3)," //
+				+ "	Sun nchar(3)," //
+				+ "	Mon nchar(3)," //
+				+ "	Hng nchar(3)," //
+				+ "	Dea nchar(3)," //
+				+ "	Tem nchar(3)," //
+				+ "	Her nchar(3)," //
+				+ "	Eps nchar(3)," //
+				+ "	Hie nchar(3)," //
+				+ "	Jus nchar(3)," //
+				+ "	Dev nchar(3)," //
+				+ "	Tow nchar(3));";
+
+		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
+			stmt.execute(sql);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	private void createQuestTable() {
+		String sql = "CREATE TABLE IF NOT EXISTS " + QUEST_TABLE_NAME + " (" //
+				+ " QuestName varchar(50) NOT NULL," //
+				+ " QuestNumber varchar(2) PRIMARY KEY," //
+				+ " QuestGiver varchar(20) NOT NULL," //
+				+ " TimeFrame varchar(15) NOT NULL," //
+				+ " Reward varchar(25)," //
+				+ " Remarks varchar(255));";
+
+		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
+			stmt.execute(sql);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
 	private Connection connect(String fileName) {
 		String url = "jdbc:sqlite:./database/" + fileName;
 
@@ -346,7 +412,7 @@ public class Persona4Planner {
 		}
 		return conn;
 	}
-	
+
 	private static void forceToFront(JFrame frame) {
 		frame.setAlwaysOnTop(true);
 		frame.setAlwaysOnTop(false);
@@ -562,6 +628,64 @@ public class Persona4Planner {
 
 		public String tower() {
 			return tower;
+		}
+	}
+
+	public static class QuestTable {
+		private String questName, questNumber, questGiver, questTimeFrame, reward, remarks;
+
+		public QuestTable withQuestName(String questName) {
+			this.questName = questName;
+			return this;
+		}
+
+		public QuestTable withQuestNumber(String questNumber) {
+			this.questNumber = questNumber;
+			return this;
+		}
+
+		public QuestTable withQuestGiver(String questGiver) {
+			this.questGiver = questGiver;
+			return this;
+		}
+
+		public QuestTable withAvailabilityDate(String questTimeFrame) {
+			this.questTimeFrame = questTimeFrame;
+			return this;
+		}
+
+		public QuestTable withRewardOf(String reward) {
+			this.reward = reward;
+			return this;
+		}
+
+		public QuestTable withRemarks(String remarks) {
+			this.remarks = remarks;
+			return this;
+		}
+
+		public String questName() {
+			return questName;
+		}
+
+		public String questNumber() {
+			return questNumber;
+		}
+
+		public String questGiver() {
+			return questGiver;
+		}
+
+		public String questTimeFrame() {
+			return questTimeFrame;
+		}
+
+		public String reward() {
+			return reward;
+		}
+
+		public String remarks() {
+			return remarks;
 		}
 	}
 
