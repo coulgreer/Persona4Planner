@@ -15,11 +15,6 @@ import java.awt.event.ComponentEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -46,9 +41,6 @@ public class Persona4Planner {
 	private final static int DEFAULT_NAVBAR_BUTTON_WIDTH = DEFAULT_NAVBAR_WIDTH - (NAVBAR_BUTTON_BUFFER * 2);
 	private final static int DEFAULT_NAVBAR_BUTTON_HEIGHT = 50;
 	private final static int DEFAUL_LEVEL = 1;
-	private final static String DATABASE_NAME = "Persona4_Schedule.db";
-	private final static String ARCANA_TABLE_NAME = "ArcanaAvailability";
-	private final static String QUEST_TABLE_NAME = "Quest";
 
 	private JPanel cards;
 	private RadarChart radarChart;
@@ -139,15 +131,14 @@ public class Persona4Planner {
 		Future<?> future = executor.submit(new Runnable() {
 			@Override
 			public void run() {
-				Persona4Planner p4p = new Persona4Planner();
-				p4p.createDatabaseTables();
+				Persona4Database db = new Persona4Database();
 
 				try {
 					String line = null;
 					BufferedReader br = new BufferedReader(new FileReader("documents/Arcana-Yearly-Schedule"));
 					line = br.readLine();
 					while ((line = br.readLine()) != null) {
-						String[] dailyData = line.split("\t");
+						String[] dailyData = line.split("\\|");
 						String date = dailyData[0];
 						String day = dailyData[1];
 						String weather = dailyData[2];
@@ -172,7 +163,7 @@ public class Persona4Planner {
 						String devil = dailyData[21];
 						String tower = dailyData[22];
 
-						p4p.insertToAvailability(new ArcanaTable() //
+						db.insertToAvailability(new ArcanaAvailabilityData() //
 								.withDateOf(date) //
 								.withDayOf(day) //
 								.withWeatherOf(weather) //
@@ -207,7 +198,7 @@ public class Persona4Planner {
 					BufferedReader br = new BufferedReader(new FileReader("documents/Quests"));
 					line = br.readLine();
 					while ((line = br.readLine()) != null) {
-						String[] questData = line.split("\t");
+						String[] questData = line.split("\\|");
 						String questName = questData[0];
 						String questNumber = questData[1];
 						String questGiver = questData[2];
@@ -215,12 +206,50 @@ public class Persona4Planner {
 						String questReward = questData[4];
 						String remarks = questData[5];
 
-						p4p.insertToQuests(new QuestTable() //
+						db.insertToQuests(new QuestData() //
 								.withQuestName(questName) //
 								.withQuestNumber(questNumber) //
 								.withQuestGiver(questGiver) //
 								.withAvailabilityDate(questTimeFrame) //
 								.withRewardOf(questReward) //
+								.withRemarks(remarks));
+					}
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				try {
+					String line = null;
+					BufferedReader br = new BufferedReader(new FileReader("documents/Social-Link-Answers"));
+					line = br.readLine();
+					while ((line = br.readLine()) != null) {
+						String[] lectureData = line.split("\\|");
+						String arcana = lectureData[0];
+						String rank1Answers = lectureData[1];
+						String rank2Answers = lectureData[2];
+						String rank3Answers = lectureData[3];
+						String rank4Answers = lectureData[4];
+						String rank5Answers = lectureData[5];
+						String rank6Answers = lectureData[6];
+						String rank7Answers = lectureData[7];
+						String rank8Answers = lectureData[8];
+						String rank9Answers = lectureData[9];
+						String rank10Answers = lectureData[10];
+						String remarks = lectureData[11];
+
+						db.insertToConversationAnswers(new ArcanaConversationData() //
+								.withArcana(arcana) //
+								.withRank1Answers(rank1Answers) //
+								.withRank2Answers(rank2Answers) //
+								.withRank3Answers(rank3Answers) //
+								.withRank4Answers(rank4Answers) //
+								.withRank5Answers(rank5Answers) //
+								.withRank6Answers(rank6Answers) //
+								.withRank7Answers(rank7Answers) //
+								.withRank8Answers(rank8Answers) //
+								.withRank9Answers(rank9Answers) //
+								.withRank10Answers(rank10Answers) //
 								.withRemarks(remarks));
 					}
 					br.close();
@@ -294,246 +323,127 @@ public class Persona4Planner {
 		forceToFront(frame);
 	}
 
-	private void createDatabaseTables() {
-		createQuestTable();
-		createArcanaTable();
-	}
-
-	private void insertToAvailability(ArcanaTable table) {
-		String sql = "INSERT INTO " + ARCANA_TABLE_NAME //
-				+ "(Date, Day, Weather, Afternoon, Night, Mag, Cha, Pri, Epr, Lov, For, Str, Sun, Mon, Hng, Dea, Tem, Her, Eps, Hie, Jus, Dev, Tow)" //
-				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, table.date());
-			pstmt.setString(2, table.day());
-			pstmt.setString(3, table.weather());
-			pstmt.setString(4, table.afternoon());
-			pstmt.setString(5, table.night());
-			pstmt.setString(6, table.magician());
-			pstmt.setString(7, table.chariot());
-			pstmt.setString(8, table.priestess());
-			pstmt.setString(9, table.emperor());
-			pstmt.setString(10, table.lovers());
-			pstmt.setString(11, table.fortune());
-			pstmt.setString(12, table.strength());
-			pstmt.setString(13, table.sun());
-			pstmt.setString(14, table.moon());
-			pstmt.setString(15, table.hangedMan());
-			pstmt.setString(16, table.death());
-			pstmt.setString(17, table.temperance());
-			pstmt.setString(18, table.hermit());
-			pstmt.setString(19, table.empress());
-			pstmt.setString(20, table.hierophant());
-			pstmt.setString(21, table.justice());
-			pstmt.setString(22, table.devil());
-			pstmt.setString(23, table.tower());
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	private void insertToQuests(QuestTable table) {
-		String sql = "INSERT INTO " + QUEST_TABLE_NAME //
-				+ "(QuestName, QuestNumber, QuestGiver, TimeFrame, Reward, Remarks)" //
-				+ "VALUES (?, ?, ?, ?, ?, ?);";
-
-		try (Connection conn = this.connect(DATABASE_NAME); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, table.questName());
-			pstmt.setString(2, table.questNumber());
-			pstmt.setString(3, table.questGiver());
-			pstmt.setString(4, table.questTimeFrame());
-			pstmt.setString(5, table.reward());
-			pstmt.setString(6, table.remarks());
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	private void createArcanaTable() {
-		String sql = "CREATE TABLE IF NOT EXISTS " + ARCANA_TABLE_NAME + " (" //
-				+ "	Date nchar(6) PRIMARY KEY," //
-				+ "	Day nchar(3) NOT NULL," //
-				+ "	Weather varchar(3) NOT NULL," //
-				+ "	Afternoon nchar(1) NOT NULL," //
-				+ "	Night nchar(1) NOT NULL," //
-				+ "	Mag nchar(3)," //
-				+ "	Cha nchar(3)," //
-				+ "	Pri nchar(3)," //
-				+ "	Epr nchar(3)," //
-				+ "	Lov nchar(3)," //
-				+ "	For nchar(3)," //
-				+ "	Str nchar(3)," //
-				+ "	Sun nchar(3)," //
-				+ "	Mon nchar(3)," //
-				+ "	Hng nchar(3)," //
-				+ "	Dea nchar(3)," //
-				+ "	Tem nchar(3)," //
-				+ "	Her nchar(3)," //
-				+ "	Eps nchar(3)," //
-				+ "	Hie nchar(3)," //
-				+ "	Jus nchar(3)," //
-				+ "	Dev nchar(3)," //
-				+ "	Tow nchar(3));";
-
-		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
-			stmt.execute(sql);
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	private void createQuestTable() {
-		String sql = "CREATE TABLE IF NOT EXISTS " + QUEST_TABLE_NAME + " (" //
-				+ " QuestName varchar(50) NOT NULL," //
-				+ " QuestNumber varchar(2) PRIMARY KEY," //
-				+ " QuestGiver varchar(20) NOT NULL," //
-				+ " TimeFrame varchar(15) NOT NULL," //
-				+ " Reward varchar(25)," //
-				+ " Remarks varchar(255));";
-
-		try (Connection conn = this.connect(DATABASE_NAME); Statement stmt = conn.createStatement()) {
-			stmt.execute(sql);
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	private Connection connect(String fileName) {
-		String url = "jdbc:sqlite:./database/" + fileName;
-
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(url);
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		return conn;
-	}
-
 	private static void forceToFront(JFrame frame) {
 		frame.setAlwaysOnTop(true);
 		frame.setAlwaysOnTop(false);
 	}
 
-	public static class ArcanaTable {
+	public static class ArcanaAvailabilityData {
 		private String date, day, weather, afternoon, night;
 		private String magician, chariot, priestess, emperor, lovers, fortune, strength, sun, moon, hangedMan, death,
 				temperance, hermit, empress, hierophant, justice, devil, tower;
 
-		public ArcanaTable withDateOf(String date) {
+		public ArcanaAvailabilityData withDateOf(String date) {
 			this.date = date;
 			return this;
 		}
 
-		public ArcanaTable withDayOf(String day) {
+		public ArcanaAvailabilityData withDayOf(String day) {
 			this.day = day;
 			return this;
 		}
 
-		public ArcanaTable withWeatherOf(String weather) {
+		public ArcanaAvailabilityData withWeatherOf(String weather) {
 			this.weather = weather;
 			return this;
 		}
 
-		public ArcanaTable withAfternoon(String afternoon) {
+		public ArcanaAvailabilityData withAfternoon(String afternoon) {
 			this.afternoon = afternoon;
 			return this;
 		}
 
-		public ArcanaTable withNight(String night) {
+		public ArcanaAvailabilityData withNight(String night) {
 			this.night = night;
 			return this;
 		}
 
-		public ArcanaTable withMagicianAvailability(String magician) {
+		public ArcanaAvailabilityData withMagicianAvailability(String magician) {
 			this.magician = magician;
 			return this;
 		}
 
-		public ArcanaTable withChariotAvailability(String chariot) {
+		public ArcanaAvailabilityData withChariotAvailability(String chariot) {
 			this.chariot = chariot;
 			return this;
 		}
 
-		public ArcanaTable withPriestessAvailability(String priestess) {
+		public ArcanaAvailabilityData withPriestessAvailability(String priestess) {
 			this.priestess = priestess;
 			return this;
 		}
 
-		public ArcanaTable withEmperorAvailability(String emperor) {
+		public ArcanaAvailabilityData withEmperorAvailability(String emperor) {
 			this.emperor = emperor;
 			return this;
 		}
 
-		public ArcanaTable withLoversAvailability(String lovers) {
+		public ArcanaAvailabilityData withLoversAvailability(String lovers) {
 			this.lovers = lovers;
 			return this;
 		}
 
-		public ArcanaTable withFortuneAvailability(String fortune) {
+		public ArcanaAvailabilityData withFortuneAvailability(String fortune) {
 			this.fortune = fortune;
 			return this;
 		}
 
-		public ArcanaTable withStrengthAvailability(String strength) {
+		public ArcanaAvailabilityData withStrengthAvailability(String strength) {
 			this.strength = strength;
 			return this;
 		}
 
-		public ArcanaTable withSunAvailability(String sun) {
+		public ArcanaAvailabilityData withSunAvailability(String sun) {
 			this.sun = sun;
 			return this;
 		}
 
-		public ArcanaTable withMoonAvailability(String moon) {
+		public ArcanaAvailabilityData withMoonAvailability(String moon) {
 			this.moon = moon;
 			return this;
 		}
 
-		public ArcanaTable withHangedManAvailability(String hangedMan) {
+		public ArcanaAvailabilityData withHangedManAvailability(String hangedMan) {
 			this.hangedMan = hangedMan;
 			return this;
 		}
 
-		public ArcanaTable withDeathAvailability(String death) {
+		public ArcanaAvailabilityData withDeathAvailability(String death) {
 			this.death = death;
 			return this;
 		}
 
-		public ArcanaTable withTemperanceAvailability(String temperance) {
+		public ArcanaAvailabilityData withTemperanceAvailability(String temperance) {
 			this.temperance = temperance;
 			return this;
 		}
 
-		public ArcanaTable withHermitAvailability(String hermit) {
+		public ArcanaAvailabilityData withHermitAvailability(String hermit) {
 			this.hermit = hermit;
 			return this;
 		}
 
-		public ArcanaTable withEmpressAvailability(String empress) {
+		public ArcanaAvailabilityData withEmpressAvailability(String empress) {
 			this.empress = empress;
 			return this;
 		}
 
-		public ArcanaTable withHierophantAvailability(String hierophant) {
+		public ArcanaAvailabilityData withHierophantAvailability(String hierophant) {
 			this.hierophant = hierophant;
 			return this;
 		}
 
-		public ArcanaTable withJusticeAvailability(String justice) {
+		public ArcanaAvailabilityData withJusticeAvailability(String justice) {
 			this.justice = justice;
 			return this;
 		}
 
-		public ArcanaTable withDevilAvailability(String devil) {
+		public ArcanaAvailabilityData withDevilAvailability(String devil) {
 			this.devil = devil;
 			return this;
 		}
 
-		public ArcanaTable withTowerAvailability(String tower) {
+		public ArcanaAvailabilityData withTowerAvailability(String tower) {
 			this.tower = tower;
 			return this;
 		}
@@ -631,35 +541,35 @@ public class Persona4Planner {
 		}
 	}
 
-	public static class QuestTable {
+	public static class QuestData {
 		private String questName, questNumber, questGiver, questTimeFrame, reward, remarks;
 
-		public QuestTable withQuestName(String questName) {
+		public QuestData withQuestName(String questName) {
 			this.questName = questName;
 			return this;
 		}
 
-		public QuestTable withQuestNumber(String questNumber) {
+		public QuestData withQuestNumber(String questNumber) {
 			this.questNumber = questNumber;
 			return this;
 		}
 
-		public QuestTable withQuestGiver(String questGiver) {
+		public QuestData withQuestGiver(String questGiver) {
 			this.questGiver = questGiver;
 			return this;
 		}
 
-		public QuestTable withAvailabilityDate(String questTimeFrame) {
+		public QuestData withAvailabilityDate(String questTimeFrame) {
 			this.questTimeFrame = questTimeFrame;
 			return this;
 		}
 
-		public QuestTable withRewardOf(String reward) {
+		public QuestData withRewardOf(String reward) {
 			this.reward = reward;
 			return this;
 		}
 
-		public QuestTable withRemarks(String remarks) {
+		public QuestData withRemarks(String remarks) {
 			this.remarks = remarks;
 			return this;
 		}
@@ -686,6 +596,164 @@ public class Persona4Planner {
 
 		public String remarks() {
 			return remarks;
+		}
+	}
+
+	public static class ArcanaConversationData {
+		private String arcana;
+		private String rank1Answers, rank2Answers, rank3Answers, rank4Answers, rank5Answers;
+		private String rank6Answers, rank7Answers, rank8Answers, rank9Answers, rank10Answers;
+		private String remarks;
+
+		public ArcanaConversationData withArcana(String arcana) {
+			this.arcana = arcana;
+			return this;
+		}
+
+		public ArcanaConversationData withRank1Answers(String rank1Answers) {
+			this.rank1Answers = rank1Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank2Answers(String rank2Answers) {
+			this.rank2Answers = rank2Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank3Answers(String rank3Answers) {
+			this.rank3Answers = rank3Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank4Answers(String rank4Answers) {
+			this.rank4Answers = rank4Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank5Answers(String rank5Answers) {
+			this.rank5Answers = rank5Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank6Answers(String rank6Answers) {
+			this.rank6Answers = rank6Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank7Answers(String rank7Answers) {
+			this.rank7Answers = rank7Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank8Answers(String rank8Answers) {
+			this.rank8Answers = rank8Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank9Answers(String rank9Answers) {
+			this.rank9Answers = rank9Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRank10Answers(String rank10Answers) {
+			this.rank10Answers = rank10Answers;
+			return this;
+		}
+
+		public ArcanaConversationData withRemarks(String remarks) {
+			this.remarks = remarks;
+			return this;
+		}
+
+		public String arcana() {
+			return arcana;
+		}
+
+		public String rank1Answers() {
+			return rank1Answers;
+		}
+
+		public String rank2Answers() {
+			return rank2Answers;
+		}
+
+		public String rank3Answers() {
+			return rank3Answers;
+		}
+
+		public String rank4Answers() {
+			return rank4Answers;
+		}
+
+		public String rank5Answers() {
+			return rank5Answers;
+		}
+
+		public String rank6Answers() {
+			return rank6Answers;
+		}
+
+		public String rank7Answers() {
+			return rank7Answers;
+		}
+
+		public String rank8Answers() {
+			return rank8Answers;
+		}
+
+		public String rank9Answers() {
+			return rank9Answers;
+		}
+
+		public String rank10Answers() {
+			return rank10Answers;
+		}
+
+		public String remarks() {
+			return remarks;
+		}
+	}
+	
+	public static class LectureData {
+		private String date;
+		private String answer;
+		private String socialLinkModifier;
+		private String socialQualityModifier;
+		
+		public LectureData withDate(String date) {
+			this.date = date;
+			return this;
+		}
+		
+		public LectureData withAnswer(String answer) {
+			this.answer = answer;
+			return this;
+		}
+		
+		public LectureData withSocialLinkModifier(String socialLinkModifier) {
+			this.socialLinkModifier = socialLinkModifier;
+			return this;
+		}
+		
+		public LectureData withSocialQualityModifier(String socialQualityModifier) {
+			this.socialQualityModifier = socialQualityModifier;
+			return this;
+		}
+		
+		public String date() {
+			return date;
+		}
+		
+		public String answer() {
+			return answer;
+		}
+		
+		public String socialLinkModifier() {
+			return socialLinkModifier;
+		}
+		
+		public String socialQualityModifier() {
+			return socialQualityModifier;
 		}
 	}
 
