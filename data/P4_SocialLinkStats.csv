@@ -1,0 +1,22 @@
+Number|Social Link|Is After School Available|Is Evening Available|Required Social Qualities|Required Social Link Ranks|Remaining Flags|Current Rank|Current Points
+0|Fool|FALSE|FALSE|||0|0|0
+I|Magician|TRUE|FALSE|||0|0|0
+II|Priestess|TRUE|FALSE|||0|0|0
+III|Empress|TRUE|FALSE|Knowledge Lv3||0|0|0
+IV|Emperor|TRUE|FALSE|||0|0|0
+V|Hierophant|FALSE|TRUE|||0|0|0
+VI|Lovers|TRUE|FALSE|||0|0|0
+VII|Chariot|TRUE|FALSE|||0|0|0
+VIII|Justice|FALSE|TRUE|||0|0|0
+IX|Hermit|TRUE|FALSE|||0|0|0
+X|Fortune|TRUE|FALSE|Knowledge Lv5, Courage Lv5||1|0|0
+XI|Strength|TRUE|FALSE|||0|0|0
+XII|Hanged Man|TRUE|FALSE|||2|0|0
+XIII|Death|TRUE|FALSE||Devil Lv4|0|0|0
+XIV|Temperance|TRUE|FALSE|||1|0|0
+XV|Devil|FALSE|TRUE|Diligence Lv3||1|0|0
+XVI|Tower|FALSE|TRUE|Understanding Lv5||1|0|0
+XVII|Star|FALSE|FALSE|||0|0|0
+XVIII|Moon|TRUE|FALSE|Courage Lv3|Strength Lv4|1|0|0
+XIX|Sun|TRUE|FALSE|||0|0|0
+XX|Judgement|FALSE|FALSE|||0|0|0

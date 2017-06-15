@@ -1,0 +1,11 @@
+Activity|Is After School Activity|Is Evening Activity|Is Rain Required|Required Quest|Social Quality Modifier|Visits
+Aiya Rainy Day Challenge|TRUE|FALSE|TRUE||Courage +2, Diligence +2, Understanding +2, Knowledge +2|0
+Focused Study|TRUE|TRUE|TRUE||Knowledge +4|0
+Study|TRUE|TRUE|FALSE||Knowledge +2|0
+Capsule Machine|TRUE|FALSE|TRUE|||0
+Fishing|FALSE|TRUE|FALSE|||0
+Cat|TRUE|FALSE|FALSE|14|Understanding +2|0
+Futon|FALSE|TRUE|FALSE|||0
+Farm Dungeon|TRUE|FALSE|FALSE|||0
+Clear Dungeon|TRUE|FALSE|FALSE|||0
+Read Book|TRUE|TRUE|FALSE|||0

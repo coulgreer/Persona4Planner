@@ -15,6 +15,8 @@ import java.awt.event.ComponentEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.ParseException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -27,6 +29,27 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.border.LineBorder;
+
+import cagreer.persona.data.AiyaChineseDiner;
+import cagreer.persona.data.Book;
+import cagreer.persona.data.DailyAvailability;
+import cagreer.persona.data.DailyData;
+import cagreer.persona.data.Dungeon;
+import cagreer.persona.data.Exam;
+import cagreer.persona.data.FridgeEvent;
+import cagreer.persona.data.Job;
+import cagreer.persona.data.LectureEvent;
+import cagreer.persona.data.LunchEvent;
+import cagreer.persona.data.MechaModel;
+import cagreer.persona.data.MiscellaneousActivity;
+import cagreer.persona.data.PhoneEvent;
+import cagreer.persona.data.Quest;
+import cagreer.persona.data.SocialLinkEvent;
+import cagreer.persona.data.SocialLinkPoints;
+import cagreer.persona.data.SocialLinkStats;
+import cagreer.persona.data.SocialQualityStats;
+import cagreer.persona.data.StoryEvent;
+import cagreer.persona.data.TanakasShopping;
 
 public class Persona4Planner {
 	private final static String STATUS_SCREEN = "Status Screen";
@@ -125,182 +148,6 @@ public class Persona4Planner {
 		panel.add(Box.createRigidArea(new Dimension(0, 5)));
 	}
 
-	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
-
-		Future<?> future = executor.submit(new Runnable() {
-			@Override
-			public void run() {
-				Persona4Database db = new Persona4Database();
-
-				try {
-					String line = null;
-					BufferedReader br = new BufferedReader(new FileReader("documents/Arcana-Yearly-Schedule"));
-					line = br.readLine();
-					while ((line = br.readLine()) != null) {
-						String[] dailyData = line.split("\\|");
-						String date = dailyData[0];
-						String day = dailyData[1];
-						String weather = dailyData[2];
-						String afternoon = dailyData[3];
-						String night = dailyData[4];
-						String magician = dailyData[5];
-						String chariot = dailyData[6];
-						String priestess = dailyData[7];
-						String emperor = dailyData[8];
-						String lovers = dailyData[9];
-						String fortune = dailyData[10];
-						String strength = dailyData[11];
-						String sun = dailyData[12];
-						String moon = dailyData[13];
-						String hangedMan = dailyData[14];
-						String death = dailyData[15];
-						String temperance = dailyData[16];
-						String hermit = dailyData[17];
-						String empress = dailyData[18];
-						String hierophant = dailyData[19];
-						String justice = dailyData[20];
-						String devil = dailyData[21];
-						String tower = dailyData[22];
-
-						db.insertToAvailability(new ArcanaAvailabilityData() //
-								.withDateOf(date) //
-								.withDayOf(day) //
-								.withWeatherOf(weather) //
-								.withAfternoon(afternoon) //
-								.withNight(night) //
-								.withMagicianAvailability(magician) //
-								.withChariotAvailability(chariot) //
-								.withPriestessAvailability(priestess) //
-								.withEmperorAvailability(emperor) //
-								.withLoversAvailability(lovers) //
-								.withFortuneAvailability(fortune) //
-								.withStrengthAvailability(strength) //
-								.withSunAvailability(sun) //
-								.withMoonAvailability(moon) //
-								.withHangedManAvailability(hangedMan) //
-								.withDeathAvailability(death) //
-								.withTemperanceAvailability(temperance) //
-								.withHermitAvailability(hermit) //
-								.withEmpressAvailability(empress) //
-								.withHierophantAvailability(hierophant) //
-								.withJusticeAvailability(justice) //
-								.withDevilAvailability(devil) //
-								.withTowerAvailability(tower));
-					}
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-
-				try {
-					String line = null;
-					BufferedReader br = new BufferedReader(new FileReader("documents/Quests"));
-					line = br.readLine();
-					while ((line = br.readLine()) != null) {
-						String[] questData = line.split("\\|");
-						String questName = questData[0];
-						String questNumber = questData[1];
-						String questGiver = questData[2];
-						String questTimeFrame = questData[3];
-						String questReward = questData[4];
-						String remarks = questData[5];
-
-						db.insertToQuests(new QuestData() //
-								.withQuestName(questName) //
-								.withQuestNumber(questNumber) //
-								.withQuestGiver(questGiver) //
-								.withAvailabilityDate(questTimeFrame) //
-								.withRewardOf(questReward) //
-								.withRemarks(remarks));
-					}
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-
-				try {
-					String line = null;
-					BufferedReader br = new BufferedReader(new FileReader("documents/Social-Link-Answers"));
-					line = br.readLine();
-					while ((line = br.readLine()) != null) {
-						String[] lectureData = line.split("\\|");
-						String arcana = lectureData[0];
-						String rank1Answers = lectureData[1];
-						String rank2Answers = lectureData[2];
-						String rank3Answers = lectureData[3];
-						String rank4Answers = lectureData[4];
-						String rank5Answers = lectureData[5];
-						String rank6Answers = lectureData[6];
-						String rank7Answers = lectureData[7];
-						String rank8Answers = lectureData[8];
-						String rank9Answers = lectureData[9];
-						String rank10Answers = lectureData[10];
-						String remarks = lectureData[11];
-
-						db.insertToConversationAnswers(new ArcanaConversationData() //
-								.withArcana(arcana) //
-								.withRank1Answers(rank1Answers) //
-								.withRank2Answers(rank2Answers) //
-								.withRank3Answers(rank3Answers) //
-								.withRank4Answers(rank4Answers) //
-								.withRank5Answers(rank5Answers) //
-								.withRank6Answers(rank6Answers) //
-								.withRank7Answers(rank7Answers) //
-								.withRank8Answers(rank8Answers) //
-								.withRank9Answers(rank9Answers) //
-								.withRank10Answers(rank10Answers) //
-								.withRemarks(remarks));
-					}
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-
-		executor.submit(new Runnable() {
-			@Override
-			public void run() {
-				final SplashScreen splash = SplashScreen.getSplashScreen();
-				if (splash == null) {
-					System.out.println("SplashScreen.getSplashScreen() returned null");
-					return;
-				}
-				Graphics2D g = splash.createGraphics();
-				if (g == null) {
-					System.out.println("g is null");
-					return;
-				}
-				for (int i = 0; !future.isDone(); i++) {
-					renderSplashFrame(g, i);
-					splash.update();
-					try {
-						Thread.sleep(250);
-					} catch (InterruptedException e) {
-					}
-				}
-				splash.close();
-			}
-		});
-		executor.shutdown();
-
-		try {
-			executor.awaitTermination(1, TimeUnit.DAYS);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				createGUI();
-
-			}
-		});
-
-	}
-
 	private static void renderSplashFrame(Graphics2D g, int frame) {
 		final String[] comps = { "Creating Database", "This may take a minute" };
 		g.setComposite(AlphaComposite.Clear);
@@ -328,433 +175,690 @@ public class Persona4Planner {
 		frame.setAlwaysOnTop(false);
 	}
 
-	public static class ArcanaAvailabilityData {
-		private String date, day, weather, afternoon, night;
-		private String magician, chariot, priestess, emperor, lovers, fortune, strength, sun, moon, hangedMan, death,
-				temperance, hermit, empress, hierophant, justice, devil, tower;
+	public static void main(String[] args) {
+		ExecutorService executor = Executors.newFixedThreadPool(2);
 
-		public ArcanaAvailabilityData withDateOf(String date) {
-			this.date = date;
-			return this;
+		Future<?> future = executor.submit(new Runnable() {
+			@Override
+			public void run() {
+				Database db = new Database();
+
+				try {
+					parseAndInsertDinerData(db);
+					parseAndInsertBookData(db);
+					parseAndInsertAvailabilityData(db);
+					parseAndInsertDailyData(db);
+					parseAndInsertDungeonData(db);
+					parseAndInsertExamData(db);
+					parseAndInsertFridgeData(db);
+					parseAndInsertJobData(db);
+					parseAndInsertLectureData(db);
+					parseAndInsertLunchData(db);
+					parseAndInsertMechaData(db);
+					parseAndInsertMiscellaneousData(db);
+					parseAndInsertPhoneData(db);
+					parseAndInsertQuestData(db);
+					parseAndInsertSocialLinkEventData(db);
+					parseAndInsertSocialLinkPointsData(db);
+					parseAndInsertSocialLinkStatsData(db);
+					parseAndInsertSocialQualityData(db);
+					parseAndInsertStoryEvent(db);
+					parseAndInsertTanakaShopping(db);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+		});
+
+		executor.submit(new Runnable() {
+			@Override
+			public void run() {
+				final SplashScreen splash = SplashScreen.getSplashScreen();
+				if (splash == null) {
+					System.out.println("SplashScreen.getSplashScreen() returned null");
+					return;
+				}
+				Graphics2D g = splash.createGraphics();
+				if (g == null) {
+					System.out.println("g is null");
+					return;
+				}
+				for (int i = 0; !future.isDone(); i++) {
+					renderSplashFrame(g, i);
+					splash.update();
+					try {
+						Thread.sleep(250);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				splash.close();
+			}
+		});
+		executor.shutdown();
+
+		try {
+			executor.awaitTermination(1, TimeUnit.DAYS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 
-		public ArcanaAvailabilityData withDayOf(String day) {
-			this.day = day;
-			return this;
-		}
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				createGUI();
+			}
+		});
+	}
 
-		public ArcanaAvailabilityData withWeatherOf(String weather) {
-			this.weather = weather;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withAfternoon(String afternoon) {
-			this.afternoon = afternoon;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withNight(String night) {
-			this.night = night;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withMagicianAvailability(String magician) {
-			this.magician = magician;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withChariotAvailability(String chariot) {
-			this.chariot = chariot;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withPriestessAvailability(String priestess) {
-			this.priestess = priestess;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withEmperorAvailability(String emperor) {
-			this.emperor = emperor;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withLoversAvailability(String lovers) {
-			this.lovers = lovers;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withFortuneAvailability(String fortune) {
-			this.fortune = fortune;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withStrengthAvailability(String strength) {
-			this.strength = strength;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withSunAvailability(String sun) {
-			this.sun = sun;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withMoonAvailability(String moon) {
-			this.moon = moon;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withHangedManAvailability(String hangedMan) {
-			this.hangedMan = hangedMan;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withDeathAvailability(String death) {
-			this.death = death;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withTemperanceAvailability(String temperance) {
-			this.temperance = temperance;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withHermitAvailability(String hermit) {
-			this.hermit = hermit;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withEmpressAvailability(String empress) {
-			this.empress = empress;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withHierophantAvailability(String hierophant) {
-			this.hierophant = hierophant;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withJusticeAvailability(String justice) {
-			this.justice = justice;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withDevilAvailability(String devil) {
-			this.devil = devil;
-			return this;
-		}
-
-		public ArcanaAvailabilityData withTowerAvailability(String tower) {
-			this.tower = tower;
-			return this;
-		}
-
-		public String date() {
-			return date;
-		}
-
-		public String day() {
-			return day;
-		}
-
-		public String weather() {
-			return weather;
-		}
-
-		public String afternoon() {
-			return afternoon;
-		}
-
-		public String night() {
-			return night;
-		}
-
-		public String magician() {
-			return magician;
-		}
-
-		public String chariot() {
-			return chariot;
-		}
-
-		public String priestess() {
-			return priestess;
-		}
-
-		public String emperor() {
-			return emperor;
-		}
-
-		public String lovers() {
-			return lovers;
-		}
-
-		public String fortune() {
-			return fortune;
-		}
-
-		public String strength() {
-			return strength;
-		}
-
-		public String sun() {
-			return sun;
-		}
-
-		public String moon() {
-			return moon;
-		}
-
-		public String hangedMan() {
-			return hangedMan;
-		}
-
-		public String death() {
-			return death;
-		}
-
-		public String temperance() {
-			return temperance;
-		}
-
-		public String hermit() {
-			return hermit;
-		}
-
-		public String empress() {
-			return empress;
-		}
-
-		public String hierophant() {
-			return hierophant;
-		}
-
-		public String justice() {
-			return justice;
-		}
-
-		public String devil() {
-			return devil;
-		}
-
-		public String tower() {
-			return tower;
+	private static Date parseSQLDate(String date) {
+		java.text.SimpleDateFormat format = null;
+		java.util.Date utilDate = null;
+		Date sqlDate = null;
+		try {
+			date = date.trim();
+			format = new java.text.SimpleDateFormat("yyyy-MM-dd");
+			utilDate = format.parse(date);
+			sqlDate = new Date(utilDate.getTime());
+			return sqlDate;
+		} catch (ParseException e) {
+			return sqlDate;
 		}
 	}
 
-	public static class QuestData {
-		private String questName, questNumber, questGiver, questTimeFrame, reward, remarks;
-
-		public QuestData withQuestName(String questName) {
-			this.questName = questName;
-			return this;
-		}
-
-		public QuestData withQuestNumber(String questNumber) {
-			this.questNumber = questNumber;
-			return this;
-		}
-
-		public QuestData withQuestGiver(String questGiver) {
-			this.questGiver = questGiver;
-			return this;
-		}
-
-		public QuestData withAvailabilityDate(String questTimeFrame) {
-			this.questTimeFrame = questTimeFrame;
-			return this;
-		}
-
-		public QuestData withRewardOf(String reward) {
-			this.reward = reward;
-			return this;
-		}
-
-		public QuestData withRemarks(String remarks) {
-			this.remarks = remarks;
-			return this;
-		}
-
-		public String questName() {
-			return questName;
-		}
-
-		public String questNumber() {
-			return questNumber;
-		}
-
-		public String questGiver() {
-			return questGiver;
-		}
-
-		public String questTimeFrame() {
-			return questTimeFrame;
-		}
-
-		public String reward() {
-			return reward;
-		}
-
-		public String remarks() {
-			return remarks;
+	private static Integer parseInt(String integer) {
+		try {
+			return Integer.parseInt(integer);
+		} catch (NumberFormatException e) {
+			return null;
 		}
 	}
 
-	public static class ArcanaConversationData {
-		private String arcana;
-		private String rank1Answers, rank2Answers, rank3Answers, rank4Answers, rank5Answers;
-		private String rank6Answers, rank7Answers, rank8Answers, rank9Answers, rank10Answers;
-		private String remarks;
-
-		public ArcanaConversationData withArcana(String arcana) {
-			this.arcana = arcana;
-			return this;
-		}
-
-		public ArcanaConversationData withRank1Answers(String rank1Answers) {
-			this.rank1Answers = rank1Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank2Answers(String rank2Answers) {
-			this.rank2Answers = rank2Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank3Answers(String rank3Answers) {
-			this.rank3Answers = rank3Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank4Answers(String rank4Answers) {
-			this.rank4Answers = rank4Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank5Answers(String rank5Answers) {
-			this.rank5Answers = rank5Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank6Answers(String rank6Answers) {
-			this.rank6Answers = rank6Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank7Answers(String rank7Answers) {
-			this.rank7Answers = rank7Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank8Answers(String rank8Answers) {
-			this.rank8Answers = rank8Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank9Answers(String rank9Answers) {
-			this.rank9Answers = rank9Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRank10Answers(String rank10Answers) {
-			this.rank10Answers = rank10Answers;
-			return this;
-		}
-
-		public ArcanaConversationData withRemarks(String remarks) {
-			this.remarks = remarks;
-			return this;
-		}
-
-		public String arcana() {
-			return arcana;
-		}
-
-		public String rank1Answers() {
-			return rank1Answers;
-		}
-
-		public String rank2Answers() {
-			return rank2Answers;
-		}
-
-		public String rank3Answers() {
-			return rank3Answers;
-		}
-
-		public String rank4Answers() {
-			return rank4Answers;
-		}
-
-		public String rank5Answers() {
-			return rank5Answers;
-		}
-
-		public String rank6Answers() {
-			return rank6Answers;
-		}
-
-		public String rank7Answers() {
-			return rank7Answers;
-		}
-
-		public String rank8Answers() {
-			return rank8Answers;
-		}
-
-		public String rank9Answers() {
-			return rank9Answers;
-		}
-
-		public String rank10Answers() {
-			return rank10Answers;
-		}
-
-		public String remarks() {
-			return remarks;
-		}
-	}
-	
-	public static class LectureData {
-		private String date;
-		private String answer;
-		private String socialLinkModifier;
-		private String socialQualityModifier;
-		
-		public LectureData withDate(String date) {
-			this.date = date;
-			return this;
-		}
-		
-		public LectureData withAnswer(String answer) {
-			this.answer = answer;
-			return this;
-		}
-		
-		public LectureData withSocialLinkModifier(String socialLinkModifier) {
-			this.socialLinkModifier = socialLinkModifier;
-			return this;
-		}
-		
-		public LectureData withSocialQualityModifier(String socialQualityModifier) {
-			this.socialQualityModifier = socialQualityModifier;
-			return this;
-		}
-		
-		public String date() {
-			return date;
-		}
-		
-		public String answer() {
-			return answer;
-		}
-		
-		public String socialLinkModifier() {
-			return socialLinkModifier;
-		}
-		
-		public String socialQualityModifier() {
-			return socialQualityModifier;
+	private static String parseString(String str) {
+		str = str.trim();
+		if (!str.equals("")) {
+			return str;
+		} else {
+			return null;
 		}
 	}
 
+	private static void parseAndInsertDinerData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_AiyaChineseDiner.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] aiyaData = line.split("\\|", -1);
+			String day = parseString(aiyaData[0]);
+			String socialQualityModifier = parseString(aiyaData[1]);
+			Integer visits = parseInt(aiyaData[2]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(aiyaData[3]);
+			Boolean isEveningActivity = Boolean.parseBoolean(aiyaData[4]);
+
+			db.insertIntoAiyaChineseDinerMenuTable(new AiyaChineseDiner.Builder() //
+					.setDay(day) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setNumberOfVisit(visits) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningActivity(isEveningActivity) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertBookData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_Books.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] bookData = line.split("\\|", -1);
+			String name = parseString(bookData[0]);
+			Date releaseDate = parseSQLDate(bookData[1]);
+			String socialQualityModifier = parseString(bookData[2]);
+			Integer readSections = parseInt(bookData[3]);
+			Integer totalSections = parseInt(bookData[4]);
+			Boolean isObtained = Boolean.parseBoolean(bookData[5]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(bookData[6]);
+			Boolean isEveningActivity = Boolean.parseBoolean(bookData[7]);
+
+			db.insertIntoBook(new Book.Builder() //
+					.setName(name) //
+					.setReleaseDate(releaseDate) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setReadSections(readSections) //
+					.setTotalSections(totalSections) //
+					.setObtained(isObtained) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningActivity(isEveningActivity) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertAvailabilityData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_DailyAvailability.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] dailyAvailabilityData = line.split("\\|", -1);
+			Date date = parseSQLDate(dailyAvailabilityData[0]);
+			String magician = parseString(dailyAvailabilityData[1]);
+			String chariot = parseString(dailyAvailabilityData[2]);
+			String priestess = parseString(dailyAvailabilityData[3]);
+			String emperor = parseString(dailyAvailabilityData[4]);
+			String lovers = parseString(dailyAvailabilityData[5]);
+			String fortune = parseString(dailyAvailabilityData[6]);
+			String strength = parseString(dailyAvailabilityData[7]);
+			String sun = parseString(dailyAvailabilityData[8]);
+			String moon = parseString(dailyAvailabilityData[9]);
+			String hangedMan = parseString(dailyAvailabilityData[10]);
+			String death = parseString(dailyAvailabilityData[11]);
+			String temperance = parseString(dailyAvailabilityData[12]);
+			String hermit = parseString(dailyAvailabilityData[13]);
+			String empress = parseString(dailyAvailabilityData[14]);
+			String hierophant = parseString(dailyAvailabilityData[15]);
+			String justice = parseString(dailyAvailabilityData[16]);
+			String devil = parseString(dailyAvailabilityData[17]);
+			String tower = parseString(dailyAvailabilityData[18]);
+
+			db.insertIntoDailyAvailability(new DailyAvailability.Builder() //
+					.setDate(date) //
+					.setMagicianAvailability(magician) //
+					.setChariotAvailability(chariot) //
+					.setPriestessAvailability(priestess) //
+					.setEmperorAvailability(emperor) //
+					.setLoversAvailability(lovers) //
+					.setFortuneAvailability(fortune) //
+					.setStrengthAvailability(strength) //
+					.setSunAvailability(sun) //
+					.setMoonAvailability(moon) //
+					.setHangedManAvailability(hangedMan) //
+					.setDeathAvailability(death) //
+					.setTemperanceAvailability(temperance) //
+					.setHermitAvailability(hermit) //
+					.setEmpressAvailability(empress) //
+					.setHierophantAvailability(hierophant) //
+					.setJusticeAvailability(justice) //
+					.setDevilAvailability(devil) //
+					.setTowerAvailability(tower) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertDailyData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_DailyData.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] dailyData = line.split("\\|", -1);
+			Date date = parseSQLDate(dailyData[0]);
+			String day = parseString(dailyData[1]);
+			String morningWeather = parseString(dailyData[2]);
+			String eveningWeather = parseString(dailyData[3]);
+			String afterSchoolFreeTime = parseString(dailyData[4]);
+			String eveningFreeTime = parseString(dailyData[5]);
+			Boolean isSchoolDay = Boolean.parseBoolean(dailyData[6]);
+
+			db.insertIntoDailyData(new DailyData.Builder() //
+					.setDate(date) //
+					.setDay(day) //
+					.setMorningWeather(morningWeather) //
+					.setEveningWeather(eveningWeather) //
+					.setAfterSchoolFreeTime(afterSchoolFreeTime) //
+					.setEveningFreeTime(eveningFreeTime) //
+					.setSchoolDay(isSchoolDay) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertDungeonData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_DungeonEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] dungeonData = line.split("\\|", -1);
+			String name = parseString(dungeonData[0]);
+			String keyResponse = parseString(dungeonData[1]);
+			String socialQualityModifier = parseString(dungeonData[2]);
+			String autoSocialLinkLevel = parseString(dungeonData[3]);
+			String socialLinkModifier = parseString(dungeonData[4]);
+			String optionalBossReward = parseString(dungeonData[5]);
+			Boolean isStoryBossDefeated = Boolean.parseBoolean(dungeonData[6]);
+			Boolean isOptionalBossDefeated = Boolean.parseBoolean(dungeonData[7]);
+
+			db.insertIntoDungeon(new Dungeon.Builder() //
+					.setName(name) //
+					.setKeyResponse(keyResponse) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setAutoSocialLinkLevel(autoSocialLinkLevel) //
+					.setSocialLinkModifier(socialLinkModifier) //
+					.setOptionalBossReward(optionalBossReward) //
+					.setStoryBossDefeated(isStoryBossDefeated) //
+					.setOptionalBossDefeated(isOptionalBossDefeated) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertExamData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_Exams.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] examData = line.split("\\|", -1);
+			Date startDate = parseSQLDate(examData[0]);
+			Date endDate = parseSQLDate(examData[1]);
+			String exam = parseString(examData[2]);
+			String neededSocialQualityLevelForTop10 = parseString(examData[3]);
+			String top10SocialLinkRewards = parseString(examData[4]);
+			String neededSocialQualityLevelForTop = parseString(examData[5]);
+			String topSocialLinkRewards = parseString(examData[6]);
+
+			db.insertIntoExam(new Exam.Builder() //
+					.setStartDate(startDate) //
+					.setEndDate(endDate) //
+					.setExam(exam) //
+					.setRequiredSocialQualityLevelForTop10(neededSocialQualityLevelForTop10) //
+					.setSocialLinkRewardsForTop10(top10SocialLinkRewards) //
+					.setRequiredSocialQualityLevelForAce(neededSocialQualityLevelForTop) //
+					.setSocialLinkRewardsForAce(topSocialLinkRewards) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertFridgeData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_FridgeEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] fridgeData = line.split("\\|", -1);
+			Date date = parseSQLDate(fridgeData[0]);
+			String meal = parseString(fridgeData[1]);
+			String socialQualityModifier = parseString(fridgeData[2]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(fridgeData[3]);
+			Boolean isEveningActivity = Boolean.parseBoolean(fridgeData[4]);
+
+			db.insertIntoFridgeEvent(new FridgeEvent.Builder() //
+					.setDate(date) //
+					.setMeal(meal) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningActivity(isEveningActivity) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertJobData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_Jobs.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] jobData = line.split("\\|", -1);
+			String name = parseString(jobData[0]);
+			Date startDate = parseSQLDate(jobData[1]);
+			String socialQualityRequirement = parseString(jobData[2]);
+			String socialQualityModifier = parseString(jobData[3]);
+			String socialLink = parseString(jobData[4]);
+			Integer visits = parseInt(jobData[5]);
+			Boolean isDuringRain = Boolean.parseBoolean(jobData[6]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(jobData[7]);
+			Boolean isEveningActivity = Boolean.parseBoolean(jobData[8]);
+
+			db.insertIntoJob(new Job.Builder() //
+					.setName(name) //
+					.setStartDate(startDate) //
+					.setSocialQualityRequirement(socialQualityRequirement) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setSocialLink(socialLink) //
+					.setVisits(visits) //
+					.setDuringRain(isDuringRain) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningActivity(isEveningActivity) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertLectureData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_LectureEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] lectureData = line.split("\\|", -1);
+			Date date = parseSQLDate(lectureData[0]);
+			String answer = parseString(lectureData[1]);
+			String socialQualityModifier = parseString(lectureData[2]);
+			String socialLinkModifier = parseString(lectureData[3]);
+
+			db.insertIntoLectureEvent(new LectureEvent.Builder() //
+					.setDate(date) //
+					.setAnswer(answer) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setSocialLinkModifier(socialLinkModifier) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertLunchData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_LunchEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] lunchData = line.split("\\|", -1);
+			Date date = parseSQLDate(lunchData[0]);
+			String meal = parseString(lunchData[1]);
+			String methodology = parseString(lunchData[2]);
+			String socialLinksFavorite = parseString(lunchData[3]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(lunchData[4]);
+			Boolean isEveningActivity = Boolean.parseBoolean(lunchData[5]);
+
+			db.insertIntoLunchEvent(new LunchEvent.Builder() //
+					.setDate(date) //
+					.setMeal(meal) //
+					.setMethodology(methodology) //
+					.setSocialLinksFavorite(socialLinksFavorite) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningActivity(isEveningActivity) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertMechaData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_MechaModels.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] mechaData = line.split("\\|", -1);
+			String model = parseString(mechaData[0]);
+			Integer currentProgress = parseInt(mechaData[1]);
+			Integer totalProgress = parseInt(mechaData[2]);
+			Integer quest = parseInt(mechaData[3]);
+			String requiredQuestStatus = parseString(mechaData[4]);
+
+			db.insertIntoMechaModel(new MechaModel.Builder() //
+					.setModel(model) //
+					.setCurrentProgress(currentProgress) //
+					.setTotalProgress(totalProgress) //
+					.setQuest(quest) //
+					.setRequiredQuestStatus(requiredQuestStatus) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertMiscellaneousData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_MiscActivities.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] miscData = line.split("\\|", -1);
+			String activity = parseString(miscData[0]);
+			Boolean isAfterSchoolActivity = Boolean.parseBoolean(miscData[1]);
+			Boolean isEveningActivity = Boolean.parseBoolean(miscData[2]);
+			Boolean isRainRequired = Boolean.parseBoolean(miscData[3]);
+			Integer requiredQuestNumber = parseInt(miscData[4]);
+			String socialQualityModifier = parseString(miscData[5]);
+			Integer visits = parseInt(miscData[6]);
+
+			db.insertIntoMiscellaneous(new MiscellaneousActivity.Builder() //
+					.setActivity(activity) //
+					.setAfterSchoolActivity(isAfterSchoolActivity) //
+					.setEveningSchoolActivity(isEveningActivity) //
+					.setRainRequired(isRainRequired) //
+					.setRequiredQuestNumber(requiredQuestNumber) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.setVisits(visits) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertPhoneData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_PhoneEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] phoneData = line.split("\\|", -1);
+			Date date = parseSQLDate(phoneData[0]);
+			String initiatingSocialLink = parseString(phoneData[1]);
+			String involvedSocialLink = parseString(phoneData[2]);
+			String book = parseString(phoneData[3]);
+			String keyResponses = parseString(phoneData[4]);
+			String status = parseString(phoneData[5]);
+
+			db.insertIntoPhoneEvent(new PhoneEvent.Builder() //
+					.setDate(date) //
+					.setInitiatingSocialLink(initiatingSocialLink) //
+					.setInvolvedSocialLink(involvedSocialLink) //
+					.setBook(book) //
+					.setKeyResponses(keyResponses) //
+					.setStatus(status) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertQuestData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_Quest.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] questData = line.split("\\|", -1);
+			Integer number = parseInt(questData[0]);
+			String name = parseString(questData[1]);
+			String questGiver = parseString(questData[2]);
+			String startLocation = parseString(questData[3]);
+			Date startDate = parseSQLDate(questData[4]);
+			Date endDate = parseSQLDate(questData[5]);
+			String previousQuestNumber = parseString(questData[6]);
+			String socialQualities = parseString(questData[7]);
+			String reward = parseString(questData[8]);
+			Integer neededAfterSchoolSlots = parseInt(questData[9]);
+			Integer neededEveningSlots = parseInt(questData[10]);
+			Integer daysSpentOnQuest = parseInt(questData[11]);
+			Integer daysNeededToComplete = parseInt(questData[12]);
+			String status = parseString(questData[13]);
+			String instructions = parseString(questData[14]);
+
+			db.insertIntoQuest(new Quest.Builder() //
+					.setNumber(number) //
+					.setName(name) //
+					.setQuestGiver(questGiver) //
+					.setStartLocation(startLocation) //
+					.setStartDate(startDate) //
+					.setEndDate(endDate) //
+					.setPreviousQuest(previousQuestNumber) //
+					.setRequiredSocialQualities(socialQualities) //
+					.setReward(reward) //
+					.setNeededAfterSchoolSlot(neededAfterSchoolSlots) //
+					.setNeededEveningSlots(neededEveningSlots) //
+					.setDaysSpentOnQuest(daysSpentOnQuest) //
+					.setDaysNeededToComplete(daysNeededToComplete) //
+					.setStatus(status) //
+					.setInstructions(instructions) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertSocialLinkEventData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_SocialLinkEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] socialLinkEventData = line.split("\\|", -1);
+			String socialLink = parseString(socialLinkEventData[0]);
+			String rank1Answers = parseString(socialLinkEventData[1]);
+			String rank2Answers = parseString(socialLinkEventData[2]);
+			String rank3Answers = parseString(socialLinkEventData[3]);
+			String rank4Answers = parseString(socialLinkEventData[4]);
+			String rank5Answers = parseString(socialLinkEventData[5]);
+			String rank6Answers = parseString(socialLinkEventData[6]);
+			String rank7Answers = parseString(socialLinkEventData[7]);
+			String rank8Answers = parseString(socialLinkEventData[8]);
+			String rank9Answers = parseString(socialLinkEventData[9]);
+			String rank10Answers = parseString(socialLinkEventData[10]);
+
+			db.insertIntoSocialLinkEvent(new SocialLinkEvent.Builder() //
+					.setSocialLink(socialLink) //
+					.setRank1Answers(rank1Answers) //
+					.setRank2Answers(rank2Answers) //
+					.setRank3Answers(rank3Answers) //
+					.setRank4Answers(rank4Answers) //
+					.setRank5Answers(rank5Answers) //
+					.setRank6Answers(rank6Answers) //
+					.setRank7Answers(rank7Answers) //
+					.setRank8Answers(rank8Answers) //
+					.setRank9Answers(rank9Answers) //
+					.setRank10Answers(rank10Answers) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertSocialLinkPointsData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_SocialLinkPoints.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] socialLinkPointsData = line.split("\\|", -1);
+			String socialLink = parseString(socialLinkPointsData[0]);
+			Integer rank1Points = parseInt(socialLinkPointsData[1]);
+			Integer rank2Points = parseInt(socialLinkPointsData[2]);
+			Integer rank3Points = parseInt(socialLinkPointsData[3]);
+			Integer rank4Points = parseInt(socialLinkPointsData[4]);
+			Integer rank5Points = parseInt(socialLinkPointsData[5]);
+			Integer rank6Points = parseInt(socialLinkPointsData[6]);
+			Integer rank7Points = parseInt(socialLinkPointsData[7]);
+			Integer rank8Points = parseInt(socialLinkPointsData[8]);
+			Integer rank9Points = parseInt(socialLinkPointsData[9]);
+			Integer rank10Points = parseInt(socialLinkPointsData[10]);
+
+			db.insertIntoSocialLinkPoints(new SocialLinkPoints.Builder() //
+					.setSocialLink(socialLink) //
+					.setRank1Points(rank1Points) //
+					.setRank2Points(rank2Points) //
+					.setRank3Points(rank3Points) //
+					.setRank4Points(rank4Points) //
+					.setRank5Points(rank5Points) //
+					.setRank6Points(rank6Points) //
+					.setRank7Points(rank7Points) //
+					.setRank8Points(rank8Points) //
+					.setRank9Points(rank9Points) //
+					.setRank10Points(rank10Points) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertSocialLinkStatsData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_SocialLinkStats.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] socialLinkStatsData = line.split("\\|", -1);
+			String arcanaNumber = parseString(socialLinkStatsData[0]);
+			String socialLink = parseString(socialLinkStatsData[1]);
+			Boolean isAfterSchoolAvailable = Boolean.parseBoolean(socialLinkStatsData[2]);
+			Boolean isEveningAvailable = Boolean.parseBoolean(socialLinkStatsData[3]);
+			String requiredSocialQuality = parseString(socialLinkStatsData[4]);
+			String requiredSocialLinkRanks = parseString(socialLinkStatsData[5]);
+			Integer remainingFlags = parseInt(socialLinkStatsData[6]);
+			Integer currentRank = parseInt(socialLinkStatsData[7]);
+			Integer currentPoints = parseInt(socialLinkStatsData[8]);
+
+			db.insertIntoSocialLinkStats(new SocialLinkStats.Builder() //
+					.setArcanaNumber(arcanaNumber) //
+					.setSocialLink(socialLink) //
+					.setAfterSchoolAvailable(isAfterSchoolAvailable) //
+					.setEveningAvailable(isEveningAvailable) //
+					.setRequiredSocialQuality(requiredSocialQuality) //
+					.setRequiredSocialLinkRanks(requiredSocialLinkRanks) //
+					.setRemainingFlags(remainingFlags) //
+					.setCurrentRank(currentRank) //
+					.setCurrentPoints(currentPoints) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertSocialQualityData(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_SocialLinkPoints.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] socialQualityData = line.split("\\|", -1);
+			String socialQuality = parseString(socialQualityData[0]);
+			Integer level1Points = parseInt(socialQualityData[1]);
+			Integer level2Points = parseInt(socialQualityData[2]);
+			Integer level3Points = parseInt(socialQualityData[3]);
+			Integer level4Points = parseInt(socialQualityData[4]);
+			Integer level5Points = parseInt(socialQualityData[5]);
+			Integer currentPoints = parseInt(socialQualityData[6]);
+			Integer currentLevel = parseInt(socialQualityData[7]);
+
+			db.insertIntoSocialQualityStats(new SocialQualityStats.Builder() //
+					.setSocialQuality(socialQuality) //
+					.setLevel1Points(level1Points) //
+					.setLevel2Points(level2Points) //
+					.setLevel3Points(level3Points) //
+					.setLevel4Points(level4Points) //
+					.setLevel5Points(level5Points) //
+					.setCurrentPoints(currentPoints) //
+					.setCurrentLevel(currentLevel) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertStoryEvent(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_StoryEvents.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] storyEventData = line.split("\\|", -1);
+			Date date = parseSQLDate(storyEventData[0]);
+			String name = parseString(storyEventData[1]);
+			String keyResponses = parseString(storyEventData[2]);
+			String socialLinkAutoLevel = parseString(storyEventData[3]);
+			String socialLinkModifier = parseString(storyEventData[4]);
+			String socialQualityModifier = parseString(storyEventData[5]);
+
+			db.insertIntoStoryEvent(new StoryEvent.Builder() //
+					.setDate(date) //
+					.setName(name) //
+					.setKeyResponses(keyResponses) //
+					.setSocialLinkAutoLevel(socialLinkAutoLevel) //
+					.setSocialLinkModifier(socialLinkModifier) //
+					.setSocialQualityModifier(socialQualityModifier) //
+					.build());
+		}
+		br.close();
+	}
+
+	private static void parseAndInsertTanakaShopping(Database db) throws IOException {
+		String line = null;
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_TanakaShopping.csv"));
+		line = br.readLine();
+		while ((line = br.readLine()) != null) {
+			String[] tanakaShopping = line.split("\\|", -1);
+			Date date = parseSQLDate(tanakaShopping[0]);
+			String offer = parseString(tanakaShopping[1]);
+			String price = parseString(tanakaShopping[2]);
+
+			db.insertIntoTanakasShopping(new TanakasShopping.Builder() //
+					.setDate(date) //
+					.setOffer(offer) //
+					.setPrice(price) //
+					.build());
+		}
+		br.close();
+	}
 }
