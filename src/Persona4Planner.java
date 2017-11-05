@@ -32,7 +32,7 @@ import javax.swing.border.LineBorder;
 
 import cagreer.persona.data.AiyaChineseDiner;
 import cagreer.persona.data.Book;
-import cagreer.persona.data.DailyAvailability;
+import cagreer.persona.data.SocialLinkAvailability;
 import cagreer.persona.data.DailyData;
 import cagreer.persona.data.Dungeon;
 import cagreer.persona.data.Exam;
@@ -326,8 +326,8 @@ public class Persona4Planner {
 					.setName(name) //
 					.setReleaseDate(releaseDate) //
 					.setSocialQualityModifier(socialQualityModifier) //
-					.setReadSections(readSections) //
-					.setTotalSections(totalSections) //
+					.setReadChapters(readSections) //
+					.setTotalChapters(totalSections) //
 					.setObtained(isObtained) //
 					.setAfterSchoolActivity(isAfterSchoolActivity) //
 					.setEveningActivity(isEveningActivity) //
@@ -338,7 +338,7 @@ public class Persona4Planner {
 
 	private static void parseAndInsertAvailabilityData(Database db) throws IOException {
 		String line = null;
-		BufferedReader br = new BufferedReader(new FileReader("data/P4_DailyAvailability.csv"));
+		BufferedReader br = new BufferedReader(new FileReader("data/P4_SocialLinkAvailability.csv"));
 		line = br.readLine();
 		while ((line = br.readLine()) != null) {
 			String[] dailyAvailabilityData = line.split("\\|", -1);
@@ -362,7 +362,7 @@ public class Persona4Planner {
 			String devil = parseString(dailyAvailabilityData[17]);
 			String tower = parseString(dailyAvailabilityData[18]);
 
-			db.insertIntoDailyAvailability(new DailyAvailability.Builder() //
+			db.insertIntoDailyAvailability(new SocialLinkAvailability.Builder() //
 					.setDate(date) //
 					.setMagicianAvailability(magician) //
 					.setChariotAvailability(chariot) //

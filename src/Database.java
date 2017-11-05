@@ -7,7 +7,7 @@ import java.sql.Types;
 
 import cagreer.persona.data.AiyaChineseDiner;
 import cagreer.persona.data.Book;
-import cagreer.persona.data.DailyAvailability;
+import cagreer.persona.data.SocialLinkAvailability;
 import cagreer.persona.data.DailyData;
 import cagreer.persona.data.Dungeon;
 import cagreer.persona.data.Exam;
@@ -90,14 +90,14 @@ public class Database {
 
 	public void insertIntoBook(Book data) {
 		String sql = "INSERT INTO " + BOOK_TABLE //
-				+ " (`Name`, `ReleaseDate`, `SocialQualityModifier`, `ReadSections`, `TotalSections`, `IsObtained`, `IsAfterSchoolActivity`, `IsEveningActivity`)" //
+				+ " (`Title`, `ReleaseDate`, `SocialQualityModifier`, `ReadChapters`, `TotalChapters`, `IsObtained`, `IsAfterSchoolActivity`, `IsEveningActivity`)" //
 				+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 		try (Connection conn = this.connect(DATABASE); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, data.getName());
+			pstmt.setString(1, data.getTitle());
 			pstmt.setDate(2, data.getReleaseDate());
 			pstmt.setString(3, data.getSocialQualityModifier());
-			pstmt.setInt(4, data.getReadSections());
-			pstmt.setInt(5, data.getTotalSections());
+			pstmt.setInt(4, data.getReadChapters());
+			pstmt.setInt(5, data.getTotalChapters());
 			pstmt.setBoolean(6, data.isObtained());
 			pstmt.setBoolean(7, data.isAfterSchoolActivity());
 			pstmt.setBoolean(8, data.isEveningActivity());
@@ -107,7 +107,7 @@ public class Database {
 		}
 	}
 
-	public void insertIntoDailyAvailability(DailyAvailability data) {
+	public void insertIntoDailyAvailability(SocialLinkAvailability data) {
 		String sql = "INSERT INTO " + DAILY_AVAILABILITY_TABLE //
 				+ " (`Date`, `Magician`, `Chariot`, `Priestess`, `Emperor`, `Lovers`, `Fortune`, `Strength`, `Sun`, `Moon`, `HangedMan`, `Death`, `Temperance`, `Hermit`, `Empress`, `Hierophant`, `Justice`, `Devil`, `Tower`)" //
 				+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -471,11 +471,11 @@ public class Database {
 
 	private void createBookTable() {
 		String sql = "CREATE TABLE IF NOT EXISTS " + BOOK_TABLE + " (" //
-				+ " `Name` TEXT," //
+				+ " `Title` TEXT," //
 				+ " `ReleaseDate` DATE," //
 				+ " `SocialQualityModifier` TEXT NOT NULL," //
-				+ " `ReadSections` TINYINT NOT NULL," //
-				+ " `TotalSections` TINYINT NOT NULL," //
+				+ " `ReadChapters` TINYINT NOT NULL," //
+				+ " `TotalChapters` TINYINT NOT NULL," //
 				+ " `IsObtained` BOOLEAN NOT NULL," //
 				+ " `IsAfterSchoolActivity` BOOLEAN NOT NULL," //
 				+ " `IsEveningActivity` BOOLEAN NOT NULL," //

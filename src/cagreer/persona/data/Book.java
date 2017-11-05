@@ -3,17 +3,17 @@ import java.sql.Date;
 
 public class Book {
 	private Boolean isObtained, isAfterSchoolActivity, isEveningActivity;
-	private Integer readSections, totalSections;
-	private String name, socialQualityModifier;
+	private Integer readChapters, totalChapters;
+	private String title, socialQualityModifier;
 	private Date releaseDate;
 
-	private Book(Date releaseDate, String name, String socialQualityModifier, Integer readSections, Integer totalSections,
+	private Book(Date releaseDate, String name, String socialQualityModifier, Integer readChapters, Integer totalChapters,
 			Boolean isObtained, Boolean isAfterSchoolActivity, Boolean isEveningActivity) {
 		this.releaseDate = releaseDate;
-		this.name = name;
+		this.title = name;
 		this.socialQualityModifier = socialQualityModifier;
-		this.readSections = readSections;
-		this.totalSections = totalSections;
+		this.readChapters = readChapters;
+		this.totalChapters = totalChapters;
 		this.isObtained = isObtained;
 		this.isAfterSchoolActivity = isAfterSchoolActivity;
 		this.isEveningActivity = isEveningActivity;
@@ -23,20 +23,20 @@ public class Book {
 		return releaseDate;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
 	public String getSocialQualityModifier() {
 		return socialQualityModifier;
 	}
 
-	public Integer getReadSections() {
-		return readSections;
+	public Integer getReadChapters() {
+		return readChapters;
 	}
 
-	public Integer getTotalSections() {
-		return totalSections;
+	public Integer getTotalChapters() {
+		return totalChapters;
 	}
 
 	public Boolean isObtained() {
@@ -53,7 +53,7 @@ public class Book {
 
 	public static class Builder {
 		private Boolean isObtained, isAfterSchoolActivity, isEveningActivity;
-		private Integer readSections, totalSections;
+		private Integer readChapters, totalChapters;
 		private String name, socialQualityModifier;
 		private Date releaseDate;
 
@@ -72,13 +72,13 @@ public class Book {
 			return this;
 		}
 
-		public Builder setReadSections(Integer readSections) {
-			this.readSections = readSections;
+		public Builder setReadChapters(Integer readChapters) {
+			this.readChapters = readChapters;
 			return this;
 		}
 
-		public Builder setTotalSections(Integer totalSections) {
-			this.totalSections = totalSections;
+		public Builder setTotalChapters(Integer totalChapters) {
+			this.totalChapters = totalChapters;
 			return this;
 		}
 
@@ -98,7 +98,7 @@ public class Book {
 		}
 
 		public Book build() {
-			return new Book(releaseDate, name, socialQualityModifier, readSections, totalSections, isObtained,
+			return new Book(releaseDate, name, socialQualityModifier, readChapters, totalChapters, isObtained,
 					isAfterSchoolActivity, isEveningActivity);
 		}
 	}

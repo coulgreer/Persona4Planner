@@ -1,12 +1,12 @@
 package cagreer.persona.data;
 import java.sql.Date;
 
-public class DailyAvailability {
+public class SocialLinkAvailability {
 	private Date date;
 	private String magician, chariot, priestess, emperor, lovers, fortune, strength, sun, moon, hangedMan, death,
 			temperance, hermit, empress, hierophant, justice, devil, tower;
 
-	private DailyAvailability(Date date, String magician, String chariot, String priestess, String emperor,
+	private SocialLinkAvailability(Date date, String magician, String chariot, String priestess, String emperor,
 			String lovers, String fortune, String strength, String sun, String moon, String hangedMan, String death,
 			String temperance, String hermit, String empress, String hierophant, String justice, String devil,
 			String tower) {
@@ -207,8 +207,8 @@ public class DailyAvailability {
 			return this;
 		}
 
-		public DailyAvailability build() {
-			return new DailyAvailability(date, magician, chariot, priestess, emperor, lovers, fortune, strength, sun,
+		public SocialLinkAvailability build() {
+			return new SocialLinkAvailability(date, magician, chariot, priestess, emperor, lovers, fortune, strength, sun,
 					moon, hangedMan, death, temperance, hermit, empress, hierophant, justice, devil, tower);
 		}
 	}
