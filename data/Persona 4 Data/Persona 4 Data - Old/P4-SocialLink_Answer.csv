@@ -1,0 +1,447 @@
+Id|Answer|Relationship
+SLA02S01R01P00Af|ANY|Friend
+SLA02S02R01P01Af|"It must be tough."|Friend
+SLA02S03R01P03Af|"Hmm, you're looking hairier."|Friend
+SLA02S03R02P00Af|ANY|Friend
+SLA02S04R01P03Af|"You're incredible."|Friend
+SLA02S04R02P01Af|"That's the spirit!"|Friend
+SLA02S05R01P01Af|"Of course."|Friend
+SLA02S05R02P03Af|"I will soon."|Friend
+SLA02S06R01P01Af|"No problem"|Friend
+SLA02S06R02P02Af|"Man, you're mature."|Friend
+SLA02S07R01P00Af|ANY|Friend
+SLA02S07R02P01Af|"You were just upset."|Friend
+SLA02S08R01P00Af|ANY|Friend
+SLA02S08R02P00Af|ANY|Friend
+SLA02S08R03P00Af|ANY|Friend
+SLA02S09R01P01Af|"Cheer up."|Friend
+SLA02S09R02P01Af|"You're right."|Friend
+SLA02S10R01P00Af|ANY|Friend
+SLA02S10R02P00Af|ANY|Friend
+SLA03S01R01P00Af|ANY|Friend
+SLA03S01R02P00Af|ANY|Friend
+SLA03S02R01P02Af|"Sensei?"|Friend
+SLA03S02R02P01Af|"Sounds good."|Friend
+SLA03S03R01P01Af|"Making dinner at the inn?"|Friend
+SLA03S03R02P01Af|"Good luck."|Friend
+SLA03S03R03P01Af|"Count me in!"|Friend
+SLA03S03R03P02Af|"I don't mind."|Friend
+SLA03S04R01P01Af|"Let's eat!"|Friend
+SLA03S04R01P00Af|ANY|Friend
+SLA03S04R02P01Af|"There's always next time."|Friend
+SLA03S04R03P02Af|"I'm having fun."|Friend
+SLA03S05R01P01Af|"What's all this for?"|Friend
+SLA03S05R02P00Af|ANY|Friend
+SLA03S05R03P00Af|ANY|Friend
+SLA03S06R01P02Af|"Gotten any better yet?"|Friend
+SLA03S06R02P02Af|"Keep practicing."|Friend
+SLA03S06R03P03Af|"They care about you."|Friend
+SLA03S07R01P00Af|ANY|Friend
+SLA03S07R02P02Af|"They're not mistaken."|Friend
+SLA03S08R01P00Af|ANY|Friend
+SLA03S08R02P02Af|"You were cool."|Friend
+SLA03S09R01P03Af|"For you…"|Friend
+SLA03S09R02P03Al|"I really like you."|Lover
+SLA03S09R02P00Af|ANY|Friend
+SLA03S10R01P00Al|ANY|Lover
+SLA03S10R02P00Al|ANY|Lover
+SLA03S10R03P00Al|ANY|Lover
+SLA03S10R01P00Af|ANY|Friend
+SLA03S10R02P00Af|ANY|Friend
+SLA05S01R01P00Af|ANY|Friend
+SLA05S01R02P00Af|ANY|Friend
+SLA05S01R03P00Af|ANY|Friend
+SLA05S02R01P02Af|"You just need to change."|Friend
+SLA05S03R01P00Af|ANY|Friend
+SLA05S03R02P00Af|ANY|Friend
+SLA05S03R03P00Af|ANY|Friend
+SLA05S04R01P01Af|"Plenty."|Friend
+SLA05S04R02P02Af|"I'll go with you."|Friend
+SLA05S04R03P02Af|"You're giving him a new one?"|Friend
+SLA05S05R01P00Af|ANY|Friend
+SLA05S05R02P01Af|"It was pretty amazing."|Friend
+SLA05S06R01P00Af|ANY|Friend
+SLA05S07R01P03Af|"I want to learn too."|Friend
+SLA05S07R02P00Af|ANY|Friend
+SLA05S08R01P02Af|"Kanji didn't do anything."|Friend
+SLA05S08R01P03Af|"You got a warrant."|Friend
+SLA05S08R02P00Af|ANY|Friend
+SLA05S08R03P01Af|"Believe it!"|Friend
+SLA05S08R03P03Af|"Tell him, Kanji."|Friend
+SLA05S09R01P03Af|"How was it?"|Friend
+SLA05S09R02P01Af|"Good for you."|Friend
+SLA06S01R01P00Af|ANY|Friend
+SLA06S01R02P00Af|ANY|Friend
+SLA06S02R01P03Af|"Working."|Friend
+SLA06S02R02P03Af|"Tell me about yourself."|Friend
+SLA06S02R03P01Af|"That's stretching it."|Friend
+SLA06S03R01P00Af|ANY|Friend
+SLA06S03R02P02Af|"Fit or not, you're family."|Friend
+SLA06S04R01P04Af|"Surprise me."|Friend
+SLA06S04R02P01Af|"You don't have to do that."|Friend
+SLA06S05R01P02Af|"Can I help?"|Friend
+SLA06S05R02P01Af|"Are you okay?"|Friend
+SLA06S06R01P03Af|"Then let's go outside."|Friend
+SLA06S06R02P00Af|ANY|Friend
+SLA06S07R01P02Af|"This is more important, huh?"|Friend
+SLA06S08R01P03Af|"Want some coffee?"|Friend
+SLA06S08R02P03Af|"Because you're a coward."|Friend
+SLA06S08R02P01Af|"Because of Nanako."|Friend
+SLA06S09R01P02Af|"It was fun"|Friend
+SLA06S09R02P01Af|"Was it hard?"|Friend
+SLA06S10R01P01Af|"Thank you."|Friend
+SLA06S10R02P00Af|ANY|Friend
+SLA07S01R01P00Af|ANY|Friend
+SLA07S02R01P03Af|"Just order takeout."|Friend
+SLA07S03R01P03Af|"What are you looking for?"|Friend
+SLA07S04R01P03Af|Grab her hand and run.|Friend
+SLA07S04R02P01Af|Go along with her.|Friend
+SLA07S04R03P01Af|"I don't mind."|Friend
+SLA07S05R01P01Af|"All the time."|Friend
+SLA07S05R02P03Af|"I don't know..."|Friend
+SLA07S06R01P00Af|ANY|Friend
+SLA07S06R02P00Af|ANY|Friend
+SLA07S06R03P03Af|"She'll understand."|Friend
+SLA07S06R03P01Af|"Having second thoughts?"|Friend
+SLA07S06R04P02Af|"If you're serious..."|Friend
+SLA07S07R01P00Af|ANY|Friend
+SLA07S07R02P03Af|"That part doesn't matter."|Friend
+SLA07S07R03P01Af|Laugh it off.|Friend
+SLA07S07R03P03Af|Move closer to her.|Friend
+SLA07S08R01P00Af|ANY|Friend
+SLA07S08R02P01Al|Hold her.|Lover
+SLA07S08R02P00Af|ANY|Friend
+SLA07S09R01P03Af|"Risette is Rise, too."|Friend
+SLA07S10R01P00Al|ANY|Lover
+SLA08S01R01P00Af|ANY|Friend
+SLA08S01R02P00Af|ANY|Friend
+SLA08S01R03P00Af|ANY|Friend
+SLA08S02R01P01Af|"Right."|Friend
+SLA08S02R02P01Af|"I'm cool with it."|Friend
+SLA08S03R01P01Af|"It's cute."|Friend
+SLA08S03R01P02Af|"It's very feminine."|Friend
+SLA08S04R01P03Af|"Quit bagging on her."|Friend
+SLA08S04R01P02Af|"None of your business."|Friend
+SLA08S04R02P03Af|Hold Chie's hand.|Friend
+SLA08S04R02P01Af|Crack a joke.|Friend
+SLA08S05R01P03Af|"You look so happy."|Friend
+SLA08S05R02P01Af|"I'll look out for her."|Friend
+SLA08S06R01P01Af|"Exactly."|Friend
+SLA08S06R02P01Af|"Of course."|Friend
+SLA08S07R01P00Af|ANY|Friend
+SLA08S07R02P01Af|"It's no trouble."|Friend
+SLA08S08R01P02Af|"That's the first step."|Friend
+SLA08S09R01P00Af|ANY|Friend
+SLA08S09R02P02Af|"You protected that kid."|Friend
+SLA08S09R03P01Al|"Will you be my girlfriend?"|Lover
+SLA08S09R03P00Af|ANY|Friend
+SLA08S10R01P02Al|"It was messier."|Lover
+SLA08S10R02P01Al|"That sounds good."|Lover
+SLA08S10R03P00Al|ANY|Lover
+SLA08S10R04P00Al|ANY|Lover
+SLA08S10R01P00Af|ANY|Friend
+SLA09S01R01P00Af|ANY|Friend
+SLA09S02R01P02Af|"Go ahead and ask."|Friend
+SLA09S02R02P01Af|"That's right."|Friend
+SLA09S03R01P02Af|"Let's go buy some together."|Friend
+SLA09S03R02P03Af|"It's not Nanako's fault."|Friend
+SLA09S03R02P00Af|ANY|Friend
+SLA09S04R01P02Af|"Is there anything else?"|Friend
+SLA09S04R02P02Af|"They go to heaven."|Friend
+SLA09S04R03P03Af|"I dont know."|Friend
+SLA09S04R04P03Af|"He's protecting you."|Friend
+SLA09S05R01P01Af|"A person you love a lot."|Friend
+SLA09S05R02P01Af|"Did he say that?"|Friend
+SLA09S05R03P03Af|Listen to her talk.|Friend
+SLA09S05R03P01Af|Talk with her.|Friend
+SLA09S06R01P02Af|Swear to it.|Friend
+SLA09S06R02P03Af|"I'll ask him with you."|Friend
+SLA09S07R01P01Af|"Let's go look for her."|Friend
+SLA09S07R02P00Af|ANY|Friend
+SLA09S07R03P02Af|"Let's go home."|Friend
+SLA09S07R04P00Af|ANY|Friend
+SLA09S08R01P01Af|"I'll help you look for it."|Friend
+SLA09S08R02P01Af|"He's lonely too."|Friend
+SLA09S08R02P02Af|"Because you're lonely."|Friend
+SLA09S09R01P02Af|"He loves you, too."|Friend
+SLA09S09R02P01Af|"He still has you."|Friend
+SLA09S09R03P03Af|Play with her.|Friend
+SLA09S10R01P01Af|"Sure thing."|Friend
+SLA09S10R02P02Af|"Let's do it."|Friend
+SLA11S01R01P00Af|ANY|Friend
+SLA11S01R02P00Af|ANY|Friend
+SLA11S02R01P03Af|"That's no fun."|Friend
+SLA11S02R02P00Af|ANY|Friend
+SLA11S02R03P03Af|"Remember that card…?"|Friend
+SLA11S03R01P01Af|"A challenge for a duel?"|Friend
+SLA11S03R02P00Af|ANY|Friend
+SLA11S04R01P03Af|"That 'card' again?"|Friend
+SLA11S04R02P00Af|ANY|Friend
+SLA11S04R03P02Af|"Let's catch him together."|Friend
+SLA11S05R01P02Af|"Burn it."|Friend
+SLA11S05R02P02Af|"A mailbox."|Friend
+SLA11S05R03P02Af|"Good, you got it back."|Friend
+SLA11S05R04P02Af|"Let's do it."|Friend
+SLA11S06R01P01Af|"Because I looked reliable."|Friend
+SLA11S06R02P03Af|"The numbers are important."|Friend
+SLA11S06R03P01AlF|"I'm glad you're a girl"|Lover Flag
+SLA11S06R03P02Af|"Your gender doesn't matter"|Friend
+SLA11S07R01P03Af|"Subtract '40' and '4'?"|Friend
+SLA11S07R02P03Af|"Don't be afraid."|Friend
+SLA11S08R01P03Af|"I feel kinda sad."|Friend
+SLA11S08R02P01AlF|Protect Naoto.|Lover Flag
+SLA11S08R03P01Af|"Because I love you."|Lover
+SLA11S08R03P02Af|"Because we're friends."|Friend
+SLA11S09R01P02Af|"Somewhere high."|Friend
+SLA11S09R02P03Af|"Throwing things away?"|Friend
+SLA11S10R01P00Al|ANY|Lover
+SLA11S10R02P02Al|"I like it higher."|Lover
+SLA11S10R01P00Af|ANY|Friend
+SLA11S10R02P00Af|ANY|Friend
+SLA12S01R01P00Af|ANY|Friend
+SLA12S01R02P00Af|ANY|Friend
+SLA12S02R01P02Af|"Junes"|Friend
+SLA12S02R02P01Af|"I'm jealous"|Friend
+SLA12S02R03P00Af|ANY|Friend
+SLA12S03R01P02Af|"Just tell me how."|Friend
+SLA12S03R02P03Af|"I can see that."|Friend
+SLA12S03R03P02Af|"Leave it to me."|Friend
+SLA12S04R01P00Af|ANY|Friend
+SLA12S04R02P01Af|"That's good for you."|Friend
+SLA12S05R01P02Af|"You've got some nerve..."|Friend
+SLA12S05R02P03Af|"Let's go do something fun."|Friend
+SLA12S06R01P00Af|ANY|Friend
+SLA12S06R02P01Af|"Your're right."|Friend
+SLA12S06R03P00Af|ANY|Friend
+SLA12S07R01P00Af|ANY|Friend
+SLA12S07R02P00Af|ANY|Friend
+SLA12S07R03P00Af|ANY|Friend
+SLA12S08R01P02Af|"Let's catch up to him."|Friend
+SLA12S08R02P00Af|ANY|Friend
+SLA12S08R03P00Af|ANY|Friend
+SLA12S09R01P03Af|"Don't jump to conclusions."|Friend
+SLA12S09R02P03Af|"It was written recently?"|Friend
+SLA12S09R03P00Af|ANY|Friend
+SLA12S10R01P00Af|ANY|Friend
+SLA12S10R02P00Af|ANY|Friend
+SLA13S01R01P00Af|ANY|Friend
+SLA13S01R02P00Af|ANY|Friend
+SLA13S02R01P01Af|"Got it"|Friend
+SLA13S02R02P01Af|"Thanks for the help."|Friend
+SLA13S04R01P01Af|"Right on."|Friend
+SLA13S05R01P02Af|"I'm just getting warmed up."|Friend
+SLA13S06R01P02Af|"Anything for you guys."|Friend
+SLA13S06R01P01Af|"No problem."|Friend
+SLA13S07R01P00Af|ANY|Friend
+SLA13S07R02P01Af|"Sounds good."|Friend
+SLA13S07R03P01Af|"Could be."|Friend
+SLA13S07R04P01Af|"We've got a problem."|Friend
+SLA13S07R05P01Af|"Count me in."|Friend
+SLA13S08R01P01Af|Stop them|Friend
+SLA13S08R02P00Af|ANY|Friend
+SLA13S08R03P01Af|"That's his charm."|Friend
+SLA13S09R01P01Af|"Could be."|Friend
+SLA13S09R01P03Af|"I don't know."|Friend
+SLA14S01R01P01Af|"I didn't mind."|Friend
+SLA14S02R01P02Af|"Tired of the food?"|Friend
+SLA14S02R02P02Af|"Making your parents happy."|Friend
+SLA14S03R01P02Af|Tell your own tale of failure|Friend
+SLA14S03R02P01Af|"I'll go tell them off."|Friend
+SLA14S03R03P03Af|"Let the gossipers gossip."|Friend
+SLA14S04R01P01Af|Talk back to the lady.|Friend
+SLA14S04R01P02Af|Flatter the lady.|Friend
+SLA14S04R01P03Af|Keep quiet.|Friend
+SLA14S04R02P01Af| "It's not your fault."|Friend
+SLA14S05R01P01Af|"That's a good idea."|Friend
+SLA14S05R02P00Af|ANY|Friend
+SLA14S06R01P00Af|ANY|Friend
+SLA14S06R02P02Af|"You're not the only one."|Friend
+SLA14S07R01P01Af|"I don't mind."|Friend
+SLA14S07R02P02Af|Take action.|Friend
+SLA14S08R01P00Af|ANY|Friend
+SLA14S08R02P02Af|"We can't just ignore you."|Friend
+SLA14S09R01P02Af|"People are different."|Friend
+SLA14S09R02P00Af|ANY|Friend
+SLA14S09R03P03Af|"Just let it all out, Naoki."|Friend
+SLA14S09R03P02Af|"She can hear you."|Friend
+SLA14S10R01P01Af|"I didn't do anything."|Friend
+SLA15S01R01P00Af|ANY|Friend
+SLA15S01R02P00Af|ANY|Friend
+SLA15S01R03P00Af|ANY|Friend
+SLA15S02R01P01Af|"Who are you talking about?"|Friend
+SLA15S02R02P00Af|ANY|Friend
+SLA15S03R01P01Af|"Of what?"|Friend
+SLA15S03R02P01Af|"I'm jealous"|Friend
+SLA15S03R03P01Af|"That's not true."|Friend
+SLA15S04R01P01Af|"Tsuki Meinchi?"|Friend
+SLA15S04R02P00Af|ANY|Friend
+SLA15S04R03P00Af|ANY|Friend
+SLA15S05R01P01Af|"It's actually interesting."|Friend
+SLA15S05R02P01Af|Talk about school.|Friend
+SLA15S05R03P00Af|ANY|Friend
+SLA15S06R01P01Af|"I get it."|Friend
+SLA15S06R02P02Af|"Letters? How inconvenient."|Friend
+SLA15S07R01P00Af|ANY|Friend
+SLA15S07R02P00Af|ANY|Friend
+SLA15S07R03P00Af|ANY|Friend
+SLA15S08R01P01Af|"Take your time."|Friend
+SLA15S09R01P01Af|"I understand the feeling."|Friend
+SLA15S09R02P01Af|"I guess so."|Friend
+SLA15S10R01P01Af|"They kept insisting?"|Friend
+SLA15S10R02P00Af|ANY|Friend
+SLA15S10R03P00Af|ANY|Friend
+SLA16S01R01P00Af|ANY|Friend
+SLA16S01R02P00Af|ANY|Friend
+SLA16S02R01P03Af|"I hate kids."|Friend
+SLA16S02R02P00Af|ANY|Friend
+SLA16S03R01P02Af|"I don't know."|Friend
+SLA16S03R02P00Af|ANY|Friend
+SLA16S04R01P00Af|ANY|Friend
+SLA16S04R02P01Af|"You're right..."|Friend
+SLA16S04R03P03Af|"Just let it go."|Friend
+SLA16S04R04P00Af|ANY|Friend
+SLA16S05R01P00Af|ANY|Friend
+SLA16S05R02P00Af|ANY|Friend
+SLA16S06R01P00Af|ANY|Friend
+SLA16S06R02P00Af|ANY|Friend
+SLA16S06R03P00Af|ANY|Friend
+SLA16S06R04P01Af|"Featherman R."|Friend
+SLA16S07R01P00Af|ANY|Friend
+SLA16S07R02P00Af|ANY|Friend
+SLA16S07R03P03Af|"You're both afraid."|Friend
+SLA16S07R04P02Af|"That's not true."|Friend
+SLA16S08R01P00Af|ANY|Friend
+SLA16S08R02P00Af|ANY|Friend
+SLA16S09R01P01Af|"I'm fine."|Friend
+SLA16S09R02P00Af|ANY|Friend
+SLA16S09R03P01Af|"Yeah he is."|Friend
+SLA16S09R04P02Af|"It's never too late."|Friend
+SLA16S10R01P02Af|"I'll be lonely here."|Friend
+SLA17S01R01P00Af|ANY|Friend
+SLA17S02R01P01Af|"What do you mean?"|Friend
+SLA17S03R01P01Af|"For the money."|Friend
+SLA17S03R02P01Af|"I do."|Friend
+SLA17S03R03P03Af|"Stop it!"|Friend
+SLA17S04R01P00Af|ANY|Friend
+SLA17S04R02P00Af|ANY|Friend
+SLA17S04R03P00Af|ANY|Friend
+SLA17S04R04P00Af|ANY|Friend
+SLA17S05R01P02Af|"It's like a soap opera."|Friend
+SLA17S05R02P00Af|ANY|Friend
+SLA17S05R03P01Af|Comfort her.|Friend
+SLA17S05R03P02Af|Cheer her up.|Friend
+SLA17S06R01P00Af|ANY|Friend
+SLA17S06R02P00Af|ANY|Friend
+SLA17S06R03P00Af|ANY|Friend
+SLA17S07R01P02Af|"Hang in there."|Friend
+SLA17S09R01P00Af|ANY|Friend
+SLA17S09R02P00Af|ANY|Friend
+SLA17S09R03P00Af|ANY|Friend
+SLA17S09R04P00Af|ANY|Friend
+SLA17S10R01P00Af|ANY|Friend
+SLA18S01R01P00Af|ANY|Friend
+SLA18S01R02P03Af|PE|Friend
+SLA18S02R01P00Af|ANY|Friend
+SLA18S02R02P01Af|"Sure I do."|Friend
+SLA18S02R03P02Af|"I'll stay and help you."|Friend
+SLA18S02R03P00Af|ANY|Friend
+SLA18S03R01P03Af|"It's boring."|Friend
+SLA18S03R02P02Af|"Well, it is the countryside."|Friend
+SLA18S04R01P01Af|"That's just how it is."|Friend
+SLA18S04R02P03Af|"You're not the only one."|Friend
+SLA18S05R01P02Af|"No, there isn't."|Friend
+SLA18S05R02P03Af|"Leave it to me."|Friend
+SLA18S05R03P02Af|"I don't mind."|Friend
+SLA18S06R01P00Af|ANY|Friend
+SLA18S06R02P00Af|ANY|Friend
+SLA18S06R03P03Af|"That's not it."|Friend
+SLA18S07R01P00Af|ANY|Friend
+SLA18S07R02P03Af|"What's your favorite type of girls?"|Friend
+SLA18S08R01P03Af|"This guy."|Friend
+SLA18S08R02P00Af|ANY|Friend
+SLA18S08R03P02Af|Cheer him up.|Friend
+SLA18S09R01P00Af|ANY|Friend
+SLA18S09R02P00Af|ANY|Friend
+SLA18S09R03P01Af|Cake.|Friend
+SLA18S09R04P01Af|Junes.|Friend
+SLA18S09R05P00Af|ANY|Friend
+SLA18S09R06P00Af|ANY|Friend
+SLA18S10R01P02Af|"No, it's all you."|Friend
+SLA20S01R01P00Af|ANY|Friend
+SLA20S01R02P00Af|ANY|Friend
+SLA20S01R03P00Af|ANY|Friend
+SLA20S02R01P02Af|"We'll have to come back."|Friend
+SLA20S02R02P02Af|"Buy it yourself."|Friend
+SLA20S02R03P00Af|ANY|Friend
+SLA20S03R01P02Af|"Let's just chill."|Friend
+SLA20S03R02P00Af|ANY|Friend
+SLA20S03R03P00Af|ANY|Friend
+SLA20S03R03P03Ar|"That was downright cruel..."|Reverse
+SLA20S04R01P01Af|Stop them.|Friend
+SLA20S04R02P01Af|"Did you hear?"|Friend
+SLA20S05R01P00Af|ANY|Friend
+SLA20S05R02P02Af|"Have a little confidence."|Friend
+SLA20S05R02P04Af|"… ..."|Friend
+SLA20S05R03P00Af|ANY|Friend
+SLA20S05R03P02Ar|"Not gonna happen!"|Reverse
+SLA20S06R01P00Af|ANY|Friend
+SLA20S06R02P00Af|ANY|Friend
+SLA20S06R03P02Af|"… ..."|Friend
+SLA20S06R04P02AlF|"Should think about it."|Lover Flag
+SLA20S07R01P01Af|"I don't mind."|Friend
+SLA20S07R02P00Af|ANY|Friend
+SLA20S08R01P01Af|"Happens all the time.|Friend
+SLA20S09R01P00Af|ANY|Friend
+SLA20S09R02P01Af|"Thank you."|Friend
+SLA20S10R01P01Al|Accept it|Lover
+SLA20S10R01P02Af|Reject her|Friend
+SLA21S01R01P00Af|ANY|Friend
+SLA21S01R02P00Af|ANY|Friend
+SLA21S02R01P02Af|"What craze me is not..."|Friend
+SLA21S02R02P00Af|ANY|Friend
+SLA21S02R03P01Af|"I'll give it my all!"|Friend
+SLA21S03R01P00Af|ANY|Friend
+SLA21S03R02P00Af|ANY|Friend
+SLA21S03R03P00Af|ANY|Friend
+SLA21S04R01P02Af|"No."|Friend
+SLA21S04R02P01Af|"Is something wrong?"|Friend
+SLA21S04R03P02Af|"I can't forget."|Friend
+SLA21S05R01P02Af|"Just passing by."|Friend
+SLA21S05R02P00Af|ANY|Friend
+SLA21S05R03P03Af|"Take care of yourself, too."|Friend
+SLA21S05R04P01Af|"Yes I do."|Friend
+SLA21S06R01P03Af|"How is your mother?"|Friend
+SLA21S06R02P00Af|ANY|Friend
+SLA21S07R01P02Af|"He's a kind father."|Friend
+SLA21S08R01P01Af|Gently encourage her.|Friend
+SLA21S09R01P00Af|ANY|Friend
+SLA21S09R02P00Af|ANY|Friend
+SLA21S09R03P03Af|"The things that can be done."|Friend
+SLA21S10R01P01Al|Hug her.|Lover
+SLA21S10R01P02Af|Leave.|Friend
+SLA21S10R02P00Al|ANY|Lover
+SLA22S01R01P00Af|ANY|Friend
+SLA22S01R02P00Af|ANY|Friend
+SLA22S01R03P01Af|Help out.|Friend
+SLA22S02R01P02Af|"You do have talent."|Friend
+SLA22S02R01P01Af|"Effort is what matters."|Friend
+SLA22S02R02P01Af|Help out.|Friend
+SLA22S03R01P02Af|"Forget about it today."|Friend
+SLA22S03R02P00Af|ANY|Friend
+SLA22S03R03P01Af|"That's a great attitude."|Friend
+SLA22S04R01P03Af|"Why don't you give up?"|Friend
+SLA22S04R01P00Af|ANY|Friend
+SLA22S04R02P03Af|"Alright, follow me."|Friend
+SLA22S04R02P02Af|"Want me to help out?"|Friend
+SLA22S04R03P02Af|"No, you're not."|Friend
+SLA22S04R03P03Af|"Just hang in there."|Friend
+SLA22S05R01P00Af|ANY|Friend
+SLA22S05R02P03Af|"It's okay to mess up."|Friend
+SLA22S05R02P01Af|"Don't worry, you can do it."|Friend
+SLA22S07R01P01Af|Stick up for Ayane|Friend
+SLA22S07R02P03Af|Hold her.|Friend
+SLA22S07R02P01Af|Comfort her.|Friend
+SLA22S08R01P01Al|Reveal your feelings for her.|Lover
+SLA22S08R01P02Af|Change the subject.|Friend
+SLA22S09R01P03Al|"Wanna come to my house?"|Lover
+SLA22S09R01P02Al|"Wanna go out and have fun?"|Lover

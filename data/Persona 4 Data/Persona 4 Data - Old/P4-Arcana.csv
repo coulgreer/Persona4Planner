@@ -1,0 +1,22 @@
+Arcana Number|Arcana|Is After School Available|Is Evening Available|Triggered Flags|Total Flags|Current Rank|Current Points
+0|Fool|FALSE|FALSE|0|0|0|0
+1|Magician|TRUE|FALSE|0|0|0|0
+2|Priestess|TRUE|FALSE|0|0|0|0
+3|Empress|TRUE|FALSE|0|0|0|0
+4|Emperor|TRUE|FALSE|0|0|0|0
+5|Hierophant|FALSE|TRUE|0|0|0|0
+6|Lovers|TRUE|FALSE|0|0|0|0
+7|Chariot|TRUE|FALSE|0|0|0|0
+8|Justice|FALSE|TRUE|0|0|0|0
+9|Hermit|TRUE|FALSE|0|0|0|0
+10|Fortune|TRUE|FALSE|0|1|0|0
+11|Strength|TRUE|FALSE|0|0|0|0
+12|Hanged Man|TRUE|FALSE|0|2|0|0
+13|Death|TRUE|FALSE|0|0|0|0
+14|Temperance|TRUE|FALSE|0|1|0|0
+15|Devil|FALSE|TRUE|0|1|0|0
+16|Tower|FALSE|TRUE|0|1|0|0
+17|Star|FALSE|FALSE|0|0|0|0
+18|Moon|TRUE|FALSE|0|1|0|0
+19|Sun|TRUE|FALSE|0|0|0|0
+20|Judgement|FALSE|FALSE|0|0|0|0
