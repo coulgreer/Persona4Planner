@@ -1,0 +1,21 @@
+Phone Event Id|Receive Date|Hangout Date|Initiating Social Link|Involved Social Link|Available Rank|Dungeon Clear Required|Books|Key Responses|Status
+PE01|2011-04-23|2011-04-24|Strength|Strength|||||Unaccepted
+PE02|2011-05-03|2011-05-04|Magician|Magician,Justice,Strength|||||Unaccepted
+PE03|2011-05-07|2011-05-08|Chariot|Chariot|||||Unaccepted
+PE04|2011-05-28|2011-05-29|Strength|Strength,Chariot|1,2,3,4|Steamy Bathhouse|�Lovely Witch Detective�|�Thanks�|Unaccepted
+PE05|2011-06-11|2011-06-12|Priestess|Priestess|||||Unaccepted
+PE06|2011-07-03|2011-07-03|Sun|Sun,Strength|||||Unaccepted
+PE07|2011-07-15|2011-07-17|Strength|Strength,Chariot,Priestess|||�Fun with Numbers�|�I'm allergic to math�|Unaccepted
+PE08|2011-08-03|2011-08-08|Moon|Moon,Magician||Void Quest|||Unaccepted
+PE09|2011-08-05|2011-08-05|Hanged Man|Hanged Man||Void Quest|||Unaccepted
+PE10|2011-08-10|2011-08-10|Strength|Strength,Justice|||�O-Cha Way�|�Sure�|Unaccepted
+PE11|2011-08-20|2011-08-21|Sun|Sun|3,4,5,6,7,8,9,10||�Divine Way�||Unaccepted
+PE12|2011-08-20|2011-08-21|Moon|Moon|3,4,5,6,7,8,9,10 // 1,2,10||�Divine Way�||Unaccepted
+PE13|2011-08-26|2011-08-26|Chariot|Chariot|||||Unaccepted
+PE14|2011-08-28|2011-08-28|Lovers|Lovers|||||Unaccepted
+PE15|2011-09-04|2011-09-04|Priestess|Priestess|||||Unaccepted
+PE16|2011-10-01|2011-10-02|Chariot|Chariot,Priestess,Emperor,Lovers||Secret Laboratory|||Unaccepted
+PE17|2011-10-15|2011-10-16|Magician|Magician,Chariot,Lovers,Priestess|||||Unaccepted
+PE18|2011-10-23|2011-10-23|Chariot|Chariot|||||Unaccepted
+PE19|2011-10-23|2011-10-23|Lovers|Lovers|||||Unaccepted
+PE20|2011-11-22|2011-11-23|Magician|Magician,Strength|||||Unaccepted

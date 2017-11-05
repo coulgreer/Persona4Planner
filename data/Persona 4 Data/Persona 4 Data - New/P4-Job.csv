@@ -1,0 +1,7 @@
+Job Id|Occupation Title|Courage Modifier|Courage Rank Requirement|Diligence Modifier|Diligence Rank Requirement|Knowledge Modifier|Knowledge Rank Requirement|Understanding Modifier|Understanding Rank Requirement|Expression Modifier|Expression Rank Requirement|Start Date|Activity Name
+J01|Envelope Constructor|0|0|2|0|0|0|0|0|0|0|2011-04-23|Construct Envelopes
+J02|Translator|0|0|0|0|0|1|0|0|2|0|2011-04-23|Translate
+J03|Origami Crane Folder|0|0|0|2|0|0|2|0|0|0|2011-04-23|Fold Origami Cranes
+J04|Assistant Day Care Caretaker|0|0|0|0|0|0|2|0|0|0|2011-04-23|Work at Day Care
+J05|Hospital Janitor|2|0|3|0|0|0|0|0|0|0|2011-05-25|Work at Hospital
+J06|Tutor|0|0|0|0|0|0|0|5|2|0|2011-05-25|Tutor Student

@@ -1,0 +1,189 @@
+//Database ID Index\\
+
+[Answer Type] Answer IDs
+         Social Link Answer Example: {A1}-{02S0201}{FR}
+               A1 = Answer Number for Related Prompt   (Auto-Incremented to keep answers in order)
+               02S0201 = Associated Prompt ID Minus the Prompt Type
+               FR = Denotes Answer Type   (FR for friend answer and LV for lover answer; there can be a
+                  lover answer under a friend prompt)
+
+         Story Answer Example: {A1}-{20110412D01}{ST}
+               A1 = Answer Number for Related Prompt   (Auto-Incremented to keep answers in order)
+               20110412D01 = Associated Prompt ID Minus the Prompt Type
+               ST = Answer Type
+
+         Dungeon Answer Example: {A1}-{02D01}{DN}
+               A1 = Answer Number for Related Prompt   (Auto-Incremented to keep answers in order)
+               02D01 = Associated Prompt ID Minus the Prompt Type
+               DN = Answer Type
+
+         Answer Acronyms:
+               DN = Dungeon Answer
+               FR = Friend Answer
+               LC = Lecture Answer
+               LV = Lover Answer
+               PH = Phone Answer
+               ST = Story Answer
+
+
+
+[Event Type] Event IDs
+         Inspiration: Auto-Increment
+
+         Example: {SLE}{01}
+               SLE = Event Type
+               01 = Event Number
+
+         Event Acronyms:
+               DNE = Dungeon Event
+               PHE = Phone Event
+               STE = Story Event
+               SLE = Social Link Event
+
+
+
+[Prompt Type] Prompt IDs
+
+
+         Social Link Prompt Example: {FR}-{02S}{02}{01}
+               FR = Prompt Type   (Uses FR to denote a friend prompt or LV to denote lover prompt)
+               02S = Associated Social Link Number   (Uses the social links ID then adds an S to the end)
+               02 = Rank   (Rank that the prompt appears at)
+               01 = Auto-Incremented Number   (Keeps the prompts in order based on social link rank)
+
+         Dungeon Prompt Example: {DN}-{02D}{01}
+               DN = Prompt Type
+               02D = Associated Dungeon Number   (Uses the dungeon ID then adds a D to the end)
+               01 = Auto-Incremented ID Number   (Keeps the prompts in order based on dungeon)
+
+         Story Prompt Example: {ST}-{20110412D}{01}
+               ST = Prompt Type
+               20110412D = Date   (Uses the date that the prompt appears)
+               01 = Auto-Incremented Number (Keeps the prompts in order based on prompt date)
+
+         Phone Prompt Example: {PH}-{}{}
+               PH = 
+               
+               
+               
+
+         Prompt Type Acronyms:
+               DN = Dungeon Prompt
+               FR = Friend Prompt
+               LC = Lecture Prompt
+               LV = Lover Prompt
+               PH = Phone Prompt
+               ST = Story Prompt
+
+
+
+Arcana Number
+         Inspiration: Persona 4 and Roman Numerals
+         Reference:
+               Nulla  =  0
+               I  =  1
+               IV  =  4
+               V  =  5
+               IX  =  9
+               X  =  10
+
+
+
+Book IDs
+         Inspiration: Dewey Decimal System
+         Reference:
+               000     Generalities
+               100     Philosophy and Psychology
+               200     Religion
+               300     Social Science
+               400     Language
+               500     Natural Science and Mathematics
+               600     Technology
+               700     Arts
+               800     Literature and Rhetoric
+               900     Geography and History
+
+         Numbers --> Categories
+               000     General
+               100     Man’s Life Series
+               200     N U L L
+               300     Manuals
+               400     N U L L
+               500     N U L L
+               600     N U L L
+               700     Book for Underaged Readers
+               800     Timid Teacher Series
+               900     Miscellaneous
+         Example: {300} {ram} :: ‘The Ramen Way’ by [Unknown Author]
+               300 = Subject Area
+               ram = First 3 letters of title but can be more. Do not count articles.
+
+
+
+Exam IDs
+         Example: {2011}{S1}{F}
+               2011 = Exam’s year
+               S1 = Semester Number
+               F = Exam Type
+
+         Exam Type Acronyms:
+               M = Mid Term
+               F = Final
+
+
+
+Exam Question IDs
+         Example: {Q1}-{20110509}
+               Q1 = Question Number On Exam
+               20110509 = Question Section Date
+
+
+
+Exam Answer IDs
+         Example: {A1}-{20110509}{Q1}
+               A1 = Answer Number For Question
+               20110509 = Date the Response is a Choice
+               Q1 = Question Number That Answer Belongs To
+
+
+
+
+Hangout IDs
+         Inspiration: Graphic Card Models
+         Reference: 
+               GTX 970
+                     9 _ _ = 9 series
+                     _ 70 = performance level
+               GTX 1080 Ti
+                     10 _ _ = 10 series
+                     _ _ 80 = performance level
+                     Ti = bit more powerful than model of same performance level
+
+         Example: {SAH}-{20110416}{I}
+               SAH = Schedule Arcana Hangout
+               20110416 = Date of Hangout [YYYYMMDD]
+               I = Arcana Number
+
+
+
+Quiz Answer IDs
+         Example: {A1}-{20110414}{QZ}
+               A1 = Answer Number For Question
+               20110414 = Date of Pop Quiz [YYYYMMDD]
+               QZ = Denotes Data as a Quiz Response
+
+
+
+Quiz Question IDs
+        Example: {QZ}-{20110414}
+               QZ = Denotes Data as a Quiz Question
+               20110414 = Date of Pop Quiz [YYYYMMDD]
+
+
+
+Social Link IDs
+         Inspiration: Auto-Increment
+
+         Example: {SL}{01}
+               SL = Social Link
+               01 = Social Link Number

@@ -1,0 +1,1246 @@
+Prompt Answer Id|Prompt Id|Answer|Courage Modifier|Diligence Modifier|Knowledge Modifier|Understanding Modifier|Expression Modifier|Courage Rank Requirement|Diligence Rank Requirement|Knowledge Rank Requirement|Understanding Rank Requirement|Expression Rank Requirement
+A1-02S0101FR|FR-02S0101|"It has to be us."|0|0|0|0|0|0|0|0|0|0
+A2-02S0101FR|FR-02S0101|"I want to keep my word too."|0|0|0|0|0|0|0|0|0|0
+A3-02S0101FR|FR-02S0101|"Let's bring an end to this."|0|0|0|0|0|0|0|0|0|0
+A4-02S0101FR|FR-02S0101|"You do it."|0|0|0|0|0|0|0|0|0|0
+A1-02S0201FR|FR-02S0201|"It must be tough."|0|0|0|0|0|0|0|0|0|0
+A2-02S0201FR|FR-02S0201|"You're bragging about it?"|0|0|0|0|0|0|0|0|0|0
+A3-02S0201FR|FR-02S0201|"Why are you infamous?"|0|0|0|0|0|0|0|0|0|0
+A1-02S0301FR|FR-02S0301|"He's sounding like you too."|0|0|0|0|0|0|0|0|0|0
+A2-02S0301FR|FR-02S0301|"Teddie's cute."|0|0|0|0|0|0|0|0|0|0
+A3-02S0301FR|FR-02S0301|"Hmm, you're looking hairier."|0|0|0|0|0|0|0|0|0|0
+A1-02S0302FR|FR-02S0302|"You don't block them?"|0|0|0|0|0|0|0|0|0|0
+A2-02S0302FR|FR-02S0302|"Why not change addresses?"|0|0|0|0|0|0|0|0|0|0
+A3-02S0302FR|FR-02S0302|"Eh, what can you do."|0|0|0|0|0|0|0|0|0|0
+A1-02S0401FR|FR-02S0401|"That must be hard."|0|0|0|0|0|0|0|0|0|0
+A2-02S0401FR|FR-02S0401|"Don't strain yourself."|0|0|0|0|0|0|0|0|0|0
+A3-02S0401FR|FR-02S0401|"You're incredible."|0|0|0|0|0|0|0|0|0|0
+A1-02S0402FR|FR-02S0402|"That's the spirit!"|0|0|0|0|0|0|0|0|0|0
+A2-02S0402FR|FR-02S0402|"Don't get too excited."|0|0|0|0|0|0|0|0|0|0
+A3-02S0402FR|FR-02S0402|"What can you do…?"|0|0|0|0|0|0|0|0|0|0
+A1-02S0501FR|FR-02S0501|"Of course."|0|0|0|0|0|0|0|0|0|0
+A2-02S0501FR|FR-02S0501|"Huh?"|0|0|0|0|0|0|0|0|0|0
+A3-02S0501FR|FR-02S0501|"What, don't you?"|0|0|0|0|0|0|0|0|0|0
+A1-02S0502FR|FR-02S0502|"I have."|0|0|0|0|0|0|0|0|0|0
+A2-02S0502FR|FR-02S0502|"I haven't."|0|0|0|0|0|0|0|0|0|0
+A3-02S0502FR|FR-02S0502|"I will soon."|0|0|0|0|0|0|0|0|0|0
+A1-02S0601FR|FR-02S0601|"No problem."|0|0|0|0|0|0|0|0|0|0
+A2-02S0601FR|FR-02S0601|"Tell me nest time!"|0|0|0|0|0|0|0|0|0|0
+A3-02S0601FR|FR-02S0601|"It was fun."|0|0|0|0|0|0|0|0|0|0
+A1-02S0602FR|FR-02S0602|"You're right."|0|0|0|0|0|0|0|0|0|0
+A2-02S0602FR|FR-02S0602|"Man, you're mature."|0|0|0|0|0|0|0|0|0|0
+A3-02S0602FR|FR-02S0602|"No need to hold back."|0|0|0|0|0|0|0|0|0|0
+A1-02S0701FR|FR-02S0701|"Shut up!"|0|0|0|0|0|0|0|0|0|0
+A2-02S0701FR|FR-02S0701|"Calm down, man…"|0|0|0|0|0|0|0|0|3|0
+A3-02S0701FR|FR-02S0701|"I feel bad for Saki-senpai."|0|0|0|0|0|0|0|0|0|3
+A1-02S0702FR|FR-02S0702|"You were just upset."|0|0|0|0|0|0|0|0|0|0
+A2-02S0702FR|FR-02S0702|"Feel better now?"|0|0|0|0|0|0|0|0|0|0
+A3-02S0702FR|FR-02S0702|"I know how it is."|0|0|0|0|0|0|0|0|0|0
+A1-02S0801FR|FR-02S0801|"She dumped you?"|0|0|0|0|0|0|0|0|0|0
+A2-02S0801FR|FR-02S0801|"She died?"|0|0|0|0|0|0|0|0|0|0
+A1-02S0802FR|FR-02S0802|"Just take it slow."|0|0|0|0|0|0|0|0|0|0
+A2-02S0802FR|FR-02S0802|"I understand…"|0|0|0|0|0|0|0|0|0|0
+A3-02S0802FR|FR-02S0802|"Don't apologize."|0|0|0|0|0|0|0|0|0|0
+A1-02S0803FR|FR-02S0803|Pat his head|0|0|0|0|0|0|0|0|0|0
+A2-02S0803FR|FR-02S0803|Hug him|0|0|0|0|0|0|0|0|0|0
+A3-02S0803FR|FR-02S0803|Leave him be|0|0|0|0|0|0|0|0|0|0
+A1-02S0901FR|FR-02S0901|"Cheer up."|0|0|0|0|0|0|0|0|0|0
+A2-02S0901FR|FR-02S0901|"Still sad about Saki-senpai?"|0|0|0|0|0|0|0|0|0|0
+A3-02S0901FR|FR-02S0901|"Be a man. Stand up straight."|0|0|0|0|0|0|0|0|0|0
+A1-02S0902FR|FR-02S0902|"You're right."|0|0|0|0|0|0|0|0|0|0
+A2-02S0902FR|FR-02S0902|"That's not true."|0|0|0|0|0|0|0|0|0|0
+A3-02S0902FR|FR-02S0902|"I don't get it."|0|0|0|0|0|0|0|0|0|0
+A1-02S1001FR|FR-02S1001|"I didn't know."|0|0|0|0|0|0|0|0|0|0
+A2-02S1001FR|FR-02S1001|"It can't be helped."|0|0|0|0|0|0|0|0|0|0
+A3-02S1001FR|FR-02S1001|"'I guess'?"|0|0|0|0|0|0|0|0|0|0
+A1-02S1002FR|FR-02S1002|"Hitting you won't do that."|0|0|0|0|0|0|0|0|0|0
+A2-02S1002FR|FR-02S1002|"Then let's get equal!"|0|0|0|0|0|0|0|0|0|0
+A1-03S0101FR|FR-03S0101|"I'm sure of it."|0|0|0|0|0|0|0|0|0|0
+A2-03S0101FR|FR-03S0101|"I doubt it."|0|0|0|0|0|0|0|0|0|0
+A3-03S0101FR|FR-03S0101|"No worries, I'll protect you."|0|0|0|0|0|3|0|0|0|0
+A1-03S0102FR|FR-03S0102|Ask her straight out|0|0|0|0|0|5|0|0|0|0
+A2-03S0102FR|FR-03S0102|Say it's for the investigation|0|0|0|0|0|0|0|0|0|0
+A1-03S0201FR|FR-03S0201|"Going to apply for one?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0201FR|FR-03S0201|"Sensei?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0202FR|FR-03S0202|"Sounds good."|0|0|0|0|0|0|0|0|0|0
+A2-03S0202FR|FR-03S0202|"What's that?"|0|0|0|0|0|0|0|0|0|0
+A3-03S0202FR|FR-03S0202|"You decide."|0|0|0|0|0|0|0|0|0|0
+A1-03S0301FR|FR-03S0301|"Making dinner at the inn?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0301FR|FR-03S0301|"On an errand?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0302FR|FR-03S0302|"Good luck."|0|0|0|0|0|0|0|0|0|0
+A2-03S0302FR|FR-03S0302|"There’s no point."|0|0|0|0|0|0|0|0|0|0
+A3-03S0302FR|FR-03S0302|"Any other skills?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0303FR|FR-03S0303|"Count me in!"|0|0|0|0|0|4|0|0|0|0
+A2-03S0303FR|FR-03S0303|"I don’t mind."|0|0|0|0|0|0|0|0|0|0
+A3-03S0303FR|FR-03S0303|"I dunno…"|0|0|0|0|0|0|0|0|0|0
+A1-03S0401FR|FR-03S0401|"Let’s eat!"|0|0|0|0|0|3|0|0|0|0
+A2-03S0401FR|FR-03S0401|"My stomach’s kinda…"|0|0|0|0|0|0|0|0|0|0
+A3-03S0401FR|FR-03S0401|"Did you taste it?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0402FR|FR-03S0402|"There’s always next time."|0|0|0|0|0|0|0|0|0|0
+A2-03S0402FR|FR-03S0402|"This won’t cut it."|0|0|0|0|0|0|0|0|0|0
+A3-03S0402FR|FR-03S0402|"...Can I toss this?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0403FR|FR-03S0403|"It’s okay."|0|0|0|0|0|0|0|0|0|0
+A2-03S0403FR|FR-03S0403|"I’m having fun."|0|0|0|0|0|0|0|0|0|0
+A3-03S0403FR|FR-03S0403|"Just don’t feed me again."|0|0|0|0|0|0|0|0|0|0
+A1-03S0501FR|FR-03S0501|"What’s all this for?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0501FR|FR-03S0501|"Can you carry all that?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0502FR|FR-03S0502|"Sounds good to me."|0|0|0|0|0|0|0|0|0|0
+A2-03S0502FR|FR-03S0502|"You said no?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0503FR|FR-03S0503|"Are you serious?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0503FR|FR-03S0503|"That’s selfish."|0|0|0|0|0|0|0|0|0|0
+A1-03S0601FR|FR-03S0601|"What are you making?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0601FR|FR-03S0601|"Gotten any better yet?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0602FR|FR-03S0602|"Get someone to teach you."|0|0|0|0|0|0|0|0|0|0
+A2-03S0602FR|FR-03S0602|"Keep practicing."|0|0|0|0|0|0|0|0|0|0
+A3-03S0602FR|FR-03S0602|"Want me to teach you?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0603FR|FR-03S0603|"You’re pretty bad."|0|0|0|0|0|0|0|0|0|0
+A2-03S0603FR|FR-03S0603|"If you started a fire…"|0|0|0|0|0|0|0|0|0|0
+A3-03S0603FR|FR-03S0603|"They care about you."|0|0|0|0|0|0|0|0|0|0
+A1-03S0701FR|FR-03S0701|"You’re not coming back?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0701FR|FR-03S0701|"You’re really leaving?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0702FR|FR-03S0702|"It’s okay."|0|0|0|0|0|0|0|0|0|0
+A2-03S0702FR|FR-03S0702|"They’re not mistaken."|0|0|0|0|0|0|0|0|0|0
+A1-03S0801FR|FR-03S0801|"An interview?"|0|0|0|0|0|0|0|0|0|0
+A2-03S0801FR|FR-03S0801|"You’re going to be on TV?"|0|0|0|0|0|0|0|0|0|0
+A1-03S0802FR|FR-03S0802|"Yeah, you were."|0|0|0|0|0|0|0|0|0|0
+A2-03S0802FR|FR-03S0802|"You were cool."|0|0|0|0|0|0|0|0|0|0
+A3-03S0802FR|FR-03S0802|"You should’ve said more."|0|0|0|0|0|0|0|0|0|0
+A1-03S0901FR|FR-03S0901|"For everyone…"|0|0|0|0|0|0|0|0|0|0
+A2-03S0901FR|FR-03S0901|"For me."|0|0|0|0|0|0|0|0|0|0
+A3-03S0901FR|FR-03S0901|"For you…"|0|0|0|0|0|0|0|0|0|0
+A4-03S0901FR|FR-03S0901|"It’s a secret"|0|0|0|0|0|0|0|0|0|0
+A1-03S0902FR|FR-03S0902|"You’re my classmate."|0|0|0|0|0|0|0|0|0|0
+A2-03S0902FR|FR-03S0902|"You’re my friend."|0|0|0|0|0|0|0|0|0|0
+A3-03S0902LV|FR-03S0902|"I really like you."|0|0|0|0|0|0|0|0|0|0
+A1-03S1001LV|LV-03S1001|"The futon good with you?"|0|0|0|0|0|0|0|0|0|0
+A2-03S1001LV|LV-03S1001|"The sofa good with you?"|0|0|0|0|0|0|0|0|0|0
+A3-03S1001LV|LV-03S1001|"The floor good with you?"|0|0|0|0|0|0|0|0|0|0
+A1-03S1002LV|LV-03S1002|"That’s good."|0|0|0|0|0|0|0|0|0|0
+A2-03S1002LV|LV-03S1002|"Did you think it over?"|0|0|0|0|0|0|0|0|0|0
+A3-03S1002LV|LV-03S1002|"Good luck."|0|0|0|0|0|0|0|0|0|0
+A1-03S1003LV|LV-03S1003|"Thank you."|0|0|0|0|0|0|0|0|0|0
+A2-03S1003LV|LV-03S1003|"You’ll protect me."|0|0|0|0|0|0|0|0|0|0
+A1-03S1001FR|FR-03S1001|"That’s good."|0|0|0|0|0|0|0|0|0|0
+A2-03S1001FR|FR-03S1001|"Did you think it over?"|0|0|0|0|0|0|0|0|0|0
+A3-03S1001FR|FR-03S1001|"Good luck."|0|0|0|0|0|0|0|0|0|0
+A1-03S1002FR|FR-03S1002|"Thank you."|0|0|0|0|0|0|0|0|0|0
+A2-03S1002FR|FR-03S1002|"Relying on the gods?"|0|0|0|0|0|0|0|0|0|0
+A1-05S0101FR|FR-05S0101|"Something like that."|0|0|0|0|0|0|0|0|0|0
+A2-05S0101FR|FR-05S0101|"You’re not far off."|0|0|0|0|0|0|0|0|0|0
+A3-05S0101FR|FR-05S0101|"I’m just here to talk."|0|0|0|0|0|0|0|0|0|0
+A1-05S0102FR|FR-05S0102|"That’s right."|0|0|0|0|0|0|0|0|0|0
+A2-05S0102FR|FR-05S0102|"I want to believe in you."|0|0|0|0|0|0|0|0|0|0
+A3-05S0102FR|FR-05S0102|"You heard me!"|0|0|0|0|0|0|0|0|0|0
+A1-05S0103FR|FR-05S0103|"Everyone’s like that."|0|0|0|0|0|0|0|0|0|0
+A2-05S0103FR|FR-05S0103|"Don’t worry about it."|0|0|0|0|0|0|0|0|0|0
+A3-05S0103FR|FR-05S0103|"It’s no trouble."|0|0|0|0|0|0|0|0|0|0
+A1-05S0201FR|FR-05S0201|"Apologize to her."|0|0|0|0|0|0|0|0|0|0
+A2-05S0201FR|FR-05S0201|"You just need to change."|0|0|0|0|0|0|0|0|0|0
+A3-05S0201FR|FR-05S0201|"That’s what kids do."|0|0|0|0|0|0|0|0|0|0
+A1-05S0301FR|FR-05S0301|"Get ahold of yourself."|0|0|0|0|0|0|0|0|0|0
+A2-05S0301FR|FR-05S0301|"Let’s hurry."|0|0|0|0|0|0|0|0|0|0
+A3-05S0301FR|FR-05S0301|"What happened?"|0|0|0|0|0|0|0|0|0|0
+A1-05S0302FR|FR-05S0302|"That’s good."|0|0|0|0|0|0|0|0|0|0
+A2-05S0302FR|FR-05S0302|"I don’t blame you."|0|0|0|0|0|0|0|0|0|0
+A3-05S0302FR|FR-05S0302|"You wuss."|0|0|0|0|0|0|0|0|0|0
+A1-05S0303FR|FR-05S0303|"Because of his hobbies?"|0|0|0|0|0|0|0|0|0|0
+A2-05S0303FR|FR-05S0303|"Because of his looks?"|0|0|0|0|0|0|0|0|0|0
+A3-05S0303FR|FR-05S0303|"Because of his attitude?"|0|0|0|0|0|0|0|0|0|0
+A1-05S0401FR|FR-05S0401|"Plenty."|0|0|0|0|0|0|0|0|0|0
+A2-05S0401FR|FR-05S0401|"Nothing in particular."|0|0|0|0|0|0|0|0|0|0
+A3-05S0401FR|FR-05S0401|"I forget."|0|0|0|0|0|0|0|0|0|0
+A1-05S0402FR|FR-05S0402|"Violence isn’t the answer."|0|0|0|0|0|0|0|0|0|0
+A2-05S0402FR|FR-05S0402|"I’ll go with you."|0|0|0|0|0|0|0|0|0|0
+A1-05S0403FR|FR-05S0403|"Too bad that you didn’t find it."|0|0|0|0|0|0|0|0|0|0
+A2-05S0403FR|FR-05S0403|"That was boring."|0|0|0|0|0|0|0|0|0|0
+A3-05S0403FR|FR-05S0403|"You’re giving him a new one?"|0|0|0|0|0|0|0|0|0|0
+A1-05S0501FR|FR-05S0501|"Just tell him the truth."|0|0|0|0|0|0|0|0|0|0
+A2-05S0501FR|FR-05S0501|"This old man here made it."|0|0|0|0|0|0|0|0|0|0
+A1-05S0502FR|FR-05S0502|"It was pretty amazing."|0|0|0|0|0|0|0|0|0|0
+A2-05S0502FR|FR-05S0502|"Don’t get cocky."|0|0|0|0|0|0|0|0|0|0
+A1-05S0601FR|FR-05S0601|"It’s good for you."|0|0|0|0|0|0|0|0|0|0
+A2-05S0601FR|FR-05S0601|"You’re not happy?"|0|0|0|0|0|0|0|0|0|0
+A3-05S0601FR|FR-05S0601|"Looks like a pain…"|0|0|0|0|0|0|0|0|0|0
+A1-05S0701FR|FR-05S0701|"Don’t call me bro."|0|0|0|0|0|0|0|0|0|0
+A2-05S0701FR|FR-05S0701|"Yeah go ahead."|0|0|0|0|0|0|0|0|0|0
+A3-05S0701FR|FR-05S0701|"I want to learn too."|0|0|0|0|0|0|0|0|0|0
+A1-05S0702FR|FR-05S0702|"Your weak heart."|0|0|0|0|0|0|0|0|0|0
+A2-05S0702FR|FR-05S0702|"Your past."|0|0|0|0|0|0|0|0|0|0
+A3-05S0702FR|FR-05S0702|"I’m drawing a blank."|0|0|0|0|0|0|0|0|0|0
+A1-05S0801FR|FR-05S0801|"On what charges?"|0|0|0|0|0|0|0|0|0|0
+A2-05S0801FR|FR-05S0801|"Kanji didn’t do anything."|0|0|0|0|0|4|0|0|0|0
+A3-05S0801FR|FR-05S0801|"You got a warrant?"|0|0|0|0|0|0|0|4|0|0
+A1-05S0802FR|FR-05S0802|"It’s a misunderstanding."|0|0|0|0|0|0|0|0|0|0
+A2-05S0802FR|FR-05S0802|"He was just being nice."|0|0|0|0|0|0|0|0|0|0
+A1-05S0803FR|FR-05S0803|"Believe it!"|0|0|0|0|0|0|0|0|0|4
+A2-05S0803FR|FR-05S0803|"The truth is the truth."|0|0|0|0|0|0|0|0|0|0
+A3-05S0803FR|FR-05S0803|"Tell him, Kanji."|0|0|0|0|0|0|0|0|0|0
+A1-05S0901FR|FR-05S0901|"Tell him?"|0|0|0|0|0|0|0|0|0|0
+A2-05S0901FR|FR-05S0901|"Why didn’t you go before?"|0|0|0|0|0|0|0|0|0|0
+A3-05S0901FR|FR-05S0901|"How was it?"|0|0|0|0|0|0|0|0|0|0
+A1-05S0902FR|FR-05S0902|"Good for you."|0|0|0|0|0|0|0|0|0|0
+A2-05S0902FR|FR-05S0902|"Find more of them."|0|0|0|0|0|0|0|0|0|0
+A3-05S0902FR|FR-05S0902|"Your own self?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0101FR|FR-06S0101|"It’s fun."|0|0|0|0|0|0|0|0|0|0
+A2-06S0101FR|FR-06S0101|"Meh…"|0|0|0|0|0|0|0|0|0|0
+A3-06S0101FR|FR-06S0101|"It’s boring."|0|0|0|0|0|0|0|0|0|0
+A1-06S0102FR|FR-06S0102|"Yes."|0|0|0|0|0|0|0|0|0|0
+A2-06S0102FR|FR-06S0102|"No."|0|0|0|0|0|0|0|0|0|0
+A3-06S0102FR|FR-06S0102|"Say it straight out."|0|0|0|0|0|0|0|0|0|0
+A1-06S0201FR|FR-06S0201|"Hanging with friends."|0|0|0|0|0|0|0|0|0|0
+A2-06S0201FR|FR-06S0201|"Club meetings."|0|0|0|0|0|0|0|0|0|0
+A3-06S0201FR|FR-06S0201|"Working."|0|0|0|0|0|0|0|0|0|0
+A4-06S0201FR|FR-06S0201|"Nothing…"|0|0|0|0|0|0|0|0|0|0
+A1-06S0202FR|FR-06S0202|"Do you still suspect me?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0202FR|FR-06S0202|"Not good at talking?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0202FR|FR-06S0202|"Tell me about yourself."|0|0|0|0|0|0|0|0|0|0
+A1-06S0203FR|FR-06S0203|"That’s stretching it."|0|0|0|0|0|0|0|0|0|0
+A2-06S0203FR|FR-06S0203|"Should I call you big bro?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0301FR|FR-06S0301|"Why not play with her?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0301FR|FR-06S0301|"I feel sorry for her."|0|0|0|0|0|0|0|0|0|0
+A3-06S0301FR|FR-06S0301|"Not good with kids?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0302FR|FR-06S0302|"Why?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0302FR|FR-06S0302|"Fit or not, you’re family."|0|0|0|0|0|0|0|0|0|0
+A3-06S0302FR|FR-06S0302|"I don’t get it."|0|0|0|0|0|0|0|0|0|0
+A1-06S0401FR|FR-06S0401|"Black."|0|0|0|0|0|0|0|0|0|0
+A2-06S0401FR|FR-06S0401|"With cream."|0|0|0|0|0|0|0|0|0|0
+A3-06S0401FR|FR-06S0401|"Cream and sugar."|0|0|0|0|0|0|0|0|0|0
+A4-06S0401FR|FR-06S0401|"Surprise me."|0|0|0|0|0|0|0|0|0|0
+A1-06S0402FR|FR-06S0402|"You don’t have to do that."|0|0|0|0|0|0|0|0|0|0
+A2-06S0402FR|FR-06S0402|"Thank you."|0|0|0|0|0|0|0|0|0|0
+A1-06S0501FR|FR-06S0501|"Looking for something?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0501FR|FR-06S0501|"Can I help?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0501FR|FR-06S0501|"Working at home?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0502FR|FR-06S0502|"Are you okay?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0502FR|FR-06S0502|"What was that about?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0502FR|FR-06S0502|"But Nanako…"|0|0|0|0|0|0|0|0|0|0
+A1-06S0601FR|FR-06S0601|"Let’s not."|0|0|0|0|0|0|0|0|0|0
+A2-06S0601FR|FR-06S0601|"Even if it’s about family?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0601FR|FR-06S0601|"Then let’s go outside."|0|0|0|0|0|0|0|0|0|0
+A1-06S0602FR|FR-06S0602|"You’re right."|0|0|0|0|0|0|0|0|0|0
+A2-06S0602FR|FR-06S0602|"Is that what she wants?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0602FR|FR-06S0602|"That’s just an excuse."|0|0|0|0|0|0|0|0|0|0
+A1-06S0701FR|FR-06S0701|"When is ‘anytime’?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0701FR|FR-06S0701|"This is more important, huh?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0801FR|FR-06S0801|"Working at home again?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0801FR|FR-06S0801|"Buying a new car?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0801FR|FR-06S0801|"Want some coffee?"|0|0|0|0|0|0|0|0|0|0
+A1-06S0802FR|FR-06S0802|"Because of Nanako."|0|0|0|0|0|0|0|0|0|0
+A2-06S0802FR|FR-06S0802|"Because her killer’s loose."|0|0|0|0|0|0|0|0|0|0
+A3-06S0802FR|FR-06S0802|"Because you’re a coward."|0|0|0|0|0|5|0|0|0|0
+A1-06S0901FR|FR-06S0901|"I don’t mind."|0|0|0|0|0|0|0|0|0|0
+A2-06S0901FR|FR-06S0901|"It was fun."|0|0|0|0|0|0|0|0|0|0
+A3-06S0901FR|FR-06S0901|"Ask me next time."|0|0|0|0|0|0|0|0|0|0
+A1-06S0902FR|FR-06S0902|"Was it hard?"|0|0|0|0|0|0|0|0|0|0
+A2-06S0902FR|FR-06S0902|"Do you regret it now?"|0|0|0|0|0|0|0|0|0|0
+A3-06S0902FR|FR-06S0902|"You’ve stopped running?"|0|0|0|0|0|0|0|0|0|0
+A1-06S1001FR|FR-06S1001|"Thank you."|0|0|0|0|0|0|0|0|0|0
+A2-06S1001FR|FR-06S1001|"What am I using now?"|0|0|0|0|0|0|0|0|0|0
+A3-06S1001FR|FR-06S1001|"My name? That’s okay…"|0|0|0|0|0|0|0|0|0|0
+A1-06S1002FR|FR-06S1002|"Go get ’em."|0|0|0|0|0|0|0|0|0|0
+A2-06S1002FR|FR-06S1002|"Be careful."|0|0|0|0|0|0|0|0|0|0
+A3-06S1002FR|FR-06S1002|"Leave it to me."|0|0|0|0|0|0|0|0|0|0
+A1-07S0101FR|FR-07S0101|"Sure, I’ll show you around."|0|0|0|0|0|0|0|0|0|0
+A2-07S0101FR|FR-07S0101|"If I have the time…"|0|0|0|0|0|0|0|0|0|0
+A3-07S0101FR|FR-07S0101|"Yeah, I know a few places"|0|0|0|0|0|0|0|0|0|0
+A1-07S0201FR|FR-07S0201|"Why?"|0|0|0|0|0|0|0|0|0|0
+A2-07S0201FR|FR-07S0201|"So you don’t eat out?"|0|0|0|0|0|0|0|0|0|0
+A3-07S0201FR|FR-07S0201|"Just order takeout"|0|0|0|0|0|0|0|0|0|0
+A1-07S0301FR|FR-07S0301|"You come here often?"|0|0|0|0|0|0|0|0|0|0
+A2-07S0301FR|FR-07S0301|"Can’t you shop in Inaba…?"|0|0|0|0|0|0|0|0|0|0
+A3-07S0301FR|FR-07S0301|"What are you looking for?"|0|0|0|0|0|0|0|0|0|0
+A1-07S0401FR|FR-07S0401|Yell|0|0|0|0|0|0|0|0|0|0
+A2-07S0401FR|FR-07S0401|Call the police|0|0|0|0|0|0|0|0|0|0
+A3-07S0401FR|FR-07S0401|Grab her hand and run|0|0|0|0|0|0|0|0|0|0
+A1-07S0402FR|FR-07S0402|Go along with her|0|0|0|0|0|0|0|0|0|0
+A2-07S0402FR|FR-07S0402|Deny it|0|0|0|0|0|0|0|0|0|0
+A1-07S0403FR|FR-07S0403|"I don’t mind."|0|0|0|0|0|0|0|0|0|0
+A2-07S0403FR|FR-07S0403|"Lying is wrong."|0|0|0|0|0|0|0|0|0|0
+A3-07S0403FR|FR-07S0403|"It… it was a lie?"|0|0|0|0|0|0|0|0|0|0
+A1-07S0501FR|FR-07S0501|"All the time."|0|0|0|0|0|0|0|0|0|0
+A2-07S0501FR|FR-07S0501|"Sometimes…"|0|0|0|0|0|0|0|0|0|0
+A3-07S0501FR|FR-07S0501|"Not really."|0|0|0|0|0|0|0|0|0|0
+A1-07S0502FR|FR-07S0502|"That’s right."|0|0|0|0|0|0|0|0|0|0
+A2-07S0502FR|FR-07S0502|"No."|0|0|0|0|0|0|0|0|0|0
+A3-07S0502FR|FR-07S0502|"I don’t know…"|0|0|0|0|0|0|0|0|0|0
+A1-07S0601FR|FR-07S0601|"Give it to her yourself."|0|0|0|0|0|0|0|0|0|0
+A2-07S0601FR|FR-07S0601|"Does she even need them?"|0|0|0|0|0|0|0|0|0|0
+A3-07S0601FR|FR-07S0601|"Why so interested in her?"|0|0|0|0|0|0|0|0|0|0
+A1-07S0602FR|FR-07S0602|"That’s not nice."|0|0|0|0|0|0|0|0|0|0
+A2-07S0602FR|FR-07S0602|"He’s worried about you."|0|0|0|0|0|0|0|0|0|0
+A3-07S0602FR|FR-07S0602|"You’re really quitting?"|0|0|0|0|0|0|0|0|0|0
+A1-07S0603FR|FR-07S0603|"Having second thoughts?"|0|0|0|0|0|0|0|0|0|0
+A2-07S0603FR|FR-07S0603|"This was your decision."|0|0|0|0|0|0|0|0|0|0
+A3-07S0603FR|FR-07S0603|"She’ll understand."|0|0|0|0|0|0|0|0|5|0
+A1-07S0604FR|FR-07S0604|"Sounds great."|0|0|0|0|0|0|0|0|0|0
+A2-07S0604FR|FR-07S0604|"If you’re serious…"|0|0|0|0|0|0|0|0|0|0
+A3-07S0604FR|FR-07S0604|"I can’t decide that now."|0|0|0|0|0|0|0|0|0|0
+A1-07S0701FR|FR-07S0701|"She’s cute huh?"|0|0|0|0|0|0|0|0|0|0
+A2-07S0701FR|FR-07S0701|"Jealous?"|0|0|0|0|0|0|0|0|0|0
+A3-07S0701FR|FR-07S0701|"That’s good isn’t it?"|0|0|0|0|0|0|0|0|0|0
+A1-07S0702FR|FR-07S0702|"I’m happy."|0|0|0|0|0|0|0|0|0|0
+A2-07S0702FR|FR-07S0702|"I’m miserable."|0|0|0|0|0|0|0|0|0|0
+A3-07S0702FR|FR-07S0702|"That part doesn’t matter."|0|0|0|0|0|0|0|0|0|0
+A1-07S0703FR|FR-07S0703|Cheer her up|0|0|0|0|0|0|0|0|0|0
+A2-07S0703FR|FR-07S0703|Move closer to her|0|0|0|0|0|0|0|0|0|0
+A3-07S0703FR|FR-07S0703|Laugh it off|0|0|0|0|0|5|0|0|0|0
+A1-07S0801FR|FR-07S0801|"You mustn’t cry!"|0|0|0|0|0|0|0|0|0|0
+A2-07S0801FR|FR-07S0801|"Cry all you want."|0|0|0|0|0|0|0|0|0|0
+A1-07S0802LV|FR-07S0802|Hold her|0|0|0|0|0|0|0|0|0|0
+A2-07S0802FR|FR-07S0802|Stand there|0|0|0|0|0|0|0|0|0|0
+A1-07S0901FR|FR-07S0901|"You regret leaving."|0|0|0|0|0|0|0|0|0|0
+A2-07S0901FR|FR-07S0901|"You’re selfish."|0|0|0|0|0|0|0|0|0|0
+A3-07S0901FR|FR-07S0901|"Risette is Rise, too."|0|0|0|0|0|0|0|0|0|0
+A1-07S1001LV|LV-07S1001|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A2-07S1001LV|LV-07S1001|"You want to see?"|0|0|0|0|0|0|0|0|0|0
+A3-07S1001LV|LV-07S1001|"I don’t have any."|0|0|0|0|0|0|0|0|0|0
+A1-08S0101FR|FR-08S0101|"Morning."|0|0|0|0|0|0|0|0|0|0
+A2-08S0101FR|FR-08S0101|"You okay?"|0|0|0|0|0|0|0|0|0|0
+A3-08S0101FR|FR-08S0101|"Did you sleep well?"|0|0|0|0|0|0|0|0|0|0
+A1-08S0102FR|FR-08S0102|"Was that a compliment?"|0|0|0|0|0|0|0|0|0|0
+A2-08S0102FR|FR-08S0102|"Want me to bare it all?"|0|0|0|0|0|0|0|0|0|0
+A3-08S0102FR|FR-08S0102|"Falling for me, huh?"|0|0|0|0|0|0|0|0|0|0
+A1-08S0103FR|FR-08S0103|Ask her straight out|0|0|0|0|0|0|0|0|0|0
+A2-08S0103FR|FR-08S0103|Say it’s for the investigation|0|0|0|0|0|0|0|0|0|0
+A1-08S0201FR|FR-08S0201|"Right."|0|0|0|0|0|0|0|0|0|0
+A2-08S0201FR|FR-08S0201|"For what?"|0|0|0|0|0|0|0|0|0|0
+A1-08S0202FR|FR-08S0202|"I’m cool with it."|0|0|0|0|0|0|0|0|0|0
+A2-08S0202FR|FR-08S0202|"I guess so…"|0|0|0|0|0|0|0|0|0|0
+A3-08S0202FR|FR-08S0202|"What a pain."|0|0|0|0|0|0|0|0|0|0
+A1-08S0301FR|FR-08S0301|"It’s cute."|0|0|0|0|0|3|0|0|0|0
+A2-08S0301FR|FR-08S0301|"It’s very feminine."|0|0|0|0|0|0|0|0|0|0
+A3-08S0301FR|FR-08S0301|"It’s hilarious."|0|0|0|0|0|0|0|0|0|0
+A1-08S0401FR|FR-08S0401|"Exactly."|0|0|0|0|0|0|0|0|0|0
+A2-08S0401FR|FR-08S0401|"None of your business."|0|0|0|0|0|0|0|0|0|0
+A3-08S0401FR|FR-08S0401|"Quit bagging on her."|0|0|0|0|0|3|0|0|0|0
+A1-08S0402FR|FR-08S0402|Crack a joke|0|0|0|0|0|0|0|0|0|0
+A2-08S0402FR|FR-08S0402|Badmouth about Takeshi|0|0|0|0|0|0|0|0|0|0
+A3-08S0402FR|FR-08S0402|Hold Chie’s hand|0|0|0|0|0|3|0|0|0|0
+A1-08S0501FR|FR-08S0501|"Wolfing it down, huh?"|0|0|0|0|0|0|0|0|0|0
+A2-08S0501FR|FR-08S0501|"Looks delicious."|0|0|0|0|0|0|0|0|0|0
+A3-08S0501FR|FR-08S0501|"You look so happy."|0|0|0|0|0|0|0|0|0|0
+A1-08S0502FR|FR-08S0502|"I’ll look out for her."|0|0|0|0|0|0|0|0|0|0
+A2-08S0502FR|FR-08S0502|"Yukiko isn’t that weak."|0|0|0|0|0|0|0|0|0|0
+A3-08S0502FR|FR-08S0502|"I worry more for you."|0|0|0|0|0|0|0|0|0|0
+A1-08S0601FR|FR-08S0601|"Exactly."|0|0|0|0|0|0|0|0|0|0
+A2-08S0601FR|FR-08S0601|"It’s eat or be eaten."|0|0|0|0|0|0|0|0|0|0
+A1-08S0602FR|FR-08S0602|"Of course."|0|0|0|0|0|0|0|0|0|0
+A2-08S0602FR|FR-08S0602|"Let the police handle it."|0|0|0|0|0|0|0|0|0|0
+A3-08S0602FR|FR-08S0602|"What a pain."|0|0|0|0|0|0|0|0|0|0
+A1-08S0701FR|FR-08S0701|Hold Chie back|0|0|0|0|0|0|0|0|0|0
+A2-08S0701FR|FR-08S0701|Fight them yourself|0|0|0|0|0|0|0|0|0|0
+A1-08S0702FR|FR-08S0702|"It’s not trouble."|0|0|0|0|0|0|0|0|0|0
+A2-08S0702FR|FR-08S0702|"I’m used to it."|0|0|0|0|0|0|0|0|0|0
+A3-08S0702FR|FR-08S0702|"Just think next time."|0|0|0|0|0|0|0|0|0|0
+A1-08S0801FR|FR-08S0801|"There’s still time."|0|0|0|0|0|0|0|0|0|0
+A2-08S0801FR|FR-08S0801|"That’s the first step."|0|0|0|0|0|0|0|0|0|0
+A3-08S0801FR|FR-08S0801|"It’s hard to face yourself."|0|0|0|0|0|0|0|0|0|0
+A1-08S0901FR|FR-08S0901|Let Chie do her thing|0|0|0|0|0|0|0|0|0|0
+A2-08S0901FR|FR-08S0901|Shield Chie|0|0|0|0|0|0|0|0|0|0
+A3-08S0901FR|FR-08S0901|Fight with Chie|0|0|0|0|0|0|0|0|0|0
+A1-08S0902FR|FR-08S0902|"It all turned out okay."|0|0|0|0|0|0|0|0|0|0
+A2-08S0902FR|FR-08S0902|"You protected that kid."|0|0|0|0|0|0|0|0|0|0
+A3-08S0902FR|FR-08S0902|"That was reckless."|0|0|0|0|0|0|0|0|0|0
+A1-08S0903LV|FR-08S0903|"Will you be my girlfriend?"|0|0|0|0|0|0|0|0|0|0
+A2-08S0903FR|FR-08S0903|"I’m counting on you."|0|0|0|0|0|0|0|0|0|0
+A1-08S1001LV|LV-08S1001|"It was cleaner."|0|0|0|0|0|0|0|0|0|0
+A2-08S1001LV|LV-08S1001|"It was messier."|0|0|0|0|0|0|0|0|0|0
+A3-08S1001LV|LV-08S1001|"It was about the same."|0|0|0|0|0|0|0|0|0|0
+A1-08S1002LV|LV-08S1002|"That sounds good."|0|0|0|0|0|0|0|0|0|0
+A2-08S1002LV|LV-08S1002|"You’re on your own."|0|0|0|0|0|0|0|0|0|0
+A1-08S1003LV|LV-08S1003|Embrace|0|0|0|0|0|0|0|0|0|0
+A2-08S1003LV|LV-08S1003|Do nothing|0|0|0|0|0|0|0|0|0|0
+A1-08S1004LV|LV-08S1004|"Don’t worry."|0|0|0|0|0|0|0|0|0|0
+A2-08S1004LV|LV-08S1004|"That’s just like you Chie."|0|0|0|0|0|0|0|0|0|0
+A1-08S1001FR|FR-08S1001|"Certainly."|0|0|0|0|0|0|0|0|0|0
+A2-08S1001FR|FR-08S1001|"We can be more than that."|0|0|0|0|0|0|0|0|0|0
+A1-09S0101FR|FR-09S0101|"Yeah, come with us."|0|0|0|0|0|0|0|0|0|0
+A2-09S0101FR|FR-09S0101|"Would you rather watch TV?"|0|0|0|0|0|0|0|0|0|0
+A1-09S0201FR|FR-09S0201|"What’s wrong?"|0|0|0|0|0|0|0|0|0|0
+A2-09S0201FR|FR-09S0201|"Go ahead and ask."|0|0|0|0|0|0|0|0|0|0
+A1-09S0202FR|FR-09S0202|"That’s right."|0|0|0|0|0|0|0|0|0|0
+A2-09S0202FR|FR-09S0202|"Nope."|0|0|0|0|0|0|0|0|0|0
+A1-09S0203FR|FR-09S0203|"I do."|0|0|0|0|0|0|0|0|0|0
+A2-09S0203FR|FR-09S0203|"I don’t."|0|0|0|0|0|0|0|0|0|0
+A3-09S0203FR|FR-09S0203|"I have you."|0|0|0|0|0|0|0|0|0|0
+A1-09S0301FR|FR-09S0301|"I’ll go buy some."|0|0|0|0|0|0|0|0|0|0
+A2-09S0301FR|FR-09S0301|"Let’s go buy some together."|0|0|0|0|0|0|0|0|0|0
+A3-09S0301FR|FR-09S0301|"He’ll live."|0|0|0|0|0|0|0|0|0|0
+A1-09S0302FR|FR-09S0302|"I am sorry."|0|0|0|0|0|0|0|0|0|0
+A2-09S0302FR|FR-09S0302|"Hear her out."|0|0|0|0|0|0|0|0|0|0
+A3-09S0302FR|FR-09S0302|"It’s not Nanako’s fault."|0|0|0|0|0|3|0|0|0|0
+A1-09S0401FR|FR-09S0401|"Why all these questions?"|0|0|0|0|0|0|0|0|0|0
+A2-09S0401FR|FR-09S0401|"Is there anything else?"|0|0|0|0|0|0|0|0|0|0
+A1-09S0402FR|FR-09S0402|"They disappear."|0|0|0|0|0|0|0|0|0|0
+A2-09S0402FR|FR-09S0402|"They go to heaven."|0|0|0|0|0|0|0|0|0|0
+A3-09S0402FR|FR-09S0402|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-09S0403FR|FR-09S0403|"They have no choice."|0|0|0|0|0|0|0|0|0|0
+A2-09S0403FR|FR-09S0403|"Because they enjoy it."|0|0|0|0|0|0|0|0|0|0
+A3-09S0403FR|FR-09S0403|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-09S0404FR|FR-09S0404|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-09S0404FR|FR-09S0404|"He’s protecting everyone."|0|0|0|0|0|0|0|0|0|0
+A3-09S0404FR|FR-09S0404|"He’s protecting you."|0|0|0|0|0|0|0|0|0|0
+A1-09S0501FR|FR-09S0501|"Related to you by blood."|0|0|0|0|0|0|0|0|0|0
+A2-09S0501FR|FR-09S0501|"A person you love a lot."|0|0|0|0|0|0|0|0|0|0
+A3-09S0501FR|FR-09S0501|"Always by your side."|0|0|0|0|0|0|0|0|0|0
+A1-09S0502FR|FR-09S0502|"Did he say that?"|0|0|0|0|0|0|0|0|0|0
+A2-09S0502FR|FR-09S0502|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A3-09S0502FR|FR-09S0502|"You have me."|0|0|0|0|0|0|0|0|0|0
+A1-09S0503FR|FR-09S0503|Talk with her|0|0|0|0|0|0|0|0|0|0
+A2-09S0503FR|FR-09S0503|Put her to bed|0|0|0|0|0|0|0|0|0|0
+A3-09S0503FR|FR-09S0503|Listen to her talk|0|0|0|0|0|3|0|0|0|0
+A1-09S0601FR|FR-09S0601|Ask what happened|0|0|0|0|0|0|0|0|0|0
+A2-09S0601FR|FR-09S0601|Swear to it|0|0|0|0|0|0|0|0|0|0
+A1-09S0602FR|FR-09S0602|"He’ll come."|0|0|0|0|0|0|0|0|0|0
+A2-09S0602FR|FR-09S0602|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A3-09S0602FR|FR-09S0602|"I’ll ask him with you."|0|0|0|0|0|0|0|0|0|0
+A1-09S0701FR|FR-09S0701|"Let’s go look for her."|0|0|0|0|0|0|0|0|0|0
+A2-09S0701FR|FR-09S0701|"Let’s leave her alone."|0|0|0|0|0|0|0|0|0|0
+A1-09S0702FR|FR-09S0702|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-09S0702FR|FR-09S0702|"Why?"|0|0|0|0|0|0|0|0|0|0
+A3-09S0702FR|FR-09S0702|"Okay."|0|0|0|0|0|0|0|0|0|0
+A1-09S0703FR|FR-09S0703|"Why’d you come here?"|0|0|0|0|0|0|0|0|0|0
+A2-09S0703FR|FR-09S0703|"Let’s go home."|0|0|0|0|0|0|0|0|0|0
+A3-09S0703FR|FR-09S0703|"Your dad’s worried."|0|0|0|0|0|0|0|0|0|0
+A1-09S0704FR|FR-09S0704|"He hasn’t forgotten you."|0|0|0|0|0|0|0|0|0|0
+A2-09S0704FR|FR-09S0704|"He won’t abandon you."|0|0|0|0|0|0|0|0|0|0
+A3-09S0704FR|FR-09S0704|"Don’t worry."|0|0|0|0|0|0|0|0|0|0
+A1-09S0801FR|FR-09S0801|"I’ll help you look for it."|0|0|0|0|0|0|0|0|0|0
+A2-09S0801FR|FR-09S0801|"Nothing you can do now."|0|0|0|0|0|0|0|0|0|0
+A1-09S0802FR|FR-09S0802|"He’s lonely too."|0|0|0|0|0|0|0|0|0|0
+A2-09S0802FR|FR-09S0802|"Because you’re lonely"|0|0|0|0|0|0|0|0|0|0
+A1-09S0901FR|FR-09S0901|"I know."|0|0|0|0|0|0|0|0|0|0
+A2-09S0901FR|FR-09S0901|"He loves you, too."|0|0|0|0|0|0|0|0|0|0
+A3-09S0901FR|FR-09S0901|"What about me?"|0|0|0|0|0|0|0|0|0|0
+A1-09S0902FR|FR-09S0902|"He still has you."|0|0|0|0|0|0|0|0|0|0
+A2-09S0902FR|FR-09S0902|"She’s not lost."|0|0|0|0|0|0|0|0|0|0
+A3-09S0902FR|FR-09S0902|"I feel sorry for you too."|0|0|0|0|0|0|0|0|0|0
+A1-09S0903FR|FR-09S0903|Talk to Nanako|0|0|0|0|0|0|0|0|0|0
+A2-09S0903FR|FR-09S0903|Put her to bed|0|0|0|0|0|0|0|0|0|0
+A3-09S0903FR|FR-09S0903|Play with her|0|0|0|0|0|0|0|0|0|0
+A1-09S1001FR|FR-09S1001|"Sure thing."|0|0|0|0|0|0|0|0|0|0
+A2-09S1001FR|FR-09S1001|"I think…"|0|0|0|0|0|0|0|0|0|0
+A3-09S1001FR|FR-09S1001|"I eat salad for breakfast!"|0|0|0|0|0|0|0|0|0|0
+A1-09S1002FR|FR-09S1002|"Don’t strain yourself."|0|0|0|0|0|0|0|0|0|0
+A2-09S1002FR|FR-09S1002|"Let’s do it."|0|0|0|0|0|0|0|0|0|0
+A3-09S1002FR|FR-09S1002|"But I’m not your mom…"|0|0|0|0|0|0|0|0|0|0
+A1-11S0101FR|FR-11S0101|"A man with black sunglasses."|0|0|0|0|0|0|0|0|0|0
+A2-11S0101FR|FR-11S0101|"A man who knew I knew you."|0|0|0|0|0|0|0|0|0|0
+A3-11S0101FR|FR-11S0101|"A suspicious man."|0|0|0|0|0|0|0|0|0|0
+A1-11S0102FR|FR-11S0102|"I can’t back out now."|0|0|0|0|0|0|0|0|0|0
+A2-11S0102FR|FR-11S0102|"I gotta help. You’re a girl."|0|0|0|0|0|0|0|0|0|0
+A3-11S0102FR|FR-11S0102|"Let’s go home together."|0|0|0|0|0|0|0|0|0|0
+A1-11S0201FR|FR-11S0201|"Really?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0201FR|FR-11S0201|"I’m still worried about you."|0|0|0|0|0|0|0|0|0|0
+A3-11S0201FR|FR-11S0201|"That’s no fun."|0|0|0|0|0|0|0|0|0|0
+A1-11S0202FR|FR-11S0202|"What happened?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0202FR|FR-11S0202|"You don’t need to go home?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0202FR|FR-11S0202|"A thief in a sleuth’s house?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0203FR|FR-11S0203|"You should be careful."|0|0|0|0|0|0|0|0|0|0
+A2-11S0203FR|FR-11S0203|"Who would want your stuff?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0203FR|FR-11S0203|"Remember that card…?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0301FR|FR-11S0301|"A challenge for a duel?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0301FR|FR-11S0301|"A love letter?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0301FR|FR-11S0301|"That card business again…?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0302FR|FR-11S0302|"You won’t read it?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0302FR|FR-11S0302|"What if it’s from a guy?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0302FR|FR-11S0302|"What’ll you do with it?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0401FR|FR-11S0401|"Another love letter?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0401FR|FR-11S0401|"Is it a guy this time?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0401FR|FR-11S0401|"That ‘card’ again?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0402FR|FR-11S0402|"That’s right."|0|0|0|0|0|0|0|0|0|0
+A2-11S0402FR|FR-11S0402|"Why so uncomfortable?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0402FR|FR-11S0402|"Running from a challenge?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0403FR|FR-11S0403|"Good luck."|0|0|0|0|0|0|0|0|0|0
+A2-11S0403FR|FR-11S0403|"Let’s catch him together."|0|0|0|0|0|0|0|0|0|0
+A1-11S0501FR|FR-11S0501|"Soak it."|0|0|0|0|0|0|0|0|0|0
+A2-11S0501FR|FR-11S0501|"Burn it."|0|0|0|0|0|0|0|0|0|0
+A3-11S0501FR|FR-11S0501|"Eat it."|0|0|0|0|0|0|0|0|0|0
+A1-11S0502FR|FR-11S0502|"A riddle."|0|0|0|0|0|0|0|0|0|0
+A2-11S0502FR|FR-11S0502|"A mailbox."|0|0|0|0|0|0|0|0|0|0
+A3-11S0502FR|FR-11S0502|"A goat."|0|0|0|0|0|0|0|0|0|0
+A1-11S0503FR|FR-11S0503|"What was that?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0503FR|FR-11S0503|"Good, you got it back."|0|0|0|0|0|0|0|0|0|0
+A1-11S0504FR|FR-11S0504|"I guess I’ll help."|0|0|0|0|0|0|0|0|0|0
+A2-11S0504FR|FR-11S0504|"Let’s do it."|0|0|0|0|0|0|0|0|0|0
+A3-11S0504FR|FR-11S0504|"You’re on your own."|0|0|0|0|0|0|0|0|0|0
+A1-11S0601FR|FR-11S0601|"Because I looked reliable."|0|0|0|0|0|0|0|0|0|0
+A2-11S0601FR|FR-11S0601|"Because we looked ‘close’."|0|0|0|0|0|0|0|0|0|0
+A3-11S0601FR|FR-11S0601|"Because I looked useless."|0|0|0|0|0|0|0|0|0|0
+A1-11S0602FR|FR-11S0602|"7 and 3 o’clock, maybe…?"|0|0|0|0|0|0|0|0|0|0
+A2-11S0602FR|FR-11S0602|"The phrasing is suspicious."|0|0|0|0|0|0|0|0|0|0
+A3-11S0602FR|FR-11S0602|"The numbers are important."|0|0|0|0|0|0|0|0|0|0
+A1-11S0603LV|FR-11S0603|"I’m glad you’re a girl."|0|0|0|0|0|0|0|0|0|0
+A2-11S0603FR|FR-11S0603|"Your gender doesn’t matter."|0|0|0|0|0|0|0|0|0|0
+A3-11S0603FR|FR-11S0603|"Nothing you can do."|0|0|0|0|0|0|0|0|0|0
+A1-11S0701FR|FR-11S0701|"Maybe it’s a math problem."|0|0|0|0|0|0|0|0|0|0
+A2-11S0701FR|FR-11S0701|"Check the other cards again?"|0|0|0|0|0|0|0|0|0|0
+A3-11S0701FR|FR-11S0701|"Subtract ‘40’ and ‘4’?"|0|0|0|0|0|0|0|0|0|0
+A1-11S0702FR|FR-11S0702|"You’ll still be you."|0|0|0|0|0|0|0|0|0|0
+A2-11S0702FR|FR-11S0702|"People change."|0|0|0|0|0|0|0|0|0|0
+A3-11S0702FR|FR-11S0702|"Don’t be afraid."|0|0|0|0|0|0|0|0|0|0
+A1-11S0801FR|FR-11S0801|"You seem happy."|0|0|0|0|0|0|0|0|0|0
+A2-11S0801FR|FR-11S0801|"Don’t put yourself at risk."|0|0|0|0|0|0|0|0|0|0
+A3-11S0801FR|FR-11S0801|"I feel kinda sad."|0|0|0|0|0|0|0|0|0|0
+A1-11S0802FR|FR-11S0802|Protect Naoto|0|0|0|0|0|0|0|0|0|0
+A2-11S0802FR|FR-11S0802|Run with Naoto|0|0|0|0|0|0|0|0|0|0
+A3-11S0802FR|FR-11S0802|Fight back|0|0|0|0|0|0|0|0|0|0
+A1-11S0803LV|FR-11S0803|"Because I love you."|0|0|0|0|0|0|0|0|0|0
+A2-11S0803FR|FR-11S0803|"Because we’re friends."|0|0|0|0|0|0|0|0|0|0
+A1-11S0901FR|FR-11S0901|"Somewhere bright."|0|0|0|0|0|0|0|0|0|0
+A2-11S0901FR|FR-11S0901|"Somewhere high."|0|0|0|0|0|0|0|0|0|0
+A3-11S0901FR|FR-11S0901|"Somewhere quiet."|0|0|0|0|0|0|0|0|0|0
+A1-11S0902FR|FR-11S0902|"Cooking."|0|0|0|0|0|0|0|0|0|0
+A2-11S0902FR|FR-11S0902|"Exercising."|0|0|0|0|0|0|0|0|0|0
+A3-11S0902FR|FR-11S0902|"Throwing things away?"|0|0|0|0|0|0|0|0|0|0
+A1-11S1001LV|LV-11S1001|"Is it that interesting?"|0|0|0|0|0|0|0|0|0|0
+A2-11S1001LV|LV-11S1001|"Why don’t you sit down?"|0|0|0|0|0|0|0|0|0|0
+A3-11S1001LV|LV-11S1001|"I can’t relax…"|0|0|0|0|0|0|0|0|0|0
+A1-11S1002LV|LV-11S1002|"Whatever you prefer"|0|0|0|0|0|0|0|0|0|0
+A2-11S1002LV|LV-11S1002|"I like it higher."|0|0|0|0|0|0|0|0|0|0
+A1-11S1001FR|FR-11S1001|"It was a cinch."|0|0|0|0|0|0|0|0|0|0
+A2-11S1001FR|FR-11S1001|"It was exciting."|0|0|0|0|0|0|0|0|0|0
+A3-11S1001FR|FR-11S1001|"I was about to give up."|0|0|0|0|0|0|0|0|0|0
+A1-11S1002FR|FR-11S1002|"Leave it to me!"|0|0|0|0|0|0|0|0|0|0
+A2-11S1002FR|FR-11S1002|"I want a promotion."|0|0|0|0|0|0|0|0|0|0
+A3-11S1002FR|FR-11S1002|"You’re MY assistant."|0|0|0|0|0|0|0|0|0|0
+A1-12S0101FR|FR-12S0101|"Hi…"|0|0|0|0|0|0|0|0|0|0
+A2-12S0101FR|FR-12S0101|"Nice to meet you."|0|0|0|0|0|0|0|0|0|0
+A3-12S0101FR|FR-12S0101|"I’m your new captain."|0|0|0|0|0|0|0|0|0|0
+A1-12S0102FR|FR-12S0102|"I used to play all the time."|0|0|0|0|0|0|0|0|0|0
+A2-12S0102FR|FR-12S0102|"A little."|0|0|0|0|0|0|0|0|0|0
+A3-12S0102FR|FR-12S0102|"Nope, never."|0|0|0|0|0|0|0|0|0|0
+A1-12S0103FR|FR-12S0103|Help out|0|0|0|0|0|0|0|0|0|0
+A2-12S0103FR|FR-12S0103|Be an ass and leave|0|0|0|0|0|0|0|0|0|0
+A1-12S0201FR|FR-12S0201|"Aiya."|0|0|0|0|0|0|0|0|0|0
+A2-12S0201FR|FR-12S0201|"Junes."|0|0|0|0|0|0|0|0|0|0
+A3-12S0201FR|FR-12S0201|"Let’s go home."|0|0|0|0|0|0|0|0|0|0
+A1-12S0202FR|FR-12S0202|"I’m jealous."|0|0|0|0|0|0|0|0|0|0
+A2-12S0202FR|FR-12S0202|"Not happy about it?"|0|0|0|0|0|0|0|0|0|0
+A3-12S0202FR|FR-12S0202|"Sounds like a pain…"|0|0|0|0|0|0|0|0|0|0
+A1-12S0203FR|FR-12S0203|"Sure."|0|0|0|0|0|0|0|0|0|0
+A2-12S0203FR|FR-12S0203|"That’s okay."|0|0|0|0|0|0|0|0|0|0
+A1-12S0301FR|FR-12S0301|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0301FR|FR-12S0301|"Just tell me how."|0|0|0|0|0|0|0|0|0|0
+A1-12S0302FR|FR-12S0302|"That sucks."|0|0|0|0|0|0|0|0|0|0
+A2-12S0302FR|FR-12S0302|"But it’s just a sport…"|0|0|0|0|0|0|0|0|0|0
+A3-12S0302FR|FR-12S0302|"I can see that."|0|0|0|0|0|0|0|0|0|0
+A1-12S0303FR|FR-12S0303|"Easier said than done."|0|0|0|0|0|0|0|0|0|0
+A2-12S0303FR|FR-12S0303|"Leave it to me."|0|0|0|0|0|0|0|0|0|0
+A3-12S0303FR|FR-12S0303|"What can I do?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0401FR|FR-12S0401|"It’s hard to imagine."|0|0|0|0|0|0|0|0|0|0
+A2-12S0401FR|FR-12S0401|"I can see that."|0|0|0|0|0|0|0|0|0|0
+A1-12S0402FR|FR-12S0402|"That’s good for you."|0|0|0|0|0|0|0|0|0|0
+A2-12S0402FR|FR-12S0402|"Cheer up, man."|0|0|0|0|0|0|0|0|0|0
+A3-12S0402FR|FR-12S0402|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-12S0501FR|FR-12S0501|"It’s been over for hours."|0|0|0|0|0|0|0|0|0|0
+A2-12S0501FR|FR-12S0501|"You’ve got some nerve…"|0|0|0|0|0|0|0|0|0|0
+A3-12S0501FR|FR-12S0501|"Something wrong?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0502FR|FR-12S0502|"Get a grip, man."|0|0|0|0|0|0|0|0|0|0
+A2-12S0502FR|FR-12S0502|"You just need a rest."|0|0|0|0|0|0|0|0|0|0
+A3-12S0502FR|FR-12S0502|"Let’s go do something."|0|0|0|0|0|0|0|0|0|0
+A1-12S0601FR|FR-12S0601|"You could say that…"|0|0|0|0|0|0|0|0|0|0
+A2-12S0601FR|FR-12S0601|"It’s something else."|0|0|0|0|0|0|0|0|0|0
+A1-12S0602FR|FR-12S0602|"You’re right."|0|0|0|0|0|0|0|0|0|0
+A2-12S0602FR|FR-12S0602|"A real game? Impossible…"|0|0|0|0|0|0|0|0|0|0
+A3-12S0602FR|FR-12S0602|"We gotta save Kou."|0|0|0|0|0|0|0|0|0|0
+A1-12S0603FR|FR-12S0603|"You’re quite a strategist."|0|0|0|0|0|0|0|0|0|0
+A2-12S0603FR|FR-12S0603|"Isn’t that blackmail…?"|0|0|0|0|0|0|0|0|0|0
+A3-12S0603FR|FR-12S0603|"What about yourself?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0701FR|FR-12S0701|"You’re thinking too much."|0|0|0|0|0|0|0|0|0|0
+A2-12S0701FR|FR-12S0701|"Did they say anything?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0702FR|FR-12S0702|"What for?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0702FR|FR-12S0702|"Planning to run away?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0703FR|FR-12S0703|"And once you know?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0703FR|FR-12S0703|"You going to meet them?"|0|0|0|0|0|0|0|0|0|0
+A3-12S0703FR|FR-12S0703|"I’ll go with you."|0|0|0|0|0|0|0|0|0|0
+A1-12S0801FR|FR-12S0801|"About what?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0801FR|FR-12S0801|"Let’s catch up to him."|0|0|0|0|0|0|0|0|0|0
+A1-12S0802FR|FR-12S0802|"You alright?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0802FR|FR-12S0802|"Find anything out?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0803FR|FR-12S0803|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-12S0803FR|FR-12S0803|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0901FR|FR-12S0901|"You going to leave?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0901FR|FR-12S0901|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A3-12S0901FR|FR-12S0901|"Don’t jump to conclusions."|0|0|0|0|0|0|0|0|0|0
+A1-12S0902FR|FR-12S0902|"It was stored well?"|0|0|0|0|0|0|0|0|0|0
+A2-12S0902FR|FR-12S0902|"The letter was swapped?"|0|0|0|0|0|0|0|0|0|0
+A3-12S0902FR|FR-12S0902|"It was written recently?"|0|0|0|0|0|0|0|0|0|0
+A1-12S0903FR|FR-12S0903|"No way."|0|0|0|0|0|0|0|0|0|0
+A2-12S0903FR|FR-12S0903|"I better get home."|0|0|0|0|0|0|0|0|0|0
+A1-12S1001FR|FR-12S1001|"Isn’t that a bit much?"|0|0|0|0|0|0|0|0|0|0
+A2-12S1001FR|FR-12S1001|"You can do it man."|0|0|0|0|0|0|0|0|0|0
+A1-12S1002FR|FR-12S1002|Return it to Kou|0|0|0|0|0|0|0|0|0|0
+A2-12S1002FR|FR-12S1002|Accept it|0|0|0|0|0|0|0|0|0|0
+A1-13S0101FR|FR-13S0101|"Hi…"|0|0|0|0|0|0|0|0|0|0
+A2-13S0101FR|FR-13S0101|"Nice to meet you."|0|0|0|0|0|0|0|0|0|0
+A3-13S0101FR|FR-13S0101|"I’m your new captain."|0|0|0|0|0|0|0|0|0|0
+A1-13S0102FR|FR-13S0102|"Plenty."|0|0|0|0|0|0|0|0|0|0
+A2-13S0102FR|FR-13S0102|"A little."|0|0|0|0|0|0|0|0|0|0
+A3-13S0102FR|FR-13S0102|"Not even once."|0|0|0|0|0|0|0|0|0|0
+A1-13S0201FR|FR-13S0201|"Got it."|0|0|0|0|0|0|0|0|0|0
+A2-13S0201FR|FR-13S0201|"Junes."|0|0|0|0|0|0|0|0|0|0
+A1-13S0202FR|FR-13S0202|"Thanks for the help."|0|0|0|0|0|0|0|0|0|0
+A2-13S0202FR|FR-13S0202|"I didn’t ask you to do it."|0|0|0|0|0|0|0|0|0|0
+A1-13S0401FR|FR-13S0401|"Right on."|0|0|0|0|0|0|0|0|0|0
+A2-13S0401FR|FR-13S0401|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A3-13S0401FR|FR-13S0401|"Quit showing off."|0|0|0|0|0|0|0|0|0|0
+A1-13S0501FR|FR-13S0501|"Thanks guys."|0|0|0|0|0|0|0|0|0|0
+A2-13S0501FR|FR-13S0501|"I’m just getting warmed up."|0|0|0|0|0|0|0|0|0|0
+A1-13S0601FR|FR-13S0601|"No problem."|0|0|0|0|0|0|0|0|0|0
+A2-13S0601FR|FR-13S0601|"Anything for you guys."|0|0|0|0|0|0|0|0|4|0
+A3-13S0601FR|FR-13S0601|"Long as it’s not a hassle."|0|0|0|0|0|0|0|0|0|0
+A1-13S0701FR|FR-13S0701|"If you say so."|0|0|0|0|0|0|0|0|0|0
+A2-13S0701FR|FR-13S0701|"It’s okay, I’ll wait."|0|0|0|0|0|0|0|0|0|0
+A1-13S0702FR|FR-13S0702|"Sounds good."|0|0|0|0|0|0|0|0|0|0
+A2-13S0702FR|FR-13S0702|"You treated last time."|0|0|0|0|3|0|0|0|0|0
+A1-13S0703FR|FR-13S0703|"Could be."|0|0|0|0|0|0|0|0|0|0
+A2-13S0703FR|FR-13S0703|"Maybe not…"|0|0|0|0|0|0|0|0|0|0
+A3-13S0703FR|FR-13S0703|"What are we talking about?"|0|0|0|0|0|0|0|0|0|0
+A1-13S0704FR|FR-13S0704|"We’ve got a problem."|0|0|0|0|0|0|0|0|0|0
+A2-13S0704FR|FR-13S0704|"It’s Daisuke’s problem."|0|0|0|0|0|0|0|0|0|0
+A1-13S0705FR|FR-13S0705|"Count me in."|0|0|0|0|0|0|0|0|0|0
+A2-13S0705FR|FR-13S0705|"Count me out."|0|0|0|0|0|0|0|0|0|0
+A1-13S0801FR|FR-13S0801|Stop them|0|0|0|0|0|0|0|0|0|0
+A2-13S0801FR|FR-13S0801|Stay quiet and watch|0|0|0|0|0|0|0|0|0|0
+A3-13S0801FR|FR-13S0801|Provoke them|0|0|0|0|0|0|0|0|0|0
+A1-13S0802FR|FR-13S0802|"Yes we do!"|0|0|0|0|0|0|0|0|0|0
+A2-13S0802FR|FR-13S0802|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-13S0803FR|FR-13S0803|"That’s his charm."|0|0|0|0|0|0|0|0|0|0
+A2-13S0803FR|FR-13S0803|"You think?"|0|0|0|0|0|0|0|0|0|0
+A1-13S0901FR|FR-13S0901|"Could be."|0|0|0|0|0|0|0|0|0|0
+A2-13S0901FR|FR-13S0901|"Doubt it."|0|0|0|0|0|0|0|0|0|0
+A3-13S0901FR|FR-13S0901|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-14S0101FR|FR-14S0101|"No, thank you."|0|0|0|0|0|0|0|0|0|0
+A2-14S0101FR|FR-14S0101|"Thanks for what…?"|0|0|0|0|0|0|0|0|0|0
+A3-14S0101FR|FR-14S0101|"It was a big help."|0|0|0|0|0|0|0|0|0|0
+A1-14S0102FR|FR-14S0102|"I didn’t mind."|0|0|0|0|0|0|0|0|0|0
+A2-14S0102FR|FR-14S0102|"Wow, you’re polite today."|0|0|0|0|0|0|0|0|0|0
+A3-14S0102FR|FR-14S0102|"I was hurt."|0|0|0|0|0|0|0|0|0|0
+A1-14S0201FR|FR-14S0201|"Too busy?"|0|0|0|0|0|0|0|0|0|0
+A2-14S0201FR|FR-14S0201|"Tired of the food?"|0|0|0|0|0|0|0|0|0|0
+A3-14S0201FR|FR-14S0201|"Because of the murder?"|0|0|0|0|0|0|0|0|0|0
+A1-14S0202FR|FR-14S0202|"Contributing to society."|0|0|0|0|0|0|0|0|0|0
+A2-14S0202FR|FR-14S0202|"Making your parents happy."|0|0|0|0|0|0|0|0|0|0
+A3-14S0202FR|FR-14S0202|"Leave something behind."|0|0|0|0|0|0|0|0|0|0
+A4-14S0202FR|FR-14S0202|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-14S0301FR|FR-14S0301|Ask him to tell another story.|0|0|0|0|0|0|0|0|0|0
+A2-14S0301FR|FR-14S0301|Tell your own tale of failure.|0|0|0|0|0|0|0|0|0|0
+A3-14S0301FR|FR-14S0301|Tell an American joke.|0|0|0|0|0|0|0|0|0|0
+A1-14S0302FR|FR-14S0302|"I’ll go tell them off."|0|0|0|0|0|0|0|0|0|0
+A2-14S0302FR|FR-14S0302|"You not saying anything?"|0|0|0|0|0|0|0|0|0|0
+A3-14S0302FR|FR-14S0302|"Let the gossipers gossip."|0|0|0|0|0|0|0|0|0|0
+A1-14S0401FR|FR-14S0401|Talk back to the lady|0|0|0|0|0|4|0|0|0|0
+A2-14S0401FR|FR-14S0401|Flatter the lady|0|0|0|0|0|0|0|0|0|4
+A3-14S0401FR|FR-14S0401|Keep quiet|0|0|0|0|0|0|0|0|0|0
+A1-14S0402FR|FR-14S0402|"It’s not your fault."|0|0|0|0|0|0|0|0|0|0
+A2-14S0402FR|FR-14S0402|"Let’s forget about it."|0|0|0|0|0|0|0|0|0|0
+A1-14S0501FR|FR-14S0501|"That’s a good idea."|0|0|0|0|0|0|0|0|0|0
+A2-14S0501FR|FR-14S0501|"Let’s forget about it."|0|0|0|0|0|0|0|0|0|0
+A1-14S0502FR|FR-14S0502|"Good luck Naoki."|0|0|0|0|0|0|0|0|0|0
+A2-14S0502FR|FR-14S0502|"You got other choices."|0|0|0|0|0|0|0|0|0|0
+A3-14S0502FR|FR-14S0502|"You should think it over."|0|0|0|0|0|0|0|0|0|0
+A1-14S0601FR|FR-14S0601|"I wouldn’t have, either."|0|0|0|0|0|0|0|0|0|0
+A2-14S0601FR|FR-14S0601|"Just forget about them."|0|0|0|0|0|0|0|0|0|0
+A3-14S0601FR|FR-14S0601|"Don’t worry them too much."|0|0|0|0|0|0|0|0|0|0
+A1-14S0602FR|FR-14S0602|"Yeah, you are."|0|0|0|0|0|0|0|0|0|0
+A2-14S0602FR|FR-14S0602|"You’re not the only one."|0|0|0|0|0|0|0|0|0|0
+A3-14S0602FR|FR-14S0602|"I know what they mean."|0|0|0|0|0|0|0|0|0|0
+A1-14S0701FR|FR-14S0701|"I don’t mind."|0|0|0|0|0|0|0|0|0|0
+A2-14S0701FR|FR-14S0701|"Last time?"|0|0|0|0|0|0|0|0|0|0
+A1-14S0702FR|FR-14S0702|"Take your time."|0|0|0|0|0|0|0|0|0|0
+A2-14S0702FR|FR-14S0702|"Take action."|0|0|0|0|0|0|0|0|0|0
+A1-14S0801FR|FR-14S0801|"They’re trying to be kind."|0|0|0|0|0|0|0|0|0|0
+A2-14S0801FR|FR-14S0801|"Charge ‘em extra."|0|0|0|0|0|0|0|0|0|0
+A1-14S0802FR|FR-14S0802|"Don’t lump me in with him."|0|0|0|0|0|0|0|0|0|0
+A2-14S0802FR|FR-14S0802|"We can’t just ignore you."|0|0|0|0|0|0|0|0|0|0
+A1-14S0901FR|FR-14S0901|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-14S0901FR|FR-14S0901|"People are different."|0|0|0|0|0|0|0|0|0|0
+A3-14S0901FR|FR-14S0901|"You’re just inept."|0|0|0|0|0|0|0|0|0|0
+A1-14S0902FR|FR-14S0902|"Yeah, I am sure of it."|0|0|0|0|0|0|0|0|0|0
+A2-14S0902FR|FR-14S0902|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A3-14S0902FR|FR-14S0902|"Live for her sake."|0|0|0|0|0|0|0|0|0|0
+A1-14S0903FR|FR-14S0903|"It was out of your hands."|0|0|0|0|0|0|0|0|0|0
+A2-14S0903FR|FR-14S0903|"She can hear you."|0|0|0|0|0|0|0|0|0|0
+A3-14S0903FR|FR-14S0903|"Just let it all out, Naoki."|0|0|0|0|0|0|0|0|5|0
+A1-14S1001FR|FR-14S1001|"I didn’t do anything."|0|0|0|0|0|0|0|0|0|0
+A2-14S1001FR|FR-14S1001|"That’s right. Be grateful."|0|0|0|0|0|0|0|0|0|0
+A1-15S0101FR|FR-15S0101|"Yes."|0|0|0|0|0|0|0|0|0|0
+A2-15S0101FR|FR-15S0101|"No."|0|0|0|0|0|0|0|0|0|0
+A1-15S0102FR|FR-15S0102|Spend time with the old lady|0|0|0|0|0|0|0|0|0|0
+A2-15S0102FR|FR-15S0102|Decline|0|0|0|0|0|0|0|0|0|0
+A1-15S0103FR|FR-15S0103|"I just moved here."|0|0|0|0|0|0|0|0|0|0
+A2-15S0103FR|FR-15S0103|"I won’t be staying long."|0|0|0|0|0|0|0|0|0|0
+A1-15S0104FR|FR-15S0104|"I think so, too."|0|0|0|0|0|0|0|0|0|0
+A2-15S0104FR|FR-15S0104|"Everyone says so, but…"|0|0|0|0|0|0|0|0|0|0
+A1-15S0105FR|FR-15S0105|"Death?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0105FR|FR-15S0105|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A1-15S0201FR|FR-15S0201|"Who are you talking about?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0201FR|FR-15S0201|"So he didn’t look like me?"|0|0|0|0|0|0|0|0|0|0
+A3-15S0201FR|FR-15S0201|"Stop staring at me."|0|0|0|0|0|0|0|0|0|0
+A1-15S0202FR|FR-15S0202|"Yes, you can."|0|0|0|0|0|0|0|0|0|0
+A2-15S0202FR|FR-15S0202|"No, you don’t."|0|0|0|0|0|0|0|0|0|0
+A3-15S0202FR|FR-15S0202|"This is stupid."|0|0|0|0|0|0|0|0|0|0
+A1-15S0301FR|FR-15S0301|"Of what?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0301FR|FR-15S0301|"What about the river?"|0|0|0|0|0|0|0|0|0|0
+A1-15S0302FR|FR-15S0302|"I’m jealous."|0|0|0|0|0|0|0|0|0|0
+A2-15S0302FR|FR-15S0302|"What about now?"|0|0|0|0|0|0|0|0|0|0
+A1-15S0303FR|FR-15S0303|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-15S0303FR|FR-15S0303|"Don’t torture yourself."|0|0|0|0|0|0|0|0|0|0
+A1-15S0401FR|FR-15S0401|"Tsuki Menichi?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0401FR|FR-15S0401|"That must have been tough."|0|0|0|0|0|0|0|0|0|0
+A3-15S0401FR|FR-15S0401|"Don’t be depressed."|0|0|0|0|0|0|0|0|0|0
+A1-15S0402FR|FR-15S0402|"That may be true."|0|0|0|0|0|0|0|0|0|0
+A2-15S0402FR|FR-15S0402|"I don’t think so."|0|0|0|0|0|0|0|0|0|0
+A3-15S0402FR|FR-15S0402|"I don’t really know."|0|0|0|0|0|0|0|0|0|0
+A1-15S0403FR|FR-15S0403|"I don’t get it."|0|0|0|0|0|0|0|0|0|0
+A2-15S0403FR|FR-15S0403|"I think I understand."|0|0|0|0|0|0|0|0|0|0
+A1-15S0501FR|FR-15S0501|"It’s actually interesting."|0|0|0|0|0|0|0|0|0|0
+A2-15S0501FR|FR-15S0501|"I’m just killing time."|0|0|0|0|0|0|0|0|0|0
+A1-15S0502FR|FR-15S0502|Talk about school|0|0|0|0|0|0|0|0|0|0
+A2-15S0502FR|FR-15S0502|Talk about the murders|0|0|0|0|0|0|0|0|0|0
+A3-15S0502FR|FR-15S0502|Talk about girls|0|0|0|0|0|0|0|0|0|0
+A1-15S0503FR|FR-15S0503|"Why not?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0503FR|FR-15S0503|"I’m hurt."|0|0|0|0|0|0|0|0|0|0
+A3-15S0503FR|FR-15S0503|"But I want to see you."|0|0|0|0|0|0|0|0|0|0
+A1-15S0601FR|FR-15S0601|"I get it."|0|0|0|0|0|0|0|0|0|0
+A2-15S0601FR|FR-15S0601|"I don’t get it."|0|0|0|0|0|0|0|0|0|0
+A1-15S0602FR|FR-15S0602|"What were they about?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0602FR|FR-15S0602|"Letters? How inconvenient."|0|0|0|0|0|0|0|0|0|0
+A1-15S0701FR|FR-15S0701|Read them|0|0|0|0|0|0|0|0|0|0
+A2-15S0701FR|FR-15S0701|Wait for Hisano|0|0|0|0|0|0|0|0|0|0
+A1-15S0702FR|FR-15S0702|"What does it mean?"|0|0|0|0|0|0|0|0|0|0
+A2-15S0702FR|FR-15S0702|"You didn’t like it."|0|0|0|0|0|0|0|0|0|0
+A1-15S0703FR|FR-15S0703|"That’s a cruel tale."|0|0|0|0|0|0|0|0|0|0
+A2-15S0703FR|FR-15S0703|"That must’ve been tough."|0|0|0|0|0|0|0|0|0|0
+A3-15S0703FR|FR-15S0703|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-15S0801FR|FR-15S0801|"Take your time."|0|0|0|0|0|0|0|0|0|0
+A2-15S0801FR|FR-15S0801|"Hang in there."|0|0|0|0|0|0|0|0|0|0
+A1-15S0901FR|FR-15S0901|"I understand the feeling."|0|0|0|0|0|0|0|0|0|0
+A2-15S0901FR|FR-15S0901|"That’s selfish."|0|0|0|0|0|0|0|0|0|0
+A3-15S0901FR|FR-15S0901|"I don’t understand."|0|0|0|0|0|0|0|0|0|0
+A1-15S0902FR|FR-15S0902|"I guess so."|0|0|0|0|0|0|0|0|0|0
+A2-15S0902FR|FR-15S0902|"No, it isn’t."|0|0|0|0|0|0|0|0|0|0
+A1-15S1001FR|FR-15S1001|"They kept insisting?"|0|0|0|0|0|0|0|0|0|0
+A2-15S1001FR|FR-15S1001|"What about your husband?"|0|0|0|0|0|0|0|0|0|0
+A1-15S1002FR|FR-15S1002|"Hasn’t it?"|0|0|0|0|0|0|0|0|0|0
+A2-15S1002FR|FR-15S1002|"I’ll treasure it."|0|0|0|0|0|0|0|0|0|0
+A1-15S1003FR|FR-15S1003|"I do."|0|0|0|0|0|0|0|0|0|0
+A2-15S1003FR|FR-15S1003|"I don’t."|0|0|0|0|0|0|0|0|0|0
+A3-15S1003FR|FR-15S1003|"I’m not too sure."|0|0|0|0|0|0|0|0|0|0
+A1-16S0101FR|FR-16S0101|"Is something on your mind?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0101FR|FR-16S0101|"Are you feeling sick?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0102FR|FR-16S0102|"That sounds tough."|0|0|0|0|0|0|0|0|0|0
+A2-16S0102FR|FR-16S0102|"Yuuta’s a good kid."|0|0|0|0|0|0|0|0|0|0
+A3-16S0102FR|FR-16S0102|"Just give it some time."|0|0|0|0|0|0|0|0|0|0
+A1-16S0201FR|FR-16S0201|"Yeah, I like kids."|0|0|0|0|0|0|0|0|0|0
+A2-16S0201FR|FR-16S0201|"I am on the fence."|0|0|0|0|0|0|0|0|0|0
+A3-16S0201FR|FR-16S0201|"I hate kids."|0|0|0|0|0|0|0|0|0|0
+A1-16S0202FR|FR-16S0202|"Do you like him?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0202FR|FR-16S0202|"You have problems with him?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0301FR|FR-16S0301|"Probably."|0|0|0|0|0|0|0|0|0|0
+A2-16S0301FR|FR-16S0301|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-16S0302FR|FR-16S0302|"Do you love Yuuta?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0302FR|FR-16S0302|"Do you love your husband?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0401FR|FR-16S0401|"So, Yuuta can’t love you?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0401FR|FR-16S0401|"So, you can’t love Yuuta?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0402FR|FR-16S0402|"You’re right…"|0|0|0|0|0|0|0|0|0|0
+A2-16S0402FR|FR-16S0402|"It’s a boring idea."|0|0|0|0|0|0|0|0|0|0
+A3-16S0402FR|FR-16S0402|"It’s not a good idea."|0|0|0|0|0|0|0|0|0|0
+A1-16S0403FR|FR-16S0403|"Why don’t you go back?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0403FR|FR-16S0403|"Why don’t you take Yuuta?"|0|0|0|0|0|0|0|0|0|0
+A3-16S0403FR|FR-16S0403|"Just let it go."|0|0|0|0|0|0|0|0|0|0
+A1-16S0404FR|FR-16S0404|"I won’t."|0|0|0|0|0|0|0|0|0|0
+A2-16S0404FR|FR-16S0404|"Why would I?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0501FR|FR-16S0501|"She’s angry."|0|0|0|0|0|0|0|0|0|0
+A2-16S0501FR|FR-16S0501|"She’s not angry."|0|0|0|0|0|0|0|0|0|0
+A3-16S0501FR|FR-16S0501|"Just apologize, Yuuta."|0|0|0|0|0|0|0|0|0|0
+A1-16S0502FR|FR-16S0502|"She doesn’t hate you."|0|0|0|0|0|0|0|0|0|0
+A2-16S0502FR|FR-16S0502|"Just give it time."|0|0|0|0|0|0|0|0|0|0
+A3-16S0502FR|FR-16S0502|"Be a better kid, then."|0|0|0|0|0|0|0|0|0|0
+A1-16S0601FR|FR-16S0601|"Why not?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0601FR|FR-16S0601|"You should watch it."|0|0|0|0|0|0|0|0|0|0
+A1-16S0602FR|FR-16S0602|"She won’t let you watch it?"|0|0|0|0|0|0|0|0|0|0
+A2-16S0602FR|FR-16S0602|"Have you asked to watch it?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0603FR|FR-16S0603|"No problem."|0|0|0|0|0|0|0|0|0|0
+A2-16S0603FR|FR-16S0603|"Yuuta was lonely."|0|0|0|0|0|0|0|0|0|0
+A3-16S0603FR|FR-16S0603|"Apologize to Yuuta, not me."|0|0|0|0|0|0|0|0|0|0
+A1-16S0604FR|FR-16S0604|"Featherman R."|0|0|0|0|0|0|0|0|0|0
+A2-16S0604FR|FR-16S0604|"Money."|0|0|0|0|0|0|0|0|0|0
+A3-16S0604FR|FR-16S0604|"A loving mother."|0|0|0|0|0|0|0|0|0|0
+A1-16S0701FR|FR-16S0701|"I might have."|0|0|0|0|0|0|0|0|0|0
+A2-16S0701FR|FR-16S0701|"I didn’t ."|0|0|0|0|0|0|0|0|0|0
+A3-16S0701FR|FR-16S0701|"Tell who?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0702FR|FR-16S0702|"Anything would."|0|0|0|0|0|0|0|0|0|0
+A2-16S0702FR|FR-16S0702|"Just be a good boy."|0|0|0|0|0|0|0|0|0|0
+A3-16S0702FR|FR-16S0702|"Think of it yourself."|0|0|0|0|0|0|0|0|0|0
+A1-16S0703FR|FR-16S0703|"Maybe."|0|0|0|0|0|0|0|0|0|0
+A2-16S0703FR|FR-16S0703|"He’s not afraid of you."|0|0|0|0|0|0|0|0|0|0
+A3-16S0703FR|FR-16S0703|"You’re both afraid."|0|0|0|0|0|0|0|0|0|0
+A1-16S0704FR|FR-16S0704|"You can’t help it."|0|0|0|0|0|0|0|0|0|0
+A2-16S0704FR|FR-16S0704|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A1-16S0801FR|FR-16S0801|"I’m a day care assistant."|0|0|0|0|0|0|0|0|0|0
+A2-16S0801FR|FR-16S0801|"I’m Main Character."|0|0|0|0|0|0|0|0|0|0
+A3-16S0801FR|FR-16S0801|"Actually, I am her husband."|0|0|0|0|0|0|0|0|0|0
+A1-16S0802FR|FR-16S0802|"It’s not his fault."|0|0|0|0|0|0|0|0|0|0
+A2-16S0802FR|FR-16S0802|"Grades aren’t a factor."|0|0|0|0|0|0|0|0|0|0
+A3-16S0802FR|FR-16S0802|"It’s your own fault."|0|0|0|0|0|0|0|0|0|0
+A1-16S0901FR|FR-16S0901|"I’m fine."|0|0|0|0|0|0|0|0|0|0
+A2-16S0901FR|FR-16S0901|"I’m not that weak."|0|0|0|0|0|0|0|0|0|0
+A1-16S0902FR|FR-16S0902|"Don’t sweat it."|0|0|0|0|0|0|0|0|0|0
+A2-16S0902FR|FR-16S0902|"I can’t hear you."|0|0|0|0|0|0|0|0|0|0
+A3-16S0902FR|FR-16S0902|"Hitting is bad okay?"|0|0|0|0|0|0|0|0|0|0
+A1-16S0903FR|FR-16S0903|"Yeah he is."|0|0|0|0|0|0|0|0|0|0
+A2-16S0903FR|FR-16S0903|"You’re a doting parent now."|0|0|0|0|0|0|0|0|0|0
+A1-16S0904FR|FR-16S0904|"Yeah."|0|0|0|0|0|0|0|0|0|0
+A2-16S0904FR|FR-16S0904|"It’s never too late."|0|0|0|0|0|0|0|0|0|0
+A1-16S1001FR|FR-16S1001|"It’s for the best."|0|0|0|0|0|0|0|0|0|0
+A2-16S1001FR|FR-16S1001|"I’ll be lonely here."|0|0|0|0|0|0|0|0|0|0
+A1-17S0101FR|FR-17S0101|"Stop it!"|0|0|0|0|0|0|0|0|0|0
+A2-17S0101FR|FR-17S0101|"I’m not interested."|0|0|0|0|0|0|0|0|0|0
+A3-17S0101FR|FR-17S0101|"If you insist."|0|0|0|0|0|0|0|0|0|0
+A1-17S0201FR|FR-17S0201|"What do you mean?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0201FR|FR-17S0201|"I’m not interested."|0|0|0|0|0|0|0|0|0|0
+A3-17S0201FR|FR-17S0201|"Please, by all means."|0|0|0|0|0|0|0|0|0|0
+A1-17S0301FR|FR-17S0301|"For the money."|0|0|0|0|0|0|0|0|0|0
+A2-17S0301FR|FR-17S0301|"To be closer to you."|0|0|0|0|0|0|0|0|0|0
+A3-17S0301FR|FR-17S0301|"To have something to do."|0|0|0|0|0|0|0|0|0|0
+A1-17S0302FR|FR-17S0302|"I do."|0|0|0|0|0|0|0|0|0|0
+A2-17S0302FR|FR-17S0302|"I don’t."|0|0|0|0|0|0|0|0|0|0
+A3-17S0302FR|FR-17S0302|"Right in front of me."|0|0|0|0|0|0|0|0|0|0
+A4-17S0302FR|FR-17S0302|"Why do you ask?"|0|0|0|0|0|0|0|0|0|0
+A1-17S0303FR|FR-17S0303|"Oh, yes."|0|0|0|0|0|0|0|0|0|0
+A2-17S0303FR|FR-17S0303|"No…"|0|0|0|0|0|0|0|0|0|0
+A3-17S0303FR|FR-17S0303|"Stop it!"|0|0|0|0|0|0|0|0|0|0
+A1-17S0401FR|FR-17S0401|"Only part time…"|0|0|0|0|0|0|0|0|0|0
+A2-17S0401FR|FR-17S0401|"I’m a high school student."|0|0|0|0|0|0|0|0|0|0
+A1-17S0402FR|FR-17S0402|"What were you here for?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0402FR|FR-17S0402|"Why are you wearing black?"|0|0|0|0|0|0|0|0|0|0
+A3-17S0402FR|FR-17S0402|"We should meet again."|0|0|0|0|0|0|0|0|0|0
+A1-17S0403FR|FR-17S0403|"...Okay."|0|0|0|0|0|0|0|0|0|0
+A2-17S0403FR|FR-17S0403|"I’d rather not know."|0|0|0|0|0|0|0|0|0|0
+A3-17S0403FR|FR-17S0403|"...I can’t stay in here."|0|0|0|0|0|0|0|0|0|0
+A1-17S0404FR|FR-17S0404|"That’s just how it is."|0|0|0|0|0|0|0|0|0|0
+A2-17S0404FR|FR-17S0404|"It’s good they get better."|0|0|0|0|0|0|0|0|0|0
+A3-17S0404FR|FR-17S0404|"Why don’t you switch jobs?"|0|0|0|0|0|0|0|0|0|0
+A1-17S0501FR|FR-17S0501|"What happened?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0501FR|FR-17S0501|"It’s like a  soap opera."|0|0|0|0|0|0|0|0|0|0
+A1-17S0502FR|FR-17S0502|"That can’t be helped."|0|0|0|0|0|0|0|0|0|0
+A2-17S0502FR|FR-17S0502|"I wish I’d seen it."|0|0|0|0|0|0|0|0|0|0
+A1-17S0503FR|FR-17S0503|Comfort her|0|0|0|0|0|5|0|0|0|0
+A2-17S0503FR|FR-17S0503|Cheer her up|0|0|0|0|0|0|0|0|0|0
+A3-17S0503FR|FR-17S0503|Keep quiet|0|0|0|0|0|0|0|0|0|0
+A1-17S0601FR|FR-17S0601|"Did something happen?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0601FR|FR-17S0601|"Are you not feeling well?"|0|0|0|0|0|0|0|0|0|0
+A3-17S0601FR|FR-17S0601|"Are you done here?"|0|0|0|0|0|0|0|0|0|0
+A1-17S0602FR|FR-17S0602|"Don’t blame yourself."|0|0|0|0|0|0|0|0|0|0
+A2-17S0602FR|FR-17S0602|"It couldn’t be helped."|0|0|0|0|0|0|0|0|0|0
+A3-17S0602FR|FR-17S0602|"Think about what you did."|0|0|0|0|0|0|0|0|0|0
+A1-17S0603FR|FR-17S0603|Watch her silently|0|0|0|0|0|0|0|0|0|0
+A2-17S0603FR|FR-17S0603|Say something to her|0|0|0|0|0|0|0|0|0|0
+A1-17S0701FR|FR-17S0701|"You should get some rest…"|0|0|0|0|0|0|0|0|0|0
+A2-17S0701FR|FR-17S0701|"Hang in there."|0|0|0|0|0|0|0|0|0|0
+A1-17S0901FR|FR-17S0901|"Is there an emergency?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0901FR|FR-17S0901|"At this time of night?"|0|0|0|0|0|0|0|0|0|0
+A1-17S0902FR|FR-17S0902|"Overworking, I hear?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0902FR|FR-17S0902|"It’s important to rest."|0|0|0|0|0|0|0|0|0|0
+A1-17S0903FR|FR-17S0903|"Physician, heal thyself."|0|0|0|0|0|0|0|0|0|0
+A2-17S0903FR|FR-17S0903|"Can you help anyone now?"|0|0|0|0|0|0|0|0|0|0
+A3-17S0903FR|FR-17S0903|"Don’t do it all yourself."|0|0|0|0|0|0|0|0|0|0
+A1-17S0904FR|FR-17S0904|"Would ‘he’ want that?"|0|0|0|0|0|0|0|0|0|0
+A2-17S0904FR|FR-17S0904|"You’re doing it for yourself."|0|0|0|0|0|0|0|0|0|0
+A3-17S0904FR|FR-17S0904|"You’re just running away."|0|0|0|0|0|0|0|0|0|0
+A1-17S1001FR|FR-17S1001|"Goodbye?"|0|0|0|0|0|0|0|0|0|0
+A2-17S1001FR|FR-17S1001|"Take care…"|0|0|0|0|0|0|0|0|0|0
+A1-18S0101FR|FR-18S0101|"Nice to meet you."|0|0|0|0|0|0|0|0|0|0
+A2-18S0101FR|FR-18S0101|"Don’t worry about me."|0|0|0|0|0|0|0|0|0|0
+A3-18S0101FR|FR-18S0101|"Wow, you’re a little prick."|0|0|0|0|0|4|0|0|0|0
+A1-18S0102FR|FR-18S0102|Math|0|0|0|0|0|0|0|0|0|0
+A2-18S0102FR|FR-18S0102|English|0|0|0|0|0|0|0|0|0|0
+A3-18S0102FR|FR-18S0102|PE|0|2|0|0|0|0|0|0|0|0
+A1-18S0201FR|FR-18S0201|"Of course."|0|0|0|0|0|0|0|0|0|0
+A2-18S0201FR|FR-18S0201|"I don’t know."|0|0|0|0|0|0|0|0|0|0
+A3-18S0201FR|FR-18S0201|"I don’t think so."|0|0|0|0|0|0|0|0|0|0
+A1-18S0202FR|FR-18S0202|"Sure I do."|0|0|0|0|0|0|0|4|0|0
+A2-18S0202FR|FR-18S0202|"No, what?"|0|0|0|0|0|0|0|0|0|0
+A1-18S0203FR|FR-18S0203|"Wait until next time."|0|0|0|0|0|0|0|0|0|0
+A2-18S0203FR|FR-18S0203|"I’ll stay and help you."|0|0|0|0|0|0|5|0|0|0
+A1-18S0301FR|FR-18S0301|"It’s fun."|0|0|0|0|0|0|0|0|0|0
+A2-18S0301FR|FR-18S0301|"It’s strict."|0|0|0|0|0|0|0|0|0|0
+A3-18S0301FR|FR-18S0301|"It’s boring."|0|0|0|0|0|0|0|0|0|0
+A1-18S0302FR|FR-18S0302|"I’m a transferred student, too."|0|0|0|0|0|0|0|0|0|0
+A2-18S0302FR|FR-18S0302|"Well, it is the countryside."|0|0|0|0|0|0|0|0|0|0
+A3-18S0302FR|FR-18S0302|"Make friends with him."|0|0|0|0|0|0|0|0|0|0
+A1-18S0401FR|FR-18S0401|"That’s just how it is."|0|0|0|0|0|0|0|0|0|0
+A2-18S0401FR|FR-18S0401|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A1-18S0402FR|FR-18S0402|"It’s the law."|0|0|0|0|0|0|0|0|0|0
+A2-18S0402FR|FR-18S0402|"You don’t have to go."|0|0|0|0|0|0|0|0|0|0
+A3-18S0402FR|FR-18S0402|"You’re not the only one."|2|0|0|0|0|4|0|0|0|0
+A1-18S0501FR|FR-18S0501|"Yes, there is."|0|0|0|0|0|0|0|0|0|0
+A2-18S0501FR|FR-18S0501|"No,  there isn’t."|0|0|0|0|0|0|0|0|0|0
+A3-18S0501FR|FR-18S0501|"Not that I know of…"|0|0|0|0|0|0|0|0|0|0
+A1-18S0502FR|FR-18S0502|"Just ignore them."|0|0|0|0|0|0|0|0|0|0
+A2-18S0502FR|FR-18S0502|"Put some effort into it."|0|0|0|0|0|0|0|0|0|0
+A3-18S0502FR|FR-18S0502|"Leave it to me."|0|0|0|0|0|0|0|0|0|0
+A1-18S0503FR|FR-18S0503|"It’s not like you."|0|0|0|0|0|0|0|0|0|0
+A2-18S0503FR|FR-18S0503|"I don’t mind."|0|0|0|2|0|0|0|0|0|0
+A1-18S0601FR|FR-18S0601|"Were they a pain in the ass?"|0|0|0|0|0|0|0|0|0|0
+A2-18S0601FR|FR-18S0601|"Didn’t you join in?"|0|0|0|0|0|0|0|0|0|0
+A1-18S0602FR|FR-18S0602|"You’re just at that age."|0|0|0|0|0|0|0|0|0|0
+A2-18S0602FR|FR-18S0602|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A1-18S0603FR|FR-18S0603|"Of course."|0|0|0|0|0|0|0|0|0|0
+A2-18S0603FR|FR-18S0603|"That’s just one reason."|0|0|0|0|0|0|0|0|0|0
+A3-18S0603FR|FR-18S0603|"That’s not it."|0|0|0|0|0|0|0|0|0|0
+A1-18S0701FR|FR-18S0701|"Work hard, and you can be."|0|0|0|0|0|0|0|0|0|0
+A2-18S0701FR|FR-18S0701|"You already are one."|0|0|0|0|0|0|0|0|0|0
+A3-18S0701FR|FR-18S0701|"Just give up now."|0|0|0|0|0|0|0|0|0|0
+A1-18S0702FR|FR-18S0702|"The other  day at school…"|0|0|0|0|0|0|0|0|0|0
+A2-18S0702FR|FR-18S0702|"About the murders…"|0|0|0|0|0|0|0|0|0|0
+A3-18S0702FR|FR-18S0702|"What I like in a girl is…"|2|0|0|0|0|0|0|0|0|0
+A1-18S0801FR|FR-18S0801|"I do."|0|0|0|0|0|0|0|0|0|0
+A2-18S0801FR|FR-18S0801|"Nope."|0|0|0|0|0|0|0|0|0|0
+A3-18S0801FR|FR-18S0801|"This guy."|0|0|0|0|0|0|0|0|0|0
+A1-18S0802FR|FR-18S0802|"You must be tired."|0|0|0|0|0|0|0|0|0|0
+A2-18S0802FR|FR-18S0802|"You must be possessed."|0|0|0|0|0|0|0|0|0|0
+A1-18S0803FR|FR-18S0803|Ask him what he’s worried about|0|0|0|0|0|0|0|0|0|0
+A2-18S0803FR|FR-18S0803|Cheer him up|0|0|0|0|0|0|0|0|0|5
+A3-18S0803FR|FR-18S0803|Leave him alone|0|0|0|0|0|0|0|0|0|0
+A1-18S0901FR|FR-18S0901|"Happy birthday."|0|0|0|0|0|0|0|0|0|0
+A2-18S0901FR|FR-18S0901|"Don’t forget next time."|0|0|0|0|0|0|0|0|0|0
+A1-18S0902FR|FR-18S0902|Have a grand celebration|0|0|0|0|0|0|0|0|0|0
+A2-18S0902FR|FR-18S0902|Have a modest celebration|0|0|0|0|0|0|0|0|0|0
+A1-18S0903FR|FR-18S0903|Cake|0|0|0|0|0|0|0|0|0|0
+A2-18S0903FR|FR-18S0903|Presents|0|0|0|0|0|0|0|0|0|0
+A3-18S0903FR|FR-18S0903|Guests|0|0|0|0|0|0|0|0|0|0
+A1-18S0904FR|FR-18S0904|Junes|0|0|0|0|0|0|0|0|0|0
+A1-18S0905FR|FR-18S0905|Soothe him|0|0|0|0|0|0|0|0|0|0
+A2-18S0905FR|FR-18S0905|Wait for him to calm down|0|0|0|0|0|0|0|0|0|0
+A1-18S0906FR|FR-18S0906|Comfort him|0|0|0|0|0|0|0|0|0|0
+A2-18S0906FR|FR-18S0906|Kindly reason with him|0|0|0|0|0|0|0|0|0|0
+A3-18S0906FR|FR-18S0906|Sternly scold him|0|0|0|0|0|0|0|0|0|0
+A1-18S1001FR|FR-18S1001|"I am proud of you."|0|0|0|0|0|0|0|0|0|0
+A2-18S1001FR|FR-18S1001|"No, it’s all you."|0|0|0|0|0|0|0|0|0|0
+A1-20S0101FR|FR-20S0101|Accept the invitation|0|0|0|0|0|0|0|0|0|0
+A2-20S0101FR|FR-20S0101|Refuse|0|0|0|0|0|0|0|0|0|0
+A1-20S0102FR|FR-20S0102|"Well… it’s fun if only done occasionally."|0|0|0|0|0|0|0|0|0|0
+A2-20S0102FR|FR-20S0102|"Skipping school is not good."|0|0|0|0|0|0|0|0|0|0
+A1-20S0103FR|FR-20S0103|"This is boring…"|0|0|0|0|0|0|0|0|0|0
+A2-20S0103FR|FR-20S0103|"Alright, I’ll come."|0|0|0|0|0|0|0|0|0|0
+A1-20S0104FR|FR-20S0104|"Got money to burn?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0104FR|FR-20S0104|"...Whose card is that?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0201FR|FR-20S0201|"Why do you buy so much?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0201FR|FR-20S0201|"We’ll have to come back."|0|0|0|0|0|0|0|0|0|0
+A3-20S0201FR|FR-20S0201|"Stop complaining."|0|0|0|0|0|0|0|0|0|0
+A1-20S0202FR|FR-20S0202|"Sure."|0|0|0|0|0|0|0|0|0|0
+A2-20S0202FR|FR-20S0202|"Buy it yourself."|0|0|0|0|0|0|0|0|0|0
+A3-20S0202FR|FR-20S0202|"Let’s split one."|0|0|0|0|0|0|0|0|0|0
+A1-20S0203FR|FR-20S0203|"Sounds like a good idea."|0|0|0|0|0|0|0|0|0|0
+A2-20S0203FR|FR-20S0203|"That’d be kind of boring."|0|0|0|0|0|0|0|0|0|0
+A1-20S0301FR|FR-20S0301|"Come shopping with me."|0|0|0|0|0|0|0|0|0|0
+A2-20S0301FR|FR-20S0301|"Let’s just chill."|0|0|0|0|0|0|0|0|0|0
+A3-20S0301FR|FR-20S0301|"Why are we here again…?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0302FR|FR-20S0302|"I appreciate it."|0|0|0|0|0|0|0|0|0|0
+A2-20S0302FR|FR-20S0302|"Not exactly…"|0|0|0|0|0|0|0|0|0|0
+A1-20S0303FR|FR-20S0303|"Can’t you be nice?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0303FR|FR-20S0303|"You coulda talked to him…"|0|0|0|0|0|0|0|0|0|0
+A3-20S0303FR|FR-20S0303|"That was downright cruel…"|0|0|0|0|0|0|0|0|0|0
+A4-20S0303FR|FR-20S0303|"Are looks everything?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0401FR|FR-20S0401|Stop them|0|0|0|0|0|0|0|0|0|0
+A2-20S0401FR|FR-20S0401|Ignore them|0|0|0|0|0|0|0|0|0|0
+A1-20S0402FR|FR-20S0402|"…Did you hear them?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0402FR|FR-20S0402|"Hey, let’s go."|0|0|0|0|0|0|0|0|0|0
+A1-20S0501FR|FR-20S0501|"What are you talking about?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0501FR|FR-20S0501|"You’re welcome."|0|0|0|0|0|0|0|0|0|0
+A3-20S0501FR|FR-20S0501|"I didn’t do much."|0|0|0|0|0|0|0|0|0|0
+A1-20S0502FR|FR-20S0502|"He probably does."|0|0|0|0|0|0|0|0|0|0
+A2-20S0502FR|FR-20S0502|"Have a little confidence."|0|0|0|0|0|0|0|0|0|0
+A3-20S0502FR|FR-20S0502|"I wouldn’t know."|0|0|0|0|0|0|0|0|0|0
+A4-20S0502FR|FR-20S0502|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-20S0503FR|FR-20S0503|"No problem."|0|0|0|0|0|0|0|0|0|0
+A2-20S0503FR|FR-20S0503|"Not gonna happen!"|0|0|0|0|0|0|0|0|0|0
+A1-20S0601FR|FR-20S0601|"Try to calm down."|0|0|0|0|0|0|0|0|0|0
+A2-20S0601FR|FR-20S0601|"Come over here…"|0|0|0|0|0|0|0|0|0|0
+A3-20S0601FR|FR-20S0601|"I’ll hear you out."|0|0|0|0|0|0|0|0|0|0
+A1-20S0602FR|FR-20S0602|"You’re still young."|0|0|0|0|0|0|0|0|0|0
+A2-20S0602FR|FR-20S0602|"He just doesn’t know you."|0|0|0|0|0|0|0|0|0|0
+A3-20S0602FR|FR-20S0602|"I’ll yell at him later."|0|0|0|0|0|0|0|0|0|0
+A1-20S0603FR|FR-20S0603|"I’ll be your boyfriend."|0|0|0|0|0|0|0|0|0|0
+A2-20S0603FR|FR-20S0603|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-20S0604FR|FR-20S0604|"I don’t really care."|0|0|0|0|0|0|0|0|0|0
+A2-20S0604LV|FR-20S0604|"Should think about it."|0|0|0|0|0|0|0|0|0|0
+A1-20S0701LV|LV-20S0701|"I don’t mind."|0|0|0|0|0|0|0|0|0|0
+A2-20S0701LV|LV-20S0701|"About time you said it."|0|0|0|0|0|0|0|0|0|0
+A1-20S0702LV|LV-20S0702|"Because we’re friends."|0|0|0|0|0|0|0|0|0|0
+A2-20S0702LV|LV-20S0702|"You have a crush on me."|0|0|0|0|0|0|0|0|0|0
+A3-20S0702LV|LV-20S0702|"Because I’m special to you."|0|0|0|0|0|0|0|0|0|0
+A1-20S0801LV|LV-20S0801|"Happens all the time."|0|0|0|0|0|0|0|0|0|0
+A2-20S0801LV|LV-20S0801|"You can be so cruel."|0|0|0|0|0|0|0|0|0|0
+A3-20S0801LV|LV-20S0801|"Are you okay with that?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0901LV|LV-20S0901|Help her|0|0|0|0|0|0|0|0|0|0
+A2-20S0901LV|LV-20S0901|See what happens|0|0|0|0|0|0|0|0|0|0
+A1-20S0902LV|LV-20S0902|"Thank you."|0|0|0|0|0|0|0|0|0|0
+A2-20S0902LV|LV-20S0902|"Are you all right?"|0|0|0|0|0|0|0|0|0|0
+A3-20S0902LV|LV-20S0902|"That was reckless of you."|0|0|0|0|0|0|0|0|0|0
+A1-20S1001LV|LV-20S1001|Accept it|0|0|0|0|0|0|0|0|0|0
+A2-20S1001LV|LV-20S1001|Reject her|0|0|0|0|0|0|0|0|0|0
+A1-20S0701FR|FR-20S0701|"Cute clothes."|0|0|0|0|0|0|0|0|0|0
+A2-20S0701FR|FR-20S0701|"Sexy clothes."|0|0|0|0|0|0|0|0|0|0
+A3-20S0701FR|FR-20S0701|"Casual clothes."|0|0|0|0|0|0|0|0|0|0
+A1-20S0702FR|FR-20S0702|"Yep."|0|0|0|0|0|0|0|0|0|0
+A2-20S0702FR|FR-20S0702|"We are?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0703FR|FR-20S0703|"Of course you are."|0|0|0|0|0|0|0|0|0|0
+A2-20S0703FR|FR-20S0703|"Not really."|0|0|0|0|0|0|0|0|0|0
+A3-20S0703FR|FR-20S0703|"What’s wrong."|0|0|0|0|0|0|0|0|0|0
+A1-20S0801FR|FR-20S0801|"Of course."|0|0|0|0|0|0|0|0|0|0
+A2-20S0801FR|FR-20S0801|"What’s wrong?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0802FR|FR-20S0802|"Naturally…"|0|0|0|0|0|0|0|0|0|0
+A2-20S0802FR|FR-20S0802|"Do I really have to say it?"|0|0|0|0|0|0|0|0|0|0
+A1-20S0901FR|FR-20S0901|"Why?"|0|0|0|0|0|0|0|0|0|0
+A2-20S0901FR|FR-20S0901|"I don’t want that."|0|0|0|0|0|0|0|0|0|0
+A3-20S0901FR|FR-20S0901|"You’re being selfish."|0|0|0|0|0|0|0|0|0|0
+A1-20S0902FR|FR-20S0902|"That’s not true."|0|0|0|0|0|0|0|0|0|0
+A2-20S0902FR|FR-20S0902|"Then let’s find your value."|0|0|0|0|0|0|0|0|0|0
+A3-20S0902FR|FR-20S0902|"You decide your own worth."|0|0|0|0|0|0|0|0|0|0
+A1-20S0903FR|FR-20S0903|"I’m not going anywhere."|0|0|0|0|0|0|0|0|0|0
+A2-20S0903FR|FR-20S0903|"Well, that could happen…"|0|0|0|0|0|0|0|0|0|0
+A3-20S0903FR|FR-20S0903|"You can’t live in fear."|0|0|0|0|0|0|0|0|0|0
+A1-20S0904FR|FR-20S0904|"Sure."|0|0|0|0|0|0|0|0|0|0
+A2-20S0904FR|FR-20S0904|"I knew the whole time."|0|0|0|0|0|0|0|0|0|0
+A3-20S0904FR|FR-20S0904|"We need time apart."|0|0|0|0|0|0|0|0|0|0
+A1-20S1001FR|FR-20S1001|"Of course I will."|0|0|0|0|0|0|0|0|0|0
+A2-20S1001FR|FR-20S1001|"I’ll do my best…"|0|0|0|0|0|0|0|0|0|0
+A3-20S1001FR|FR-20S1001|"You’re strong enough now."|0|0|0|0|0|0|0|0|0|0
+A1-21S0101FR|FR-21S0101|"Ahhh…"|0|0|0|0|0|0|0|0|0|0
+A2-21S0101FR|FR-21S0101|"Argh!"|0|0|0|0|0|0|0|0|0|0
+A3-21S0101FR|FR-21S0101|"… …"|0|0|0|0|0|0|0|0|0|0
+A1-21S0102FR|FR-21S0102|"Okay."|0|0|0|0|0|0|0|0|0|0
+A2-21S0102FR|FR-21S0102|"Yes, Ma’am!"|0|0|0|0|0|0|0|0|0|0
+A3-21S0102FR|FR-21S0102|"I want to quit."|0|0|0|0|0|0|0|0|0|0
+A1-21S0201FR|FR-21S0201|"What tempts me is not…"|0|0|0|0|0|0|0|0|0|0
+A2-21S0201FR|FR-21S0201|"What craze me is not…"|0|0|0|0|0|0|0|0|0|0
+A3-21S0201FR|FR-21S0201|"What taunts me is not…"|0|0|0|0|0|0|0|0|0|0
+A1-21S0202FR|FR-21S0202|"The light of the moon…"|0|0|0|0|0|0|0|0|0|0
+A2-21S0202FR|FR-21S0202|"The light of the star…"|0|0|0|0|0|0|0|0|0|0
+A3-21S0202FR|FR-21S0202|"The light in the sea…"|0|0|0|0|0|0|0|0|0|0
+A1-21S0203FR|FR-21S0203|"I’ll give it my all!"|0|0|0|0|0|0|0|0|0|0
+A2-21S0203FR|FR-21S0203|"I’m not in the mood."|0|0|0|0|0|0|0|0|0|0
+A1-21S0301FR|FR-21S0301|"Hurry, go see her."|0|0|0|0|0|0|0|0|0|0
+A2-21S0301FR|FR-21S0301|"Want me to come with you?"|0|0|0|0|0|0|0|0|0|0
+A1-21S0302FR|FR-21S0302|"Yea, I heard."|0|0|0|0|0|0|0|0|0|0
+A2-21S0302FR|FR-21S0302|"What are you talking about?"|0|0|0|0|0|0|0|0|0|0
+A1-21S0303FR|FR-21S0303|Comfort her|0|0|0|0|0|0|0|0|0|0
+A2-21S0303FR|FR-21S0303|Don’t say anything|0|0|0|0|0|0|0|0|0|0
+A1-21S0401FR|FR-21S0401|"Yeah."|0|0|0|0|0|0|0|0|0|0
+A2-21S0401FR|FR-21S0401|"No."|0|0|0|0|0|0|0|0|0|0
+A3-21S0401FR|FR-21S0401|"It was how you said it."|0|0|0|0|0|0|0|0|0|0
+A1-21S0402FR|FR-21S0402|"Is something wrong?"|0|0|0|0|0|0|0|0|0|0
+A2-21S0402FR|FR-21S0402|"Your family will be worried?"|0|0|0|0|0|0|0|0|0|0
+A3-21S0402FR|FR-21S0402|"I’ll help."|0|0|0|0|0|0|0|0|0|0
+A1-21S0403FR|FR-21S0403|"Okay."|0|0|0|0|0|0|0|0|0|0
+A2-21S0403FR|FR-21S0403|"I can’t forget."|0|0|0|0|0|0|0|0|0|0
+A1-21S0501FR|FR-21S0501|"I was worried about you."|0|0|0|0|0|0|0|0|0|0
+A2-21S0501FR|FR-21S0501|"Just passing by."|0|0|0|0|0|0|0|0|0|0
+A3-21S0501FR|FR-21S0501|"I got hurt."|0|0|0|0|0|0|0|0|0|0
+A1-21S0502FR|FR-21S0502|"It must’ve been tough."|0|0|0|0|0|0|0|0|0|0
+A2-21S0502FR|FR-21S0502|"She’s your parent."|0|0|0|0|0|0|0|0|0|0
+A3-21S0502FR|FR-21S0502|"You should support her."|0|0|0|0|0|0|0|0|0|0
+A1-21S0503FR|FR-21S0503|"It can’t be helped."|0|0|0|0|0|0|0|0|0|0
+A2-21S0503FR|FR-21S0503|"Stop acting like a child."|0|0|0|0|0|0|0|0|0|0
+A3-21S0503FR|FR-21S0503|"Take care of yourself, too."|0|0|0|0|0|0|0|0|0|0
+A1-21S0504FR|FR-21S0504|"Yes I do."|0|0|0|0|0|0|0|0|0|0
+A2-21S0504FR|FR-21S0504|"That’s right I don’t."|0|0|0|0|0|0|0|0|0|0
+A1-21S0601FR|FR-21S0601|"Did you make up with him?"|0|0|0|0|0|0|0|0|0|0
+A2-21S0601FR|FR-21S0601|"Are you taking care of him?"|0|0|0|0|0|0|0|0|0|0
+A3-21S0601FR|FR-21S0601|"How is your mother?"|0|0|0|0|0|0|0|0|0|0
+A1-21S0602FR|FR-21S0602|"It’s just bad luck."|0|0|0|0|0|0|0|0|0|0
+A2-21S0602FR|FR-21S0602|"It’s your fault."|0|0|0|0|0|0|0|0|0|0
+A3-21S0602FR|FR-21S0602|"You’re not the only one."|0|0|0|0|0|0|0|0|0|0
+A1-21S0701FR|FR-21S0701|"He’s a great father."|0|0|0|0|0|0|0|0|0|0
+A2-21S0701FR|FR-21S0701|"He’s a kind father."|0|0|0|0|0|0|0|0|0|0
+A3-21S0701FR|FR-21S0701|"He’s a stupid father."|0|0|0|0|0|0|0|0|0|0
+A1-21S0801FR|FR-21S0801|Gently encourage her|0|0|0|0|0|0|0|0|0|0
+A2-21S0801FR|FR-21S0801|Cry together|0|0|0|0|0|0|0|0|0|0
+A3-21S0801FR|FR-21S0801|Remain silent|0|0|0|0|0|0|0|0|0|0
+A1-21S0901FR|FR-21S0901|"What’s wrong?"|0|0|0|0|0|0|0|0|0|0
+A2-21S0901FR|FR-21S0901|"It’s already over."|0|0|0|0|0|0|0|0|0|0
+A3-21S0901FR|FR-21S0901|"Let’s leave."|0|0|0|0|0|0|0|0|0|0
+A1-21S0902FR|FR-21S0902|Gently say her name|0|0|0|0|0|0|0|0|0|0
+A2-21S0902FR|FR-21S0902|Embrace her|0|0|0|0|0|0|0|0|0|0
+A3-21S0902FR|FR-21S0902|Remain silent|0|0|0|0|0|0|0|0|0|0
+A1-21S0903FR|FR-21S0903|"Think about it slowly."|0|0|0|0|0|0|0|0|0|0
+A2-21S0903FR|FR-21S0903|"You’re always cheerful."|0|0|0|0|0|0|0|0|0|0
+A3-21S0903FR|FR-21S0903|"The things that can be done."|0|0|0|0|0|0|0|0|0|0
+A1-21S1001LV|FR-21S1001|Hug her|0|0|0|0|0|0|0|0|0|0
+A2-21S1001FR|FR-21S1001|Leave|0|0|0|0|0|0|0|0|0|0
+A1-21S1002LV|LV-21S1002|"Is it?"|0|0|0|0|0|0|0|0|0|0
+A2-21S1002LV|LV-21S1002|"What’d you imagine?"|0|0|0|0|0|0|0|0|0|0
+A3-21S1002LV|LV-21S1002|"I haven’t even begun."|0|0|0|0|0|0|0|0|0|0
+A1-22S0101FR|FR-22S0101|"I play all the time."|0|0|0|0|0|0|0|0|0|0
+A2-22S0101FR|FR-22S0101|"Some…"|0|0|0|0|0|0|0|0|0|0
+A3-22S0101FR|FR-22S0101|"Never played in my life."|0|0|0|0|0|0|0|0|0|0
+A1-22S0102FR|FR-22S0102|"Where does the club play?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0102FR|FR-22S0102|"Is there any drama here?"|0|0|0|0|0|0|0|0|0|0
+A3-22S0102FR|FR-22S0102|"Do you have a boyfriend?"|0|0|0|0|0|0|0|0|0|0
+A1-22S0103FR|FR-22S0103|Help out|0|0|0|2|0|0|0|0|0|0
+A2-22S0103FR|FR-22S0103|Watch|0|0|0|0|0|0|0|0|0|0
+A1-22S0201FR|FR-22S0201|"Effort is what matters."|0|0|0|0|0|0|0|0|0|0
+A2-22S0201FR|FR-22S0201|"You do have talent."|0|0|0|0|0|0|0|0|0|0
+A3-22S0201FR|FR-22S0201|"Maybe you should give up."|2|0|0|0|0|0|0|0|0|0
+A1-22S0202FR|FR-22S0202|Help out|0|0|0|2|0|0|0|0|0|0
+A2-22S0202FR|FR-22S0202|Watch|0|0|0|0|0|0|0|0|3|0
+A1-22S0301FR|FR-22S0301|"You want me to help?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0301FR|FR-22S0301|"Forget about it today."|0|0|0|0|0|0|0|0|0|0
+A1-22S0302FR|FR-22S0302|"You don’t want to go?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0302FR|FR-22S0302|"They won’t let you go?"|0|0|0|0|0|0|0|0|0|0
+A1-22S0303FR|FR-22S0303|"That’s a great attitude."|0|0|0|0|0|0|0|0|0|0
+A2-22S0303FR|FR-22S0303|"Is that what you want?"|0|0|0|0|0|0|0|0|0|0
+A1-22S0401FR|FR-22S0401|"Can you practice at home?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0401FR|FR-22S0401|"Can it wait until tomorrow?"|0|0|0|0|0|0|0|0|0|0
+A3-22S0401FR|FR-22S0401|"Why don’t you give up?"|0|0|0|0|0|3|0|0|0|0
+A1-22S0402FR|FR-22S0402|"Outside?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0402FR|FR-22S0402|"Want me to help out?"|0|0|0|0|0|0|0|0|0|0
+A3-22S0402FR|FR-22S0402|"Alright, follow me."|0|0|0|0|0|3|0|0|0|0
+A1-22S0403FR|FR-22S0403|"Yep."|0|0|0|0|0|0|0|0|0|0
+A2-22S0403FR|FR-22S0403|"No, you’re not."|0|0|0|0|0|0|0|0|0|0
+A3-22S0403FR|FR-22S0403|"Just hang in there."|0|2|0|0|0|0|0|0|0|0
+A1-22S0501FR|FR-22S0501|Talk to her|0|0|0|0|0|0|0|0|0|0
+A2-22S0501FR|FR-22S0501|Leave her alone|0|0|0|0|0|0|0|0|0|0
+A1-22S0502FR|FR-22S0502|"Don’t worry, you can do it."|0|0|0|0|2|0|0|0|0|0
+A2-22S0502FR|FR-22S0502|"But who else is there?"|0|0|0|0|0|0|0|0|0|0
+A3-22S0502FR|FR-22S0502|"It’s okay to mess up."|0|0|0|0|0|0|0|0|3|0
+A1-22S0701FR|FR-22S0701|Stick up for Ayane|0|0|0|0|2|0|0|0|0|0
+A2-22S0701FR|FR-22S0701|Keep quiet|0|0|0|0|0|0|0|0|0|0
+A1-22S0702FR|FR-22S0702|Comfort her|0|0|0|0|2|0|0|0|0|0
+A2-22S0702FR|FR-22S0702|Pat her on the head|0|0|0|0|0|0|0|0|0|0
+A3-22S0702FR|FR-22S0702|Hold her|0|0|0|0|0|0|0|0|0|0
+A1-22S0801LV|FR-22S0801|Reveal your feelings for her|0|0|0|0|0|0|0|0|0|0
+A2-22S0801FR|FR-22S0801|Change the subject|0|0|0|0|0|0|0|0|0|0
+A1-22S0901LV|LV-22S0901|"Wanna go grab some food?"|0|0|0|0|0|0|0|0|0|0
+A2-22S0901LV|LV-22S0901|"Wanna go out and have fun?"|0|0|0|0|0|0|0|0|0|0
+A3-22S0901LV|LV-22S0901|"Wanna come to my house?"|0|0|0|0|0|5|0|0|0|0
+A1-20110412D01ST|ST-20110412D01|"Nice to meet you all."|0|0|0|0|0|0|0|0|0|0
+A2-20110412D01ST|ST-20110412D01|"… …"|0|0|0|0|0|0|0|0|0|0
+A3-20110412D01ST|ST-20110412D01|"...You calling me a loser?"|2|0|0|0|0|0|0|0|0|0
+A1-20110414D01ST|ST-20110414D01|"Where are we?"|0|0|0|0|0|0|0|0|0|0
+A2-20110414D01ST|ST-20110414D01|"Are you guys okay?"|0|0|0|2|0|0|0|0|0|0
+A3-20110414D01ST|ST-20110414D01|"Is this a dream?"|0|0|0|0|0|0|0|0|0|0
+A1-20110415D01ST|ST-20110415D01|"I can’t leave it alone."|0|0|0|0|0|0|0|0|0|0
+A2-20110415D01ST|ST-20110415D01|"This doesn’t involve me."|0|0|0|0|0|0|0|0|0|0
+A3-20110415D01ST|ST-20110415D01|"I’m worried about Chie."|0|0|0|2|0|0|0|0|0|0
+A1-20110427D01ST|ST-20110427D01|"Let’s give it some thought."|0|0|0|0|0|0|0|0|0|0
+A2-20110427D01ST|ST-20110427D01|"Let’s call it a day."|0|0|0|2|0|0|0|0|0|0
+A1-20110515D01ST|ST-20110515D01|"Chie."|0|0|0|0|0|0|0|0|0|0
+A2-20110515D01ST|ST-20110515D01|"Yukiko."|0|0|0|0|0|0|0|0|0|0
+A3-20110515D01ST|ST-20110515D01|"Both."|0|0|0|2|0|0|0|0|0|0
+A4-20110515D01ST|ST-20110515D01|"Neither."|2|0|0|0|0|0|0|0|0|0
+A1-20110608D01ST|ST-20110608D01|"Kitao from Sando Inc."|0|0|0|0|0|0|0|0|0|0
+A2-20110608D01ST|ST-20110608D01|"Kitao from Santo Inc"|0|0|2|0|0|0|0|0|0|0
+A3-20110608D01ST|ST-20110608D01|"Kitano from Sando Inc."|0|0|0|0|0|0|0|0|0|0
+A1-20110608D02ST|ST-20110608D02|"Can it come in two months?"|0|0|0|0|2|0|0|0|0|0
+A2-20110608D02ST|ST-20110608D02|"Can we reorder next month?"|0|0|0|0|0|0|0|0|0|0
+A3-20110608D02ST|ST-20110608D02|"Can it come next month?"|0|0|0|0|0|0|0|0|0|0
+A1-20110617D01ST|ST-20110617D01|Eat it|0|0|0|0|0|4|0|0|0|0
+A2-20110617D01ST|ST-20110617D01|Decline the offer|0|0|0|0|0|0|0|0|0|0
+A3-20110617D01ST|ST-20110617D01|Pretend to eat and discard it|0|0|0|0|0|0|0|0|0|0
+A1-20110617D02ST|ST-20110617D02|"Don’t do this."|0|0|0|0|2|0|0|0|0|0
+A2-20110617D02ST|ST-20110617D02|"Go get ‘em."|0|0|0|0|0|0|0|0|0|0
+A3-20110617D02ST|ST-20110617D02|"Not my problem."|0|0|0|0|0|0|0|0|0|0
+A1-20110622D01ST|ST-20110622D01|Recommend silken tofu|0|0|0|0|0|0|0|0|0|0
+A2-20110622D01ST|ST-20110622D01|Recommend momen tofu|0|0|0|0|0|0|0|0|0|0
+A3-20110622D01ST|ST-20110622D01|Recommend ganmodoki|0|0|0|0|0|0|0|0|0|0
+A1-20110710D01ST|ST-20110710D01|"Got it."|0|0|0|0|0|0|0|0|0|0
+A2-20110710D01ST|ST-20110710D01|"Leave it to me."|2|0|0|0|0|0|`|0|0|0
+A3-20110710D01ST|ST-20110710D01|"If you put it that way…"|0|0|0|0|0|0|0|0|0|0
+A1-20210710D02ST|ST-20110710D02|"Don’t worry."|0|0|0|0|0|0|0|0|0|0
+A2-20210710D02ST|ST-20110710D02|"They’ll catch him."|0|0|0|0|0|0|0|0|0|0
+A3-20210710D02ST|ST-20110710D02|"I’m here with you."|0|0|0|2|0|0|0|0|0|0
+A1-20110723D01ST|ST-20110723D01|"My pen was on fire."|2|0|0|0|0|0|0|0|0|0
+A2-20110723D01ST|ST-20110723D01|"Just you wait and see."|0|0|0|0|2|0|0|0|0|0
+A3-20110723D01ST|ST-20110723D01|"I didn’t get a single one…"|2|0|0|0|0|0|0|0|0|0
+A1-20210723D02ST|ST-20110723D02|"Don’t worry."|0|0|0|0|0|0|0|0|0|0
+A2-20210723D02ST|ST-20110723D02|"They’ll catch him."|0|0|0|0|0|0|0|0|0|0
+A3-20210723D02ST|ST-20110723D02|"I’ll protect you."|0|0|0|0|0|0|0|0|0|0
+A1-20110820D01ST|ST-20110820D01|"You look cute in it."|0|0|0|0|0|0|0|0|0|0
+A2-20110820D01ST|ST-20110820D01|"Just hang in there."|0|0|0|0|0|0|0|0|0|0
+A1-20210820D02ST|ST-20110820D02|"You look great in it, Rise."|0|0|0|0|0|0|0|0|0|0
+A2-20210820D02ST|ST-20110820D02|"You actually look sexy, Chie."|0|0|0|0|0|0|0|0|0|0
+A3-20210820D02ST|ST-20110820D02|"It suits Yukiko the best."|0|0|0|0|0|0|0|0|0|0
+A1-20110909D01ST|ST-20110909D01|"#1 rests on my lap."|0|0|0|0|0|0|0|0|0|0
+A2-20110909D01ST|ST-20110909D01|"#2 sits on my lap."|0|0|0|0|0|0|0|0|0|0
+A3-20110909D01ST|ST-20110909D01|"#3 hugs me."|0|0|0|0|0|0|0|0|0|0
+A4-20110909D01ST|ST-20110909D01|"#4 gets a piggyback ride."|0|0|0|0|0|0|0|0|0|0
+A1-20110910D01ST|ST-20110910D01|Buy an Iwatodai T-shirt|0|0|0|0|0|0|0|0|0|0
+A2-20110910D01ST|ST-20110910D01|Buy Iwatodai Mochi|0|0|0|0|0|0|0|0|0|0
+A3-20110910D01ST|ST-20110910D01|Buy an Iwatodai Lamp|0|0|0|0|0|0|0|0|0|0
+A1-20210910D02ST|ST-20110910D02|"Yeah, it was great."|0|0|0|0|0|0|0|0|0|0
+A2-20210910D02ST|ST-20110910D02|"It was okay."|0|0|0|0|0|0|0|0|0|0
+A3-20210910D02ST|ST-20110910D02|"Come with me next time."|0|0|0|0|0|0|0|0|0|0
+A1-20111027D01ST|ST-20111027D01|"Not really."|0|0|0|0|0|0|0|0|0|0
+A2-20111027D01ST|ST-20111027D01|"Of course I do."|0|0|0|0|0|0|0|0|0|0
+A3-20111027D01ST|ST-20111027D01|"Enter the pageant, dammit."|0|0|0|0|2|0|0|0|0|0
+A1-20111203D01ST|ST-20111203D01|"Push the bastard in."|0|0|0|0|0|0|0|0|0|0
+A2-20111203D01ST|ST-20111203D01|"I can’t stay here."|0|0|0|0|0|0|0|0|0|0
+A3-20111203D01ST|ST-20111203D01|"Wait a second here…"|0|0|0|0|0|0|0|0|0|0
+A1-20211203D02ST|ST-20111203D02|"We’re missing something."|0|0|0|0|0|0|0|0|0|0
+A2-20211203D02ST|ST-20111203D02|"Leave him for the police."|0|0|0|0|0|0|0|0|0|0
+A3-20211203D02ST|ST-20111203D02|"This won’t change anything."|0|0|0|0|0|0|0|0|0|0
+A1-20211203D03ST|ST-20111203D03|"Whether he’ll kill again."|0|0|0|0|0|0|0|0|0|0
+A2-20211203D03ST|ST-20111203D03|"Whether revenge is right."|0|0|0|0|0|0|0|0|0|0
+A3-20211203D03ST|ST-20111203D03|"Namatame’s true feelings."|0|0|0|0|0|0|0|0|0|0
+A4-20211203D03ST|ST-20111203D03|"Whether he can be tried."|0|0|0|0|0|0|0|0|0|0
+A1-20211203D04ST|ST-20111203D04|"Why he’s scared."|0|0|0|0|0|0|0|0|0|0
+A2-20211203D04ST|ST-20111203D04|"Something’s bothering me."|0|0|0|0|0|0|0|0|0|0
+A3-20211203D04ST|ST-20111203D04|"He can still repent…"|0|0|0|0|0|0|0|0|0|0
+A4-20211203D04ST|ST-20111203D04|"I actually don’t know."|0|0|0|0|0|0|0|0|0|0
+A1-20111203D05ST|ST-20111203D05|"...I got nothing."|0|0|0|0|0|0|0|0|0|0
+A2-20111203D05ST|ST-20111203D05|"He could escape via the TV."|0|0|0|0|0|0|0|0|0|0
+A3-20111203D05ST|ST-20111203D05|"We’re missing something…"|0|0|0|0|0|0|0|0|0|0
+A1-20111203D06ST|ST-20111203D06|"I can’t do it."|0|0|0|0|0|0|0|0|0|0
+A2-20111203D06ST|ST-20111203D06|"Calm the hell down!"|0|0|0|0|0|0|0|0|0|0
+A3-20111203D06ST|ST-20111203D06|"I’m sorry…"|0|0|0|0|0|0|0|0|0|0
+A1-20111205D01ST|ST-20111205D01|Yosuke Hanamura|0|0|0|0|0|0|0|0|0|0
+A2-20111205D01ST|ST-20111205D01|Chie Satonaka|0|0|0|0|0|0|0|0|0|0
+A3-20111205D01ST|ST-20111205D01|Yukiko Amagi|0|0|0|0|0|0|0|0|0|0
+A4-20111205D01ST|ST-20111205D01|Teddie|0|0|0|0|0|0|0|0|0|0
+A5-20111205D01ST|ST-20111205D01|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20211205D02ST|ST-20111205D02|Kanji Tatsumi|0|0|0|0|0|0|0|0|0|0
+A2-20211205D02ST|ST-20111205D02|Rise Kujikawa|0|0|0|0|0|0|0|0|0|0
+A3-20211205D02ST|ST-20111205D02|Naoto Shirogane|0|0|0|0|0|0|0|0|0|0
+A4-20211205D02ST|ST-20111205D02|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20211205D03ST|ST-20111205D03|Ryotaro Dojima|0|0|0|0|0|0|0|0|0|0
+A2-20211205D03ST|ST-20111205D03|Nanako Dojima|0|0|0|0|0|0|0|0|0|0
+A3-20211205D03ST|ST-20111205D03|Tohru Adachi|0|0|0|0|0|0|0|0|0|0
+A4-20211205D03ST|ST-20111205D03|Taro Namatame|0|0|0|0|0|0|0|0|0|0
+A5-20211205D03ST|ST-20111205D03|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20211205D04ST|ST-20111205D04|Mayumi Yamano|0|0|0|0|0|0|0|0|0|0
+A2-20211205D04ST|ST-20111205D04|Saki Knoishi|0|0|0|0|0|0|0|0|0|0
+A3-20211205D04ST|ST-20111205D04|Kinshiro Morooka|0|0|0|0|0|0|0|0|0|0
+A4-20211205D04ST|ST-20111205D04|Mitsuo Kubo|0|0|0|0|0|0|0|0|0|0
+A5-20211205D04ST|ST-20111205D04|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20111205D05ST|ST-20111205D05|Misuzu Hiiragi|0|0|0|0|0|0|0|0|0|0
+A2-20111205D05ST|ST-20111205D05|Noriko Kashiwagi|0|0|0|0|0|0|0|0|0|0
+A3-20111205D05ST|ST-20111205D05|Hanako Ohtani|0|0|0|0|0|0|0|0|0|0
+A4-20111205D05ST|ST-20111205D05|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20111205D06ST|ST-20111205D06|Ai Ebihara|0|0|0|0|0|0|0|0|0|0
+A2-20111205D06ST|ST-20111205D06|Kou Ichijo|0|0|0|0|0|0|0|0|0|0
+A3-20111205D06ST|ST-20111205D06|Daisuke Nagase|0|0|0|0|0|0|0|0|0|0
+A4-20111205D06ST|ST-20111205D06|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20111205D07ST|ST-20111205D07|Hisano Kuroda|0|0|0|0|0|0|0|0|0|0
+A2-20111205D07ST|ST-20111205D07|Sayoko Uehara|0|0|0|0|0|0|0|0|0|0
+A3-20111205D07ST|ST-20111205D07|Someone else|0|0|0|0|0|0|0|0|0|0
+A1-20111205D08ST|ST-20111205D08|Shu Nakajima|0|0|0|0|0|0|0|0|0|0
+A2-20111205D08ST|ST-20111205D08|Yumi Ozawa|0|0|0|0|0|0|0|0|0|0
+A3-20111205D08ST|ST-20111205D08|Eri Minami|0|0|0|0|0|0|0|0|0|0
+A4-20111205D08ST|ST-20111205D08|Think once again|0|0|0|0|0|0|0|0|0|0
+A1-02D01DN|DN-02D01|"Let’s give it some thought."|0|0|0|0|0|0|0|0|0|0
+A2-02D01DN|DN-02D01|"Let’s call it a day."|0|0|0|2|0|0|0|0|0|0
+A1-05D01DN|DN-05D01|Orthodox, ketchup flavored|0|0|0|0|0|0|0|0|0|0
+A2-05D01DN|DN-05D01|Asian American, soy flavored|0|0|0|0|0|0|0|0|0|0
+A3-05D01DN|DN-05D01|Herb filled, Provence style|0|0|0|0|0|0|0|0|0|0
+A4-05D01DN|DN-05D01|Aromatic, Mediterranean style|0|0|0|0|0|0|0|0|0|0
+A1-20110529D01PH|PH-20110529D01|"Thanks."|0|0|0|0|0|0|0|0|0|0
+A2-20110529D01PH|PH-20110529D01|"I don’t want it."|0|0|0|0|0|0|0|0|0|0
+A1-20110717D01PH|PH-20110717D01|"You can ‘count’ on me."|0|0|0|0|0|0|0|0|0|0
+A2-20110717D01PH|PH-20110717D01|"I’m allergic to math."|0|0|0|0|0|0|0|0|0|0
+A1-20110810D01PH|PH-20110810D01|"Sure."|0|0|0|0|0|0|0|0|0|0
+A2-20110810D01PH|PH-20110810D01|"Not interested."|0|0|0|0|0|0|0|0|0|0
