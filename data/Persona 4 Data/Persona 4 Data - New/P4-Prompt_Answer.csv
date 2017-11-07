@@ -1238,9 +1238,12 @@ A1-05D01DN|DN-05D01|Orthodox, ketchup flavored|0|0|0|0|0|0|0|0|0|0
 A2-05D01DN|DN-05D01|Asian American, soy flavored|0|0|0|0|0|0|0|0|0|0
 A3-05D01DN|DN-05D01|Herb filled, Provence style|0|0|0|0|0|0|0|0|0|0
 A4-05D01DN|DN-05D01|Aromatic, Mediterranean style|0|0|0|0|0|0|0|0|0|0
+<<<<<<< HEAD
 A1-20110529D01PH|PH-20110529D01|"Thanks."|0|0|0|0|0|0|0|0|0|0
 A2-20110529D01PH|PH-20110529D01|"I don’t want it."|0|0|0|0|0|0|0|0|0|0
 A1-20110717D01PH|PH-20110717D01|"You can ‘count’ on me."|0|0|0|0|0|0|0|0|0|0
 A2-20110717D01PH|PH-20110717D01|"I’m allergic to math."|0|0|0|0|0|0|0|0|0|0
 A1-20110810D01PH|PH-20110810D01|"Sure."|0|0|0|0|0|0|0|0|0|0
 A2-20110810D01PH|PH-20110810D01|"Not interested."|0|0|0|0|0|0|0|0|0|0
+=======
+>>>>>>> refs/remotes/origin/master

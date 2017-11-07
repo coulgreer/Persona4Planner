@@ -424,9 +424,15 @@ FR-22S0801||What should you do...?
 LV-22S0901||Ayane looks at the ground nervously
 DN-02D01|Yosuke|What kinda person could be doing this?
 DN-05D01||What kind of omelette should you make?
+<<<<<<< HEAD
 PH-20110529D01|Daisuke|Here, Main Character, you can have it.
 PH-20110717D01|Kou|...You any good at math, Main Character?
 PH-20110810D01|Kou|Tadaaa! ‘The O-Cha Way’… Want it?
+=======
+PhP-01|Daisuke|Here, Main Character, you can have it.
+PhP-02|Kou|...You any good at math, Main Character?
+PhP-03|Kou|Tadaaa! ‘The O-Cha Way’… Want it?
+>>>>>>> refs/remotes/origin/master
 ST-20110412D01|Mr. Morooka|Tell 'em your name, kid, and make it quick.
 ST-20110414D01|Chie|Haa... So… uh... We're still alive… right?
 ST-20110415D01|Yosuke|What about you? Could you just walk away?
