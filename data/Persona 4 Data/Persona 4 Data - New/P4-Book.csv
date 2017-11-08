@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Book Id|Book Title|Is Obtained|Read Chapters|Total Chapters|Courage Modifier|Diligence Modifier|Knowledge Modifier|Understanding Modifier|Expression Modifier
 300ram|The Ramen Way|FALSE|0|4|0|0|2|0|2
 100gre|A Great Man|FALSE|0|4|4|0|0|0|0
@@ -20,26 +19,3 @@ Book Id|Book Title|Is Obtained|Read Chapters|Total Chapters|Courage Modifier|Dil
 900who|Who Am I|FALSE|0|4|0|2|2|0|0
 100far|Farewell to Man|FALSE|0|4|4|0|0|0|0
 800fin|The Final Lesson|FALSE|0|4|0|0|0|4|0
-=======
-Book Id+AHw-Book Title+AHw-Is Obtained+AHw-Read Chapters+AHw-Total Chapters+AHw-Courage Modifier+AHw-Diligence Modifier+AHw-Knowledge Modifier+AHw-Understanding Modifier+AHw-Expression Modifier
-300ram+AHw-The Ramen Way+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-2+AHw-0+AHw-2
-100gre+AHw-A Great Man+AHw-FALSE+AHw-0+AHw-4+AHw-4+AHw-0+AHw-0+AHw-0+AHw-0
-800off+AHw-Off Today+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-0+AHw-4+AHw-0
-300gen+AHw-The Gentle Way+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-2+AHw-0+AHw-2
-700lov+AHw-Lovely Witch Detective+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-2+AHw-0+AHw-2+AHw-0
-100for+AHw-Forever Macho+AHw-FALSE+AHw-0+AHw-4+AHw-4+AHw-0+AHw-0+AHw-0+AHw-0
-300pun+AHw-The Punk's Way+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-2+AHw-0+AHw-2
-800sho+AHw-Short on Cash+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-0+AHw-4+AHw-0
-000gui+AHw-Guide to Pests+AHw-FALSE+AHw-0+AHw-4+AHw-2+AHw-0+AHw-2+AHw-0+AHw-0
-100man+AHw-Man of History+AHw-FALSE+AHw-0+AHw-4+AHw-4+AHw-0+AHw-0+AHw-0+AHw-0
-900fun+AHw-Fun with Numbers+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-2+AHw-2+AHw-0+AHw-0
-800cha+AHw-Changing Careers+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-0+AHw-4+AHw-0
-300och+AHw-The O+AC0-Cha Way+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-2+AHw-0+AHw-2
-700rid+AHw-Riddlemania+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-2+AHw-0+AHw-2+AHw-0
-300div+AHw-The Divine Way+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-2+AHw-0+AHw-2
-100mang+AHw-Man+AC0-God+AHw-FALSE+AHw-0+AHw-4+AHw-4+AHw-0+AHw-0+AHw-0+AHw-0
-800sen+AHw-Sensei's Friends+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-0+AHw-4+AHw-0
-900who+AHw-Who Am I+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-2+AHw-2+AHw-0+AHw-0
-100far+AHw-Farewell to Man+AHw-FALSE+AHw-0+AHw-4+AHw-4+AHw-0+AHw-0+AHw-0+AHw-0
-800fin+AHw-The Final Lesson+AHw-FALSE+AHw-0+AHw-4+AHw-0+AHw-0+AHw-0+AHw-4+AHw-0
->>>>>>> refs/remotes/origin/master
