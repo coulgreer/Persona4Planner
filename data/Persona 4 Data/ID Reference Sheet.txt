@@ -28,14 +28,17 @@
 
 
 [Event Type] Event IDs
-         Inspiration: Auto-Increment
+         Phone Event Example: {PHE}-{20110821D}{21}
+               PHE = Event Type
+               20110821D = Date YYYYMMDD of the Hangout with a D to denote date
+               21 = Initiating Social Link ID Number
 
-         Example: {SLE}{01}
+         Social Link Event Example: {SLE}{01}
                SLE = Event Type
                01 = Event Number
 
          Event Acronyms:
-<<<<<<< HEAD
+
                DNE = Dungeon Event
                PHE = Phone Event
                STE = Story Event
@@ -44,8 +47,6 @@
 
 
 [Prompt Type] Prompt IDs
-
-
          Social Link Prompt Example: {FR}-{02S}{02}{01}
                FR = Prompt Type   (Uses FR to denote a friend prompt or LV to denote lover prompt)
                02S = Associated Social Link Number   (Uses the social links ID then adds an S to the end)
@@ -59,43 +60,13 @@
 
          Story Prompt Example: {ST}-{20110412D}{01}
                ST = Prompt Type
-               20110412D = Date   (Uses the date that the prompt appears)
+               20110412D = Date   (Uses the date YYYYMMDD that the prompt appears)
                01 = Auto-Incremented Number (Keeps the prompts in order based on prompt date)
 
-         Phone Prompt Example: {PH}-{}{}
-               PH = 
-               
-               
-=======
-               DE = Dungeon Event
-               PE = Phone Event
-               SE = Story Event
-               SLE = Social Link Event
-
-
-
-[Prompt Type] Prompt IDs
-
-
-         Social Link Prompt Example: {FR}-{02S}{02}{01}
-               FR = Prompt Type   (Uses FR to denote a friend prompt or LV to denote lover prompt)
-               02S = Associated Social Link Number   (Uses the social links ID then adds an S to the end)
-               02 = Rank   (Rank that the prompt appears at)
-               01 = Auto-Incremented Number   (Keeps the prompts in order based on social link rank)
-
-         Dungeon Prompt Example: {DN}-{02D}{01}
-               DN = Prompt Type
-               02D = Associated Dungeon Number   (Uses the dungeon ID then adds a D to the end)
-               01 = Auto-Incremented ID Number   (Keeps the prompts in order based on dungeon)
-
-         Story Prompt Example: {ST}-{20110412D}{01}
-               ST = Prompt Type
-               20110412D = Date   (Uses the date that the prompt appears)
+         Phone Prompt Example: {PH}-{20110529D}{01}
+               PH = Prompt Type
+               20110529D = Date   (Uses the date YYYYMMDD that the prompt appears)
                01 = Auto-Incremented Number (Keeps the prompts in order based on prompt date)
-
-         Phone Prompt Example: {PH}-{}{}
->>>>>>> refs/remotes/origin/master
-               
 
          Prompt Type Acronyms:
                DN = Dungeon Prompt
