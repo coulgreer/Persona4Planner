@@ -1127,8 +1127,6 @@ A3-20110414D01ST|ST-20110414D01|"Is this a dream?"|0|0|0|0|0|0|0|0|0|0
 A1-20110415D01ST|ST-20110415D01|"I can’t leave it alone."|0|0|0|0|0|0|0|0|0|0
 A2-20110415D01ST|ST-20110415D01|"This doesn’t involve me."|0|0|0|0|0|0|0|0|0|0
 A3-20110415D01ST|ST-20110415D01|"I’m worried about Chie."|0|0|0|2|0|0|0|0|0|0
-A1-20110427D01ST|ST-20110427D01|"Let’s give it some thought."|0|0|0|0|0|0|0|0|0|0
-A2-20110427D01ST|ST-20110427D01|"Let’s call it a day."|0|0|0|2|0|0|0|0|0|0
 A1-20110515D01ST|ST-20110515D01|"Chie."|0|0|0|0|0|0|0|0|0|0
 A2-20110515D01ST|ST-20110515D01|"Yukiko."|0|0|0|0|0|0|0|0|0|0
 A3-20110515D01ST|ST-20110515D01|"Both."|0|0|0|2|0|0|0|0|0|0
@@ -1238,12 +1236,9 @@ A1-05D01DN|DN-05D01|Orthodox, ketchup flavored|0|0|0|0|0|0|0|0|0|0
 A2-05D01DN|DN-05D01|Asian American, soy flavored|0|0|0|0|0|0|0|0|0|0
 A3-05D01DN|DN-05D01|Herb filled, Provence style|0|0|0|0|0|0|0|0|0|0
 A4-05D01DN|DN-05D01|Aromatic, Mediterranean style|0|0|0|0|0|0|0|0|0|0
-<<<<<<< HEAD
 A1-20110529D01PH|PH-20110529D01|"Thanks."|0|0|0|0|0|0|0|0|0|0
 A2-20110529D01PH|PH-20110529D01|"I don’t want it."|0|0|0|0|0|0|0|0|0|0
 A1-20110717D01PH|PH-20110717D01|"You can ‘count’ on me."|0|0|0|0|0|0|0|0|0|0
 A2-20110717D01PH|PH-20110717D01|"I’m allergic to math."|0|0|0|0|0|0|0|0|0|0
 A1-20110810D01PH|PH-20110810D01|"Sure."|0|0|0|0|0|0|0|0|0|0
 A2-20110810D01PH|PH-20110810D01|"Not interested."|0|0|0|0|0|0|0|0|0|0
-=======
->>>>>>> refs/remotes/origin/master
