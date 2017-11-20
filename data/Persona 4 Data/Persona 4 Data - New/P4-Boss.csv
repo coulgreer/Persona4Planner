@@ -1,0 +1,30 @@
+Boss Id|Boss Name|Dungeon Id|Physical Affinity|Fire Affinity|Ice Affinity|Electric Affinity|Wind Affinity|Light Affinity|Dark Affinity
+BS-01S|Shadow Yosuke|01||||Weak||Null|Null
+BS-00S|Shadow Chie|02|Resistant||||Weak|Null|Null
+BS-01M|Avenger Knight|02|Resistant|||||Null|Null
+BS-02S|Shadow Yukiko|02||Absorb||||Null|Null
+BS-03B|Contrarian King|02||Absorb|||Null|Null|Null
+BS-04M|Daring Gigas|03||||||Null|Null
+BS-05S|Shadow Kanji|03||||||Null|Null
+BS-06B|Intolerant Officer|03||||Weak||Null|Null
+BS-07M|Amorous Snake|04||Weak||||Null|Null
+BS-08S|Shadow Rise|04||||||Null|Null
+BS-09S|Shadow Teddie|04|||Absorb|||Null|Null
+BS-10B|Momentary Child|04|||Weak|||Null|Null
+BS-11M|Killing Hand|05||||||Null|Null
+BS-12S|Shadow Mitsuo|05||||||Null|Null
+BS-13B|Escapist Soldier|05||||||Null|Null
+BS-14M|Dominating Machine|06||||||Null|Null
+BS-15S|Shadow Naoto|06||||||Null|Null
+BS-16B|Extreme Vessel|06|||||Weak|Null|Null
+BS-17M|World Balance|07||||||Null|Null
+BS-18S|Kunino-Sagiri|07||||||Null|Null
+BS-19B|Lost Okina|07||||||Null|Null
+BS-20M|Chaos Fuzz|08||||||Null|Null
+BS-21M|Giant of Envy|08||||||Null|Null
+BS-22S|Adachi|08||||||Null|Null
+BS-23S|Ameno-Sagiri|08||||||Null|Null
+BS-24M|Neo Minotaur|09||||||Null|Null
+BS-25M|Sleeping Table|09||||||Null|Null
+BS-26S|Izanami|09||||||Null|Null
+BS-27S|Izanami-no-Okami|09||||||Null|Null

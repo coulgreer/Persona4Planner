@@ -37,9 +37,12 @@
                SLE = Event Type
                01 = Event Number
 
+         Story Event Example: {STE}-{20110412}
+               STE = Event Type
+               20110412 = Date YYYYMMDD of the event
+
          Event Acronyms:
 
-               DNE = Dungeon Event
                PHE = Phone Event
                STE = Story Event
                SLE = Social Link Event
@@ -115,9 +118,26 @@ Book IDs
                700     Book for Underaged Readers
                800     Timid Teacher Series
                900     Miscellaneous
-         Example: {300} {ram} :: ‘The Ramen Way’ by [Unknown Author]
+         Example: {300}{ram} :: ‘The Ramen Way’ by [Unknown Author]
                300 = Subject Area
                ram = First 3 letters of title but can be more. Do not count articles.
+
+
+Boss IDs
+         Example: {BS}-{03}{B}
+               BS = Denotes the ID as a Boss ID
+               03 = Auto-Incremented number keeping track of all bosses
+               B = Denotes the type of boss
+
+         Boss Type Acronyms:
+               S = Story
+               M = Mini/Mid
+               B = Bonus
+
+
+Dungeon IDs
+         Example: 01
+               01 = Auto-Incremented ID number
 
 
 
