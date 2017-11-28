@@ -187,6 +187,19 @@ Hangout IDs
 
 
 
+Mecha Model IDs
+         Example: {M}{001}
+               M = Represents the ID as a model ID
+               001 = Auto-Incremented ID number
+
+
+
+Quest IDs
+         Example: {03}
+               03 = Two digit Quest Id
+
+
+
 Quiz Answer IDs
          Example: {A1}-{20110414}{QZ}
                A1 = Answer Number For Question
