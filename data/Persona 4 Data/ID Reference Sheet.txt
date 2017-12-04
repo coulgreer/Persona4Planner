@@ -136,7 +136,7 @@ Boss IDs
 
 
 Dungeon IDs
-         Example: 01
+         Example: {01}
                01 = Auto-Incremented ID number
 
 
@@ -187,10 +187,24 @@ Hangout IDs
 
 
 
+Job IDs
+         Example: {J}{01}
+               J = Denotes the ID as a job ID
+               01 = Auto-Incremented 2 digit ID number
+
+
+
+Lecture IDs
+         Example: {LC}-{20110413}
+               LC = Denotes the ID as a lecture ID
+               20110413 = Date of Lecture [YYYYMMDD]
+
+
+
 Mecha Model IDs
          Example: {M}{001}
                M = Represents the ID as a model ID
-               001 = Auto-Incremented ID number
+               001 = Auto-Incremented 3 digit ID number
 
 
 
