@@ -1,0 +1,15 @@
+Dish Id|Restaurant Id|Day|Is Raining
+MTC|AIYA|Monday|FALSE
+MTC|AIYA|Tuesday|FALSE
+PSR|AIYA|Wednesday|FALSE
+PSR|AIYA|Thursday|FALSE
+SB|AIYA|Friday|FALSE
+SB|AIYA|Saturday|FALSE
+SB|AIYA|Sunday|FALSE
+MBB|AIYA|Monday|TRUE
+MBB|AIYA|Tuesday|TRUE
+MBB|AIYA|Wednesday|TRUE
+MBB|AIYA|Thursday|TRUE
+MBB|AIYA|Friday|TRUE
+MBB|AIYA|Saturday|TRUE
+MBB|AIYA|Sunday|TRUE
