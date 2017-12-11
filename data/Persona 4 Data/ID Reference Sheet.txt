@@ -238,7 +238,13 @@ Restaurant IDs
 Restaurant Item IDs
         Example: {MBB}
                MBB = 2 to 4 Letter Acronym For a Menu Dish
-               
+
+
+
+Restaurant Menu IDs
+        Example: {MENU}{001}
+               MENU = Denotes the ID as a Menu Id
+               001 = A 3 digit Auto-Incremented Number
 
 
 
